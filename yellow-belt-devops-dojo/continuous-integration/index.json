@@ -1,0 +1,71 @@
+{
+  "pathwayTitle": "DevOps Dojo Yellow Belt",
+  "private": true,
+  "title": "Continuous Integration",
+  "description": "Experience continuous integration, the process of merging work from all the developers in a team into the master branch as and when required.",
+  "difficulty": "intermediate",
+  "time": "40 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Preparation",
+        "text": "step1.md",
+        "verify": "step1-verify.sh"
+      },
+      {
+        "title": "Jenkins dashboard",
+        "text": "step2.md"
+      },
+      {
+        "title": "Work on a user story",
+        "text": "step3-nospell.md"
+      },
+      {
+        "title": "Create a pull request",
+        "text": "step4.md"
+      },
+      {
+        "title": "Jenkins pipeline execution",
+        "text": "step5.md"
+      },
+      {
+        "title": "Rework the code",
+        "text": "step6.md"
+      },
+      {
+        "title": "Someone else reviews the pull request",
+        "text": "step7.md"
+      },
+      {
+        "title": "Merge to master branch",
+        "text": "step8.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "prepare.sh", "target": "~/","chmod": "+x"},
+        {"file": "index.html", "target": "~/nginx"}
+      ]
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideintro": false,
+    "uilayout": "terminal-iframe",
+    "showdashboard": true,
+    "dashboards": [
+      { "name": "Jenkins", "port": 8080},
+      { "name": "GitHub", "port": 9876},
+      { "name": "Pet Clinic", "port": 9966}
+    ],
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nYou can type in and run shell commands here.\r\n\u001b[m"
+  },
+  "backend": {
+    "imageid": "devopsdojo-jenkins-yb"
+  }
+}

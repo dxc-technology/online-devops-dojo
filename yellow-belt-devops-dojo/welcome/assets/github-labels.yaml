@@ -1,0 +1,52 @@
+---
+name: ":bug: bug"
+description: 
+color: 0052cc
+---
+name: ":bulb: user_story"
+description: 
+color: 0052cc
+---
+name: ":sparkles: epic"
+description: 
+color: 0052cc
+---
+name: P1
+description: "Priority 1"
+color: fbca04
+---
+name: P2
+description: "Priority 2"
+color: fbca04
+---
+name: P3
+description: "Priority 3"
+color: fbca04
+---
+name: "1"
+description: "1 story point"
+color: 0e8a16
+---
+name: "2"
+description: "2 story points"
+color: 0e8a16
+---
+name: "3"
+description: "3 story points"
+color: 0e8a16
+---
+name: "5"
+description: "5 story points"
+color: 0e8a16
+---
+name: "8"
+description: "8 story points"
+color: 0e8a16
+---
+name: "13"
+description: "13 story points"
+color: 0e8a16
+---
+name: "21"
+description: "21 story points"
+color: 0e8a16

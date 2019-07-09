@@ -1,0 +1,84 @@
+---
+speaking: Dan
+text: >
+    On behalf of the team, welcome Chun.
+---
+speaking: Chun
+text: >
+    Thanks Dan, delighted to be here.
+---
+speaking: Dan
+text: >
+    Paulo we are all excited to see this initiative. As you no doubt recall a few of us have been suggesting something of this nature for some time. If I may ask a question, what are the primary goals for the transformation?
+---
+speaking: Paulo
+text: >
+    For me there are two fundamental goals, the first is that releasing our software should be a repeatable, reliable process and secondly that we need to automate our software lifecycle as much as is possible and as is reasonable. Chun would you like to add something?
+---
+speaking: Chun
+text: >
+    I agree, those goals are supported by the 3 ways of DevOps and by the top learnings I shared from the previous transformation efforts I have worked on.
+---
+speaking: Tina
+text: >
+    I think this is good news, but just wondering how are we supposed to fit the transformation activities in with our day jobs?
+---
+speaking: Paulo
+text: >
+    We have the core enablement team, initially comprised of Chun and myself who will be fully allocated to the transformation efforts. The wider team, the people in this room, have been allocated 20% of their time to work on the transformation. I want to stress that this of course isn't a hard 20%, if more time is needed let us know.
+---
+speaking: Adam
+text: >
+    Chun, you have shared a lot of interesting, exciting and even some slightly scary concepts with us. Where do you think applying these concepts will have the greatest impact?
+---
+speaking: Chun
+text: >
+    They will impact in three main areas automation, collaboration, and innovation.
+---
+speaking: Chun
+text: >
+    Let me explain by first speaking to the culture in which we will operate. Culture will be key to our success. As I noted in my top transformation tips, Culture eats Transformation for Lunch.
+---
+speaking: Chun
+text: >
+    The culture in which we need to operate is known as a Safety First culture. This is important as introducing DevOps in support of complex systems is not without risk.
+---
+speaking: Chun
+text: >
+    Developers need to be able to add, update or remove code quickly in response to business needs.
+---
+speaking: Chun
+text: >
+    Testers need to be focused on perpetual testing using automated tests to get confidence in what is being released.
+---
+speaking: Chun
+text: >
+    Operations needs to be able to deploy and support multiple versions of the same application.
+---
+speaking: Chun
+text: >
+    Business teams need to be able to specify requirements in a manner that supports incremental delivery and provides rapid turnaround times to development teams. They also need to indicate whether the functionality which has been delivered meets their requirements (or not) as the case may be.
+---
+speaking: Chun
+text: >
+    Given the complexity of the system and the scale of the transformation it is inevitable that we will encounter some issues as we transform. Some of them will be caused by members of this team, myself included. That is ok and is to be expected.
+---
+speaking: Chun
+text: >
+    When things go wrong we will focus on the why rather than the who. We will look to learn from any issues and put automated solutions in place to prevent the issues recurring.                        
+---
+speaking: Selma
+text: >
+    That all sounds fine in theory but what evidence do you have that we will truly operate in a Safety Culture?
+---
+speaking: Paulo
+text: >
+    Charlie has committed to the transformation and the cultural shift required. We have executive support at the highest level in the organization. As you all know Charlie is a man of his word and has the track record to prove it.
+---
+speaking: Santhosh
+text: >
+    Paulo this is very exciting, as Dan mentioned this team has been waiting for an opportunity to transform how we do things for some time.
+---
+speaking: Paulo
+text: >
+    First, let's ask some questions to [student].

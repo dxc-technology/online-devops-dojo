@@ -1,0 +1,64 @@
+---
+speaking: Santhosh
+text: >
+    This all sounds wonderful, but how do we start?
+---
+speaking: Chun
+text: >
+    In one sentence by assessing current state, defining what awesome would look like, and putting a plan in place to incrementally address any deltas identified between current state and awesome.
+---
+speaking: Paulo
+text: >
+    I am reminded of the old quote "When eating an elephant take one bite at a time."
+---
+speaking: Chun
+text: >
+    Exactly. In our case each bite would be comprised of a two week continuous improvement event. These events are also known as DevOps Kaizen events. But I am getting ahead of myself. Let me answer Santhosh's question first.
+---
+speaking: Chun
+text: >
+    Santhosh, we would start by assessing current state of the development process using Value Stream Mapping (VSM).
+---
+speaking: Chun
+text: >
+    VSM will give us a shared understanding of the current process, with some key process metrics for each step in the process. These metrics would include lead time, processing time and % C/A which is the % complete versus accurate work received by each step in the process from the previous step in the process.
+---
+speaking: Paulo
+text: >
+    We should be able to conduct a VSM exercise, I suspect it will be an interesting and productive exercise for the team.
+---
+speaking: Chun
+text: >
+    Good, but remember we need representatives from all groups with an interest in the process to take part.
+---
+speaking: Paulo
+text: >
+    Got it, I will reach out to the upstream and downstream groups to make sure they engage.
+---
+speaking: Chun
+text: >
+    Then having come to an agreed understanding of the current process, we as a group need to define what awesome would look like.
+---
+speaking: Tina
+text: >
+    Awesome?
+---
+speaking: Chun
+text: >
+    Yes, collectively we need to agree what a perfect process looks like. Awesome is our target condition.
+---
+speaking: Dan
+text: >
+    And how do we plan on reaching that target?
+---
+speaking: Chun
+text: >
+    One bite at a time, or to be precise, via a series of continuous improvement events also known as Kaizen events. DevOps Kaizen events focus on improving customer/client outcomes by making incremental improvements across the entire value stream.
+---
+speaking: Paulo
+text: >
+    I know it is a lot to take in, but I am confident with Chun's coaching, with the support of our leadership and your commitment we will transform our operation for the better. 
+---
+speaking: Paulo
+text: >
+    Before we proceed, to ensure we are on the right path, let's ask [student].

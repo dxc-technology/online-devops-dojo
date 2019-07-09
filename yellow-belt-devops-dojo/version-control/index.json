@@ -1,0 +1,66 @@
+{
+  "pathwayTitle": "DevOps Dojo Yellow Belt",
+  "title": "Version Control",
+  "private": true,
+  "description": "Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.",
+  "difficulty": "intermediate",
+  "time": "30 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md",
+        "verify": "step2-verify.sh"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3-nospell.md",
+        "code": "assets/step3.sh"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md",
+        "code": "assets/step5.sh"
+      },
+      {
+        "title": "Step 6",
+        "text": "step6.md",
+        "code": "assets/step6.sh"
+      },
+      {
+        "title": "Step 7",
+        "text": "step7.md",
+        "code": "assets/step7.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "assets": {
+      "host01": [
+        { "file": "prepare.sh", "target": "~/","chmod": "+x" }
+      ]
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideintro": false,
+    "uilayout": "editor-terminal",
+    "uieditorpath":"/root/pet-clinic",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nYou can type in and run shell commands here.\r\n\u001b[m"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+
+  }
+}

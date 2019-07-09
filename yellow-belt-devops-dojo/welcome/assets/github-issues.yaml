@@ -1,0 +1,4 @@
+---
+title: Support veterinarians who handle horses
+body: "From **Paulo**:\r![](https://s3.amazonaws.com/devopsdojoassets/paulo.png)\r\r>**As a** product owner,\r**I want** horse type entries when the pet clinic database is initially populated,\r**so that** I can demo the feature to veterinarians who take care of horses.\r\r**Acceptance criteria**:\r* One can have horse as pet\r* The test data contains new pet names for horses"
+labels: [":bulb: user_story", "P1", "3"]

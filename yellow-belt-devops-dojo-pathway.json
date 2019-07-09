@@ -1,0 +1,31 @@
+{
+  "title": "Yellow Belt DevOps Dojo",
+  "description": "Learning DevOps, for real.",
+  "courses": [
+    {
+      "title": "Welcome",
+      "description": "Getting started with the Yellow Belt DevOps Dojo: understanding the back story, setting up your environment.",
+      "course_id": "welcome"
+    },
+    {
+      "title": "Leading Change",
+      "description": "Learn about the importance of Leading Change in DevOps Transformations. A large factor in the success of DevOps transformations is driven by the organization's ability to empower people to lead change at the different levels in the organization.",
+      "course_id": "leading-change"
+    },    
+    {
+      "title": "Version Control",
+      "description": "Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.",
+      "course_id": "version-control"
+    },
+    {
+      "title": "Continuous Integration",
+      "description": "The process of merging work from all the developers in a team into the master branch as and when required.",
+      "course_id": "continuous-integration"
+    },
+    {
+      "title": "Shift Left on Security",
+      "description": "Security must be considered from the beginning and continuously assessed.",
+      "course_id": "shift-security-left"
+    }
+  ]
+}
