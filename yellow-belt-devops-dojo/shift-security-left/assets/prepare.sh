@@ -1,7 +1,7 @@
 #
 # Globals
 #
-GITHUB="github.dxc.com"
+GITHUB="github.com"
 DEBUG=false
 COLQUESTION="\u001b[36m"
 COLINFO="\u001b[37m"
@@ -33,7 +33,7 @@ echo $TOKEN >> /tmp/shortname.txt
 
 EMAIL=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -X GET https://${GITHUB}/api/v3/user | jq -r '.email')
 if [ -z "$EMAIL" ]; then
-  EMAIL=${SHORTNAME}@dxc.com
+  EMAIL=${SHORTNAME}@noemail.com
 fi
 export EMAIL
 
@@ -48,7 +48,7 @@ if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
   echo -e "> I was expecting to find the pet-clinic repository under your GitHub username and I didn't, or the content does not look right."
   echo -e "> That must be me. But just in case:"
   echo -e "> - Close this Katacoda window: the environment will expire soon and you need ample time to complete the module"
-  echo -e "> - Go through the Welcome module which will set everything up for you: https://github.dxc.com/pages/GDO-CTO/Katacoda/katacoda/welcome/"
+  echo -e "> - Go through the Welcome module which will set everything up for you: https://github.com/pages/GDO-CTO/Katacoda/katacoda/welcome/"
   echo -e ""
   exit 1
 fi
