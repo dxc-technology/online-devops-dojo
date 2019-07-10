@@ -59,7 +59,7 @@ pet_clinic_copy()
   echo -e "${COLLOGS}"
 
   rm -fr /tmp/${REPO}
-  git clone https://$TOKEN@${GITHUB}/{ORGREPO}$/${REPO}.git /tmp/${REPO}
+  git clone https://$TOKEN@${GITHUB}/${ORGREPO}/${REPO}.git /tmp/${REPO}
   cd /tmp/${REPO}
   rm -fR .git
   git init
