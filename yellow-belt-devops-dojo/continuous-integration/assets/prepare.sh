@@ -1,13 +1,15 @@
 #
 # Globals
 #
-GITHUB="github.com"
 DEBUG=false
+GITHUB="github.com"
+GITHUBAPIURL="https://api.github.com"
 COLQUESTION="\u001b[36m"
 COLINFO="\u001b[37m"
 COLLOGS="\u001b[35m"
 COLRESET="\u001b[m"
 REPO=pet-clinic
+ORGREPO=pberthonneau
 
 if [ "$DEBUG" = false ] ; then
   CURL_NODEBUG="-sS"
@@ -22,13 +24,14 @@ read TOKEN
 export TOKEN
 
 echo -e "${COLLOGS}Fetching your details from GitHub...${COLRESET}"
+USER_JSON=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/user)
 
-SHORTNAME=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -X GET https://${GITHUB}/api/v3/user | jq -r '.login')
+SHORTNAME=$(echo $USER_JSON | jq -r '.login')
 export SHORTNAME
 echo $SHORTNAME > /tmp/shortname.txt
 echo $TOKEN >> /tmp/shortname.txt
 
-EMAIL=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -X GET https://${GITHUB}/api/v3/user | jq -r '.email')
+EMAIL=$(echo $USER_JSON | jq -r '.email')
 if [ -z "$EMAIL" ]; then
   EMAIL=${SHORTNAME}@noemail.com
 fi
@@ -38,7 +41,7 @@ git config --global user.email "${EMAIL}"
 
 # Check if repository already exists and properly populated
 echo -e "${COLLOGS}"
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -X GET https://${GITHUB}/api/v3/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/api/v3/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
 REPO_DOES_NOT_EXIST=$?
 if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
   echo -e "${COLRESET}> I'm confused..."
@@ -68,7 +71,7 @@ docker run --name nginx -p 9876:80 -v /root/nginx:/usr/share/nginx/html:ro -d ng
 #
 echo -e "${COLINFO}Configuring your GitHub pet-clinic repository...${COLRESET}"
 echo -e "${COLLOGS}"
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -X GET https://${GITHUB}/api/v3/repos/$SHORTNAME/pet-clinic/hooks | grep id | cut -d ":" -f2 | cut -c 1-6> ids.txt
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/api/v3/repos/$SHORTNAME/pet-clinic/hooks | grep id | cut -d ":" -f2 | cut -c 1-6> ids.txt
 
 filename="ids.txt"
 
@@ -77,7 +80,7 @@ remove_existing_webhook()
 while read -r line
 do
     name="$line"
-        curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -X DELETE https://${GITHUB}/api/v3/repos/$SHORTNAME/pet-clinic/hooks/"$line"
+        curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X DELETE https://${GITHUB}/api/v3/repos/$SHORTNAME/pet-clinic/hooks/"$line"
 done < "$filename"
 }
 remove_existing_webhook
@@ -104,7 +107,7 @@ echo -e "${COLINFO}Updating GitHub web hook to point to Katacoda Jenkins...${COL
 echo -e "${COLLOGS}"
 JenkinsUrl=`curl ${CURL_NODEBUG} "https://katacoda.com/metadata/generate-url?port=8080&ip=$(ip addr show ens3 | grep -Po 'inet \K[\d.]+')"`
 
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -X POST --data '{"name": "web","active": true,"events": [ "push", "pull_request" ], "config":{"url": "https://'"$JenkinsUrl"'/github-webhook/","content_type":"json"}}' https://${GITHUB}/api/v3/repos/$SHORTNAME/pet-clinic/hooks
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data '{"name": "web","active": true,"events": [ "push", "pull_request" ], "config":{"url": "https://'"$JenkinsUrl"'/github-webhook/","content_type":"json"}}' https://${GITHUB}/api/v3/repos/$SHORTNAME/pet-clinic/hooks
 }
 adding_webhook
 
@@ -128,4 +131,4 @@ wait_for_jenkins()
 }
 wait_for_jenkins
 
-echo -e "${COLINFO}You are all set! Click on 'CONTINUE'${COLRESET}"
+echo -e "${COLINFO}You are all set! Click on 'CONTINUE'.${COLRESET}"
