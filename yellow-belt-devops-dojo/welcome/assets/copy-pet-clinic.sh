@@ -80,7 +80,7 @@ if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
   if [ $USER_HAS_NO_ACCESS_TO_REPO -eq 0 ]; then
     echo -e "${COLQUESTION}Error: it seems that your credentials are invalid. As per the instructions please use your GitHub user account and a Personal Access Token with 'repo' and 'admin:repo_hook' scopes at https://github.com/settings/tokens/new ${COLRESET}"
     exit 1
-  # fi
+  fi
  
   curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/repos/${ORGREPO}/${REPO} | grep "Not Found"
   PETCLINIC_NOT_AVAILABLE=$?
