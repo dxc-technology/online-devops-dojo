@@ -70,22 +70,28 @@ pet_clinic_copy()
   cd -
 }
 
-# Check if repository already exists
+# Check if user repository already exists
 echo -e "${COLLOGS}"
 curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/api/v3/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
 REPO_DOES_NOT_EXIST=$?
 if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
-  curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data "{\"name\":\"${REPO}\"}" https://${GITHUB}/api/v3/user/repos | grep "Not Found"
+  curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data "{\"name\":\"${REPO}\"}" https://${GITHUB}/user/repos | grep "Not Found"
   USER_HAS_NO_ACCESS_TO_REPO=$?
-  echo "USER_HAS_NO_ACCESS_TO_REPO=${USER_HAS_NO_ACCESS_TO_REPO}"
   if [ $USER_HAS_NO_ACCESS_TO_REPO -eq 0 ]; then
     echo -e "${COLQUESTION}Error: it seems that your credentials are invalid. As per the instructions please use your GitHub user account and a Personal Access Token with 'repo' and 'admin:repo_hook' scopes at https://github.com/settings/tokens/new ${COLRESET}"
+    exit 1
+  # fi
+ 
+  curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/repos/${ORGREPO}/${REPO} | grep "Not Found"
+  PETCLINIC_NOT_AVAILABLE=$?
+  if [ $PETCLINIC_NOT_AVAILABLE -eq 0 ]; then
+    echo -e "${COLQUESTION}Error: a ressource is missing for the module to execute. Support has been notified. Please retry the module tomorrow.${COLRESET}"
     exit 1
   else
     pet_clinic_copy
   fi
 else
-  echo -e "${COLINFO}Repository" https://github.com/${SHORTNAME}/${REPO} "already exists. Skipping.${COLRESET}"
+  echo -e "${COLINFO}Repository" https://${GITHUB}/${SHORTNAME}/${REPO} "already exists. Skipping.${COLRESET}"
 fi
 
 # Provision GitHub issue labels
