@@ -74,11 +74,10 @@ pet_clinic_copy()
 echo -e "${COLLOGS}"
 curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/api/v3/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
 REPO_DOES_NOT_EXIST=$?
-echo "REPO_DOES_NOT_EXIST=${REPO_DOES_NOT_EXIST}"
 if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
   curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data "{\"name\":\"${REPO}\"}" https://${GITHUB}/api/v3/user/repos | grep "Not Found"
   USER_HAS_NO_ACCESS_TO_REPO=$?
-  echo "${USER_HAS_NO_ACCESS_TO_REPO}"
+  echo "USER_HAS_NO_ACCESS_TO_REPO=${USER_HAS_NO_ACCESS_TO_REPO}"
   if [ $USER_HAS_NO_ACCESS_TO_REPO -eq 0 ]; then
     echo -e "${COLQUESTION}Error: it seems that your credentials are invalid. As per the instructions please use your GitHub user account and a Personal Access Token with 'repo' and 'admin:repo_hook' scopes at https://github.com/settings/tokens/new ${COLRESET}"
     exit 1
