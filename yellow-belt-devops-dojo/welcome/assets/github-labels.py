@@ -9,8 +9,8 @@ import os, sys, json, requests, yaml
 COLINFO="\033[0;35m"
 COLRESET="\033[m"
 
-baseurl = 'https://github.dxc.com/api/v3'
-headers = {"Content-Type": "application/json", "Accept": "application/vnd.github.symmetra-preview+json"}
+baseurl = 'https://api.github.com/'
+headers = {"Content-Type": "application/json", "Accept": "application/vnd.github.symmetra-preview+json", "Accept: application/vnd.github.v3+json"}
 user = os.environ['SHORTNAME']
 token = os.environ['TOKEN']
 repo = user + '/pet-clinic'
