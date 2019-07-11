@@ -57,7 +57,7 @@ fi
 echo -e "${COLINFO}Cloning $REPO Git repository...${COLRESET}"
 echo -e "${COLLOGS}"
 cd ~
-rm -fR pet-clinic
+rm -fR $REPO
 git clone https://${SHORTNAME}:${TOKEN}@${GITHUB}/${SHORTNAME}/${REPO}.git
 echo -e "${COLRESET}"
 

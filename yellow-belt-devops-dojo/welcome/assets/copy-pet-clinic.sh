@@ -55,7 +55,7 @@ check_credentials
 
 pet_clinic_copy()
 {
-  echo -e "${COLINFO}Copying Pet-Clinic Git repository to user's account ..${COLRESET}"
+  echo -e "${COLINFO}Copying $REPO Git repository to user's account ..${COLRESET}"
   echo -e "${COLLOGS}"
 
   rm -fr /tmp/${REPO}
