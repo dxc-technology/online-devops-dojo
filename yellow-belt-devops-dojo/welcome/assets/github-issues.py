@@ -10,7 +10,7 @@ COLINFO="\033[0;35m"
 COLRESET="\033[m"
 
 baseurl = 'https://api.github.com/'
-headers = {"Content-Type": "application/json", "Accept": "application/vnd.github.symmetra-preview+json", "Accept: application/vnd.github.v3+json"}
+headers = {"Content-Type": "application/json", "Accept": "application/vnd.github.symmetra-preview+json", "Accept": "application/vnd.github.v3+json"}
 user = os.environ['SHORTNAME']
 token = os.environ['TOKEN']
 repo = user + '/pet-clinic'
