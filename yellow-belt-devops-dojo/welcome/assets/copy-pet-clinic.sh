@@ -85,7 +85,7 @@ if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
   curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/repos/${ORGREPO}/${REPO} | grep "Not Found"
   PETCLINIC_NOT_AVAILABLE=$?
   if [ $PETCLINIC_NOT_AVAILABLE -eq 0 ]; then
-    echo -e "${COLQUESTION}Error: a ressource is missing for the module to execute. Support has been notified. Please retry the module tomorrow.${COLRESET}"
+    echo -e "${COLQUESTION}Error: a ressource is missing for the module to execute. Please submit an issue to https://${GITHUB}/${ORGREPO}/yellow-belt-devops-dojo/issues .${COLRESET}"
     exit 1
   else
     pet_clinic_copy
