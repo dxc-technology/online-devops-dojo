@@ -72,20 +72,20 @@ pet_clinic_copy()
 
 # Check if user repository already exists
 echo -e "${COLLOGS}"
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
 REPO_DOES_NOT_EXIST=$?
 if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
-  curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data "{\"name\":\"${REPO}\"}" https://${GITHUB}/user/repos | grep "Not Found"
+  curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data "{\"name\":\"${REPO}\"}" ${GITHUBAPIURL}/user/repos | grep "Not Found"
   USER_HAS_NO_ACCESS_TO_REPO=$?
   if [ $USER_HAS_NO_ACCESS_TO_REPO -eq 0 ]; then
     echo -e "${COLQUESTION}Error: it seems that your credentials are invalid. As per the instructions please use your GitHub user account and a Personal Access Token with 'repo' and 'admin:repo_hook' scopes at https://github.com/settings/tokens/new ${COLRESET}"
     exit 1
   fi
  
-  curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/repos/${ORGREPO}/${REPO} | grep "Not Found"
+  curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/repos/${ORGREPO}/${REPO} | grep "Not Found"
   PETCLINIC_NOT_AVAILABLE=$?
   if [ $PETCLINIC_NOT_AVAILABLE -eq 0 ]; then
-    echo -e "${COLQUESTION}Error: a ressource is missing for the module to execute. Please submit an issue to https://${GITHUB}/${ORGREPO}/yellow-belt-devops-dojo/issues .${COLRESET}"
+    echo -e "${COLQUESTION}Error: a ressource is missing for the scenario to execute. Please submit an issue to https://${GITHUB}/${ORGREPO}/yellow-belt-devops-dojo/issues .${COLRESET}"
     exit 1
   else
     pet_clinic_copy
