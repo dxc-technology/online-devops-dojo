@@ -10,6 +10,7 @@ COLLOGS="\u001b[35m"
 COLRESET="\u001b[m"
 REPO=pet-clinic
 ORGREPO=pberthonneau
+KATAACCOUNT=pberthonneau
 
 if [ "$DEBUG" = false ] ; then
   CURL_NODEBUG="-sS"
@@ -41,14 +42,14 @@ git config --global user.email "${EMAIL}"
 
 # Check if repository already exists and properly populated
 echo -e "${COLLOGS}"
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/api/v3/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
 REPO_DOES_NOT_EXIST=$?
 if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
   echo -e "${COLRESET}> I'm confused..."
-  echo -e "> I was expecting to find the pet-clinic repository under your GitHub username and I didn't, or the content does not look right."
+  echo -e "> I was expecting to find the $REPO repository under your GitHub username and I didn't, or the content does not look right."
   echo -e "> That must be me. But just in case:"
   echo -e "> - Close this Katacoda window: the environment will expire soon and you need ample time to complete the module"
-  echo -e "> - Go through the Welcome module which will set everything up for you: https://github.com/pages/GDO-CTO/Katacoda/katacoda/welcome/"
+  echo -e "> - Go through the Welcome module which will set everything up for you: https://katacoda.com/${KATAACCOUNT}/courses/yellow-belt-devops-dojo/welcome"
   echo -e ""
   exit 1
 fi
@@ -69,9 +70,9 @@ docker run --name nginx -p 9876:80 -v /root/nginx:/usr/share/nginx/html:ro -d ng
 #
 # Remove existing web hook
 #
-echo -e "${COLINFO}Configuring your GitHub pet-clinic repository...${COLRESET}"
+echo -e "${COLINFO}Configuring your GitHub $REPO repository...${COLRESET}"
 echo -e "${COLLOGS}"
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET https://${GITHUB}/api/v3/repos/$SHORTNAME/pet-clinic/hooks | grep id | cut -d ":" -f2 | cut -c 1-6> ids.txt
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/hooks | grep id | cut -d ":" -f2 | cut -c 1-6> ids.txt
 
 filename="ids.txt"
 
@@ -80,7 +81,7 @@ remove_existing_webhook()
 while read -r line
 do
     name="$line"
-        curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X DELETE https://${GITHUB}/api/v3/repos/$SHORTNAME/pet-clinic/hooks/"$line"
+        curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X DELETE ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/hooks/"$line"
 done < "$filename"
 }
 remove_existing_webhook
@@ -107,7 +108,7 @@ echo -e "${COLINFO}Updating GitHub web hook to point to Katacoda Jenkins...${COL
 echo -e "${COLLOGS}"
 JenkinsUrl=`curl ${CURL_NODEBUG} "https://katacoda.com/metadata/generate-url?port=8080&ip=$(ip addr show ens3 | grep -Po 'inet \K[\d.]+')"`
 
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data '{"name": "web","active": true,"events": [ "push", "pull_request" ], "config":{"url": "https://'"$JenkinsUrl"'/github-webhook/","content_type":"json"}}' https://${GITHUB}/api/v3/repos/$SHORTNAME/pet-clinic/hooks
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data '{"name": "web","active": true,"events": [ "push", "pull_request" ], "config":{"url": "https://'"$JenkinsUrl"'/github-webhook/","content_type":"json"}}' ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/hooks
 }
 adding_webhook
 
