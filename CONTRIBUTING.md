@@ -43,7 +43,7 @@ section for more details why the development is done directly on fork's `master`
    git commit ...
    git push
    ```
-6. Your changes should be visible in Katacoda at https://katacoda.com/your_katacoda_user
+6. Your changes should be visible in Katacoda at https\://katacoda.com/your_katacoda_user
 7. To continue development of your feature:
    ```
    # hack, hack, hack
@@ -85,28 +85,28 @@ git push --delete feature-X
 ## GitHub Repository Clone
 
 Yellow Belt development is managed with 2 repositories:
-* https://github.dxc.com/devops/yellow-belt-dev - contains the course outlines
+* https://github.com/???????????????????????????/yellow-belt-dev - contains the course outlines
   and module plans
-* https://github.dxc.com/devops/yellow-belt-scenarios-dev - contains Katacoda
+* https://github.com/dxc-technology/yellow-belt-devops-dojo - contains Katacoda
   implementations of the scenarios above
 
 Once the development complete the scenarios move to another repository that is
 used by the online class.
 
 To prepare your dedicated GitHub repository:
-1. Fork in GitHub https://github.dxc.com/devops/yellow-belt-scenarios-dev
-2. Clone *your forked repository* (e.g. https://github.dxc.com/jdoe1000/yellow-belt-scenarios-dev) to your workstation
+1. Fork in GitHub https://github.com/dxc-technology/yellow-belt-devops-dojo
+2. Clone *your forked repository* (e.g. https://github.com/jdoe1000/yellow-belt-devops-dojo) to your workstation
 3. Set your remotes as follows:
    ```
    cd yellow-belt-scenarios-dev
-   git remote add upstream git@github.dxc.com:devops/yellow-belt-scenarios-dev.git
+   git remote add upstream git@github.com:dxc-technology/yellow-belt-devops-dojo.git
    git remote set-url upstream --push DISABLED
    ```
    Running `git remote -v` should give something similar to:
    ```
-   origin  git@github.dxc.com:jdoe1000/yellow-belt-scenarios-dev.git (fetch)
-   origin  git@github.dxc.com:jdoe1000/yellow-belt-scenarios-dev.git (push)
-   upstream        git@github.dxc.com:devops/yellow-belt-scenarios-dev.git (fetch)
+   origin  git@github.com:jdoe1000/yellow-belt-devops-dojo.git (fetch)
+   origin  git@github.com:jdoe1000/yellow-belt-devops-dojo.git (push)
+   upstream        git@github.com:dxc-technology/yellow-belt-devops-dojo.git (fetch)
    upstream        DISABLED (push)
    ```
    The use of `upstream --push DISABLED` is just a practice preventing those
@@ -126,7 +126,7 @@ have dedicated environments for their class right in the browser.
    the page
 4. Set _Private Git Repository_ to `Yes`
 5. Set _Git Scenario Repository_ to the address of your fork (e.g.
-   https://github.dxc.com/jdoe1000/yellow-belt-scenarios-dev)
+   https://github.com/jdoe1000/yellow-belt-devops-dojo)
 6. Make sure to click on `SAVE` button
 7. Do not close this window as we will need the values from _Git Deploy Key_
    and _Git Webhook Secret_
@@ -136,7 +136,7 @@ have dedicated environments for their class right in the browser.
 We now need to configure GitHub repository hook so that Katacoda is notified
 each time you push updates to your repository.
 
-1. Open new browser window and go to your fork's URL (e.g. https://github.dxc.com/jdoe1000/yellow-belt-scenarios-dev)
+1. Open new browser window and go to your fork's URL (e.g. https://github.com/jdoe1000/yellow-belt-devops-dojo)
 2. Open the repository _Settings_ page tab and then _Deploy keys_ (left navigation)
 3. Click on _Add deploy key_ button and use the following information to set it up:
    * _Title_: `katacoda.com`
@@ -153,27 +153,11 @@ each time you push updates to your repository.
 
 If all the setup is done correctly you should be able to access your Katacoda environment at:
 
-https://katacoda.com/your_katacoda_user
-
-## Private Katacoda modules
-
-By default, Katacoda modules with DXC Intellectual Property must be private. This is controlled by Katacoda's `index.json` file.
-In this example, the `private` attribute is set to `true`, which means that the Katacoda module are only visible by your user.
-
-```json
-{
-  "pathwayTitle": "DevOps Dojo Yellow Belt",
-  "title": "Shift Left on Security",
-  "private": true,
-  "description": "Security must be considered from the beginning and continuously assessed.",
-  "difficulty": "intermediate",
-  "time": "45 minutes"
-}
-```
+https\://katacoda.com/your_katacoda_user
 
 # Spell Check
 
-Spell check is performed using [Markdown Spell Check \(mdspell\)](https://www.npmjs.com/package/markdown-spellcheck).  A spell checking failure in the pipeline will block a merge.  To identify the failure, open the Jenkins pipeline where the failure occurred (click the red X in the GitHub Pull Request), click on the *Spell Check* step, and review the error in the output log.
+Spell check is performed using [Markdown Spell Check \(mdspell\)](https://www.npmjs.com/package/markdown-spellcheck). A spell checking failure in the pipeline will block a merge.  To identify the failure, open the Jenkins pipeline where the failure occurred (click the red X in the GitHub Pull Request), click on the *Spell Check* step, and review the error in the output log.
 
 The system is currently set to validate against a *US English* dictionary.
 
@@ -199,11 +183,4 @@ Here are some tips to address spell checking failures:
 - URLs
   - Unfortunately, linking to a URL by providing the URL in content will cause a spell check failure. To work around this, either refer to the web site without using the URL, or add the URL to the `.spelling` file.
 
-```
-[www.dxc.technology](http://www.dxc.technology) -> Fails by default
-[DXC Technology](http://www.dxc.technology) -> Passes
-[www.dxc.technology](http://www.dxc.technology) -> Passes IF "www.dxc.technology" exists in .spelling
-[http://www.dxc.technology](http://www.dxc.technology) -> Passes IF "www.dxc.technology" exists in .spelling
-```
-
-If you have a spell checking failure you can't figure out how to fix, [open an issue to request help](https://github.dxc.com/devops/yellow-belt-scenarios/issues/new) or add a comment to your pull request.
+If you have a spell checking failure you can't figure out how to fix, [open an issue to request help](https://github.com/dxc-technology/yellow-belt-devops-dojo/issues/new) or add a comment to your pull request.

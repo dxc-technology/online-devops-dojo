@@ -1,6 +1,6 @@
 {
   "pathwayTitle": "DevOps Dojo Yellow Belt",
-  "private": true,
+  "private": false,
   "title": "Continuous Integration",
   "description": "Experience continuous integration, the process of merging work from all the developers in a team into the master branch as and when required.",
   "difficulty": "intermediate",
