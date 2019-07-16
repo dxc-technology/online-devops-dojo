@@ -8,29 +8,29 @@ Chun explains that she is a coach, change facilitator and technologist, that she
 
 Chun's shares her top learnings from previous transformation efforts with the team:
 
-* Culture eats Transformation for Lunch
+* Culture eats Transformation for Lunch.
 
-* Tools are [least] important
+* Tools are [least] important.
 
-* Leadership support is key
+* Leadership support is key.
 
-* Invest in a Small Enablement group
+* Invest in a Small Enablement group.
 
-* Choose wisely what is mandated and top-down
+* Choose wisely what is mandated and top-down.
 
-* Don’t skip the Value Stream Mapping step
+* Don’t skip the Value Stream Mapping step.
 
-* Set overall goals/measures
+* Set overall goals/measures.
 
-* Create Improvement Themes
+* Create Improvement Themes.
 
-* Continuous Improvement via DevOps Kaizen NOT a Big Bang approach
+* Continuous Improvement via DevOps Kaizen NOT a Big Bang approach.
 
-* Focus on a small set of common capabilities / shared services
+* Focus on a small set of common capabilities / shared services.
 
-* Develop Champions, Change Agents, Coaches
+* Develop Champions, Change Agents, Coaches.
 
-* Start now and never finish
+* Start now and never finish.
 
 The team are excited and challenged by the ask.
 

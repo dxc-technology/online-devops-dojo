@@ -1,6 +1,6 @@
 # Peer review
 
-![Dan](../../assets/yellow-belt-devops-dojo/version-control/dan.png)
+![Dan](../../assets/online-devops-dojo/version-control/dan.png)
 
 > OK, you submitted your changes. They are ready to be reviewed by someone 
 > before they get merged.
@@ -8,7 +8,7 @@
 
 ## Steps
 
-* Go to https://github.dxc.com/YOUR_SHORTNAME/pet-clinic/pulls (use your actual GitHub user name)
+* Go to https://github.com/YOUR_SHORTNAME/pet-clinic/pulls (use your actual GitHub user name)
 * Click on the pull request you just created
 * Enter a comment to ask for a review from **Paulo**, our product owner: `@paulo - can you please review this pull request?`{{copy}}. (It's important you type the comment exactly like that for the lab to work - you may want to copy/paste the comment)
 * Paulo will provide its comments
@@ -22,4 +22,4 @@
 * From the pull request, ask Paulo for another review by adding a new comment: `@paulo, can you check now?`{{copy}}
 * Once Paulo is happy with the changes, **Paulo** will merge the pull request
 
-🤖 **Note**: Paulo is a bot, implemented as a "[GitHub app](https://developer.github.com/apps/about-apps/)". Its code is Inner Source, here: https://github.dxc.com/Platform-DXC/devops-githubapp-dojo-bot. 
+🤖 **Note**: Paulo is a bot, implemented as a "[GitHub app](https://developer.github.com/apps/about-apps/)". Its code is Inner Source, here: https://github.com/dxc-technology/devops-githubapp-dojo-bot. 

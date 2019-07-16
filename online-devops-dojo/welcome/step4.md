@@ -3,7 +3,7 @@ context of issues or pull requests. This is done through a [GitHub Application](
 which you need to "install" in your pet-clinic repository.
 
 
-* Go to DevOps Dojo Bot web site: https://github.dxc.com/github-apps/devops-dojo-bot
+* Go to DevOps Dojo Bot web site: https://github.com/github-apps/devops-dojo-bot
 
 ![](../../assets/online-devops-dojo/welcome/probot.jpg)
 

@@ -1,4 +1,3 @@
 # Conclusion
 
-This is it, you are now all set to start your DevOps Dojo Yellow Belt!
-
+This is it, you are now all set to start your Online DevOps Dojo!

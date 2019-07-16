@@ -16,7 +16,7 @@ In order to further isolate ourselves from the original pet clinic repository, w
 
   `./copy-pet-clinic.sh`{{execute}}
 
-The script will ask you for your github.dxc.com Personal Access Token. See below for instructions to generate.
+The script will ask you for your github.com Personal Access Token. See below for instructions to generate.
 
 ### Generate Personal Access Token
 

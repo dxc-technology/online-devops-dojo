@@ -1,6 +1,6 @@
 ## Welcome!
 
-Welcome to the **Yellow Belt DevOps Dojo** lab on Version Control.
+Welcome to the **Online DevOps Dojo** lab on Version Control.
 
 ## Purpose
 

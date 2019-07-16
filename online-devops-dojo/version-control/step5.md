@@ -1,6 +1,6 @@
 # Create a Pull Request
 
-![Dan](../../assets/yellow-belt-devops-dojo/version-control/dan.png)
+![Dan](../../assets/online-devops-dojo/version-control/dan.png)
 
 > Although we pushed the new code back to GitHub, it is still in its isolated branch, 
 > not impacting the work of others in the team.
@@ -9,7 +9,7 @@ can be reviewed.
 
 ## Steps
 
-* Go to GitHub, in the pet clinic repository https://github.dxc.com/YOUR_SHORTNAME/pet-clinic (use your actual GitHub user name)
+* Go to GitHub, in the pet clinic repository https://github.com/YOUR_SHORTNAME/pet-clinic (use your actual GitHub user name)
 * Click on 'Compare & pull Request'
 * Check that the title of the pull request: is `#1: add support for horses in database initialization`{{copy}}, which corresponds to the first line of your commit message
 * Enter the comments and review your changes and click on 'Create Pull Request'.

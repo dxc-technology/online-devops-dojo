@@ -4,9 +4,9 @@
   Please add an X to check boxes which apply below (and remove spaces between brackets)
 -->
 
-- [ ] I have a question about the Yellow Belt DevOps Dojo repository or materials
-- [ ] I want to make an enhancement request for the Yellow Belt DevOps Dojo repository or materials
-- [ ] I wish to report an issue with the Yellow Belt DevOps Dojo repository, documentation or materials
+- [ ] I have a question about the Online DevOps Dojo repository or materials
+- [ ] I want to make an enhancement request for the Online DevOps Dojo repository or materials
+- [ ] I wish to report an issue with the Online DevOps Dojo repository, documentation or materials
 
 ---
 

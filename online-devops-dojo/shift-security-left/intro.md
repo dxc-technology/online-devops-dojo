@@ -1,6 +1,6 @@
 ## Welcome!
 
-Welcome to the **Yellow Belt DevOps Dojo** module on shifting security left.
+Welcome to the **Online DevOps Dojo** module on shifting security left.
 
 ## Purpose
 
