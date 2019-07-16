@@ -1,6 +1,6 @@
 ## Welcome!
 
-Welcome to the **Yellow Belt DevOps Dojo** Katacoda course.
+Welcome to the **Online DevOps Dojo** Katacoda course.
 
 This course is made up of 4 open source modules.
 
@@ -18,10 +18,10 @@ So, go grab a cup of your favorite caffeinated beverage, close your email, put y
 
 ## Welcome module
 
-In this Welcome module lab, we will get you started and setup a dedicated environment for you, to allow you complete the labs for the other modules in the  **Yellow Belt DevOps Dojo** at your own pace.
+In this Welcome module lab, we will get you started and setup a dedicated environment for you, to allow you complete the labs for the other modules in the  **Online DevOps Dojo** at your own pace.
 
 First, to begin let us introduce you to the story of a business formed by the CEO Charlie, a DevOps team, an application and its delivery chain (continuous delivery pipeline).
 
 Once upon a time, not so long ago in a galaxy not so far away... 
 
-![](../../assets/yellow-belt-devops-dojo/welcome/onceuponatime.jpg)
+![](../../assets/online-devops-dojo/welcome/onceuponatime.jpg)

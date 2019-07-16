@@ -1,12 +1,12 @@
 As Dan the developer
 
-![](../../assets/yellow-belt-devops-dojo/continuous-integration/dan.png)
+![](../../assets/online-devops-dojo/continuous-integration/dan.png)
 
  you are working on the user story which was prioritized by Paulo, the product owner.
 
-![](../../assets/yellow-belt-devops-dojo/continuous-integration/paulo.png)
+![](../../assets/online-devops-dojo/continuous-integration/paulo.png)
 
-![](../../assets/yellow-belt-devops-dojo/continuous-integration/user-story.png)
+![](../../assets/online-devops-dojo/continuous-integration/user-story.png)
 
 The user story is visible as a GitHub issue in your GitHub repo: [https://github.com/[your_username]/pet-clinic/issues](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#user-story)
 

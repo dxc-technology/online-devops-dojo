@@ -1,4 +1,4 @@
-![](../../assets/yellow-belt-devops-dojo/leading-change/team-chat.jpg)
+![](../../assets/online-devops-dojo/leading-change/team-chat.jpg)
 
 Click: `./dialog1.sh`{{execute}}
 

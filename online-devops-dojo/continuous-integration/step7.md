@@ -4,7 +4,7 @@ It is now time to involve someone else for a peer review.
 
 ## Tasks
 
-![](../../assets/yellow-belt-devops-dojo/continuous-integration/tina.png)
+![](../../assets/online-devops-dojo/continuous-integration/tina.png)
 
 * In the pull request, add a comment to ask Tina the tester to review the pull request: `@tina, can you have a look at this?`{{copy}}
 * After checking the changes in the "**Files changed**" tab, Tina will have comments, and wants you to replace "Jolly Jumper" by "Silver Blaze", around line 50

@@ -6,15 +6,15 @@ Struggling to square the circle and unsure how to proceed, he came across a talk
 
 * The **First Way** which aims at maximizing throughput of the entire system, as opposed to the throughput of a specific silo of work or department. 
 
-![The First Way](../../assets/yellow-belt-devops-dojo/leading-change/first-way.png)
+![The First Way](../../assets/online-devops-dojo/leading-change/first-way.png)
 
 * The **Second Way** about creating the right to left feedback loops. The goal being to shorten and amplify feedback loops so corrections can be continually made.
 
-![The Second Way](../../assets/yellow-belt-devops-dojo/leading-change/second-way.png)
+![The Second Way](../../assets/online-devops-dojo/leading-change/second-way.png)
 
 * The **Third Way**  involves creating a culture that fosters continual experimentation and understanding that repetition and practice are the prerequisites to mastery.
 
-![The Third Way](../../assets/yellow-belt-devops-dojo/leading-change/third-way.png)
+![The Third Way](../../assets/online-devops-dojo/leading-change/third-way.png)
 
 
 Researching further:

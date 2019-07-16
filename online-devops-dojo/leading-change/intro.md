@@ -1,6 +1,6 @@
 ## Welcome!
 
-Welcome to the **Yellow Belt DevOps Dojo** Leading Change module.
+Welcome to the **Online DevOps Dojo** Leading Change module.
 
 ## Purpose
 
