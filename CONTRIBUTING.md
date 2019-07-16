@@ -43,7 +43,7 @@ section for more details why the development is done directly on fork's `master`
    git commit ...
    git push
    ```
-6. Your changes should be visible in Katacoda at https\://katacoda.com/your_katacoda_user
+6. Your changes should be visible in Katacoda at h&#8203;ttps://katacoda.com/your_katacoda_user
 7. To continue development of your feature:
    ```
    # hack, hack, hack
@@ -153,7 +153,7 @@ each time you push updates to your repository.
 
 If all the setup is done correctly you should be able to access your Katacoda environment at:
 
-https\://katacoda.com/your_katacoda_user
+h&#8203;ttps://katacoda.com/your_katacoda_user
 
 # Spell Check
 
