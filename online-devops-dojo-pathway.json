@@ -1,10 +1,10 @@
 {
-  "title": "Yellow Belt DevOps Dojo",
+  "title": "Online DevOps Dojo",
   "description": "Learning DevOps, for real.",
   "courses": [
     {
       "title": "Welcome",
-      "description": "Getting started with the Yellow Belt DevOps Dojo: understanding the back story, setting up your environment.",
+      "description": "Getting started with the Online DevOps Dojo: understanding the back story, setting up your environment.",
       "course_id": "welcome"
     },
     {
