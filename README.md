@@ -1,5 +1,5 @@
-# yellow-belt-scenarios
+# online-devops-dojo
 
-This repository contains the **Yellow Belt DevOps Dojo** Katacoda Scenarios.
+This repository contains the **DevOps Dojo** Katacoda Scenarios.
 
-The scenarios are published at: ???
+To be Completed

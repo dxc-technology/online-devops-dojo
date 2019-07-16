@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "DevOps Dojo Yellow Belt",
   "title": "Shift Left on Security",
-  "private": false,
+  "private": true,
   "description": "Security must be considered from the beginning and continuously assessed.",
   "difficulty": "intermediate",
   "time": "45 minutes",

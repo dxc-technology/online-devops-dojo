@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "DevOps Dojo Yellow Belt",
   "title": "Welcome",
-  "private": false,
+  "private": true,
   "description": "Getting started with the Yellow Belt DevOps Dojo: understanding the back story, setting up your environment.",
   "difficulty": "beginner",
   "time": "30 minutes",

@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "DevOps Dojo Yellow Belt",
   "title": "Leading Change",
-  "private": false,
+  "private": true,
   "description": "Learn about the importance of Leading Change in DevOps Transformations. A large factor in the success of DevOps transformations is driven by the organization's ability to empower people to lead change at the different levels in the organization.",
   "difficulty": "intermediate",
   "time": "30 minutes",
