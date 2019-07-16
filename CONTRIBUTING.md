@@ -1,4 +1,4 @@
-# Contributing to Yellow Belt DevOps Dojo
+# Contributing to Online DevOps Dojo
 
 We :heart: [Pull Requests](https://help.github.com/articles/about-pull-requests/) for fixing or adding content. Thanks for your contribution!
 
@@ -7,10 +7,9 @@ the [pull request](https://help.github.com/articles/about-pull-requests/) proces
 
 If you plan to contribute often or have a larger change to make, it is best to setup an environment for contribution. This is what the rest of this page is about.
 
-# Yellow Belt Development Environment Setup
+# Development Environment Setup
 
-This guide provides steps to setup a dedicated environment for Yellow Belt
-development. It includes Git and Katacoda related instructions.
+This guide provides steps to setup a dedicated environment for DevOps Dojo development. It includes Git and Katacoda related instructions.
 
 ## Prerequisites
 
@@ -21,7 +20,7 @@ Before you get started make sure to perform the one time setup:
 
 ## Development Process
 
-Steps below illustrate how to work on a new Yellow Belt feature. See [Katacoda and branches](#katacoda-and-branches)
+Steps below illustrate how to work on a new DevOps Dojo feature. See [Katacoda and branches](#katacoda-and-branches)
 section for more details why the development is done directly on fork's `master`.
 
 1. Fetch latest changes from main repository:
@@ -84,29 +83,26 @@ git push --delete feature-X
 
 ## GitHub Repository Clone
 
-Yellow Belt development is managed with 2 repositories:
-* https://github.com/???????????????????????????/yellow-belt-dev - contains the course outlines
+DevOps Dojo development is managed with two repositories:
+* https://github.com/dxc-technology/devops-dojo-plans - contains the course outlines
   and module plans
-* https://github.com/dxc-technology/yellow-belt-devops-dojo - contains Katacoda
+* https://github.com/dxc-technology/online-devops-dojo - contains Katacoda
   implementations of the scenarios above
 
-Once the development complete the scenarios move to another repository that is
-used by the online class.
-
 To prepare your dedicated GitHub repository:
-1. Fork in GitHub https://github.com/dxc-technology/yellow-belt-devops-dojo
-2. Clone *your forked repository* (e.g. https://github.com/jdoe1000/yellow-belt-devops-dojo) to your workstation
+1. Fork in GitHub https://github.com/dxc-technology/online-devops-dojo
+2. Clone *your forked repository* (e.g. https://github.com/jdoe1000/online-devops-dojo) to your workstation
 3. Set your remotes as follows:
    ```
-   cd yellow-belt-scenarios-dev
-   git remote add upstream git@github.com:dxc-technology/yellow-belt-devops-dojo.git
+   cd online-devops-dojo
+   git remote add upstream git@github.com:dxc-technology/online-devops-dojo.git
    git remote set-url upstream --push DISABLED
    ```
    Running `git remote -v` should give something similar to:
    ```
-   origin  git@github.com:jdoe1000/yellow-belt-devops-dojo.git (fetch)
-   origin  git@github.com:jdoe1000/yellow-belt-devops-dojo.git (push)
-   upstream        git@github.com:dxc-technology/yellow-belt-devops-dojo.git (fetch)
+   origin  git@github.com:jdoe1000/online-devops-dojo.git (fetch)
+   origin  git@github.com:jdoe1000/online-devops-dojo.git (push)
+   upstream        git@github.com:dxc-technology/online-devops-dojo.git (fetch)
    upstream        DISABLED (push)
    ```
    The use of `upstream --push DISABLED` is just a practice preventing those
@@ -115,7 +111,7 @@ To prepare your dedicated GitHub repository:
 
 ## Katacoda Setup
 
-katacoda.com is lab environment used by Yellow Belt that allows students to
+katacoda.com is lab environment used by Online DevOps Dojo that allows students to
 have dedicated environments for their class right in the browser.
 
 1. Sign up for new account on https://katacoda.com
@@ -126,7 +122,7 @@ have dedicated environments for their class right in the browser.
    the page
 4. Set _Private Git Repository_ to `Yes`
 5. Set _Git Scenario Repository_ to the address of your fork (e.g.
-   https://github.com/jdoe1000/yellow-belt-devops-dojo)
+   https://github.com/jdoe1000/online-devops-dojo)
 6. Make sure to click on `SAVE` button
 7. Do not close this window as we will need the values from _Git Deploy Key_
    and _Git Webhook Secret_
@@ -136,14 +132,14 @@ have dedicated environments for their class right in the browser.
 We now need to configure GitHub repository hook so that Katacoda is notified
 each time you push updates to your repository.
 
-1. Open new browser window and go to your fork's URL (e.g. https://github.com/jdoe1000/yellow-belt-devops-dojo)
+1. Open new browser window and go to your fork's URL (e.g. https://github.com/jdoe1000/online-devops-dojo)
 2. Open the repository _Settings_ page tab and then _Deploy keys_ (left navigation)
 3. Click on _Add deploy key_ button and use the following information to set it up:
    * _Title_: `katacoda.com`
    * _Key_: paste the _Git Deploy Key_ value from your Katacoda settings page
    * _Allow write access_: leave unchecked
 4. Click on _Add deploy key_ button
-5. Click on _Hooks_ (left navigation)
+5. Click on _Webhooks_ (left navigation)
 6. Click on _Add webhook_ button and use the following information to set it up:
    * _Payload URL_: https://editor.katacoda.com/scenarios/updated
    * _Content type_: `application/json`
@@ -183,4 +179,4 @@ Here are some tips to address spell checking failures:
 - URLs
   - Unfortunately, linking to a URL by providing the URL in content will cause a spell check failure. To work around this, either refer to the web site without using the URL, or add the URL to the `.spelling` file.
 
-If you have a spell checking failure you can't figure out how to fix, [open an issue to request help](https://github.com/dxc-technology/yellow-belt-devops-dojo/issues/new) or add a comment to your pull request.
+If you have a spell checking failure you can't figure out how to fix, [open an issue to request help](https://github.com/dxc-technology/online-devops-dojo/issues/new) or add a comment to your pull request.
