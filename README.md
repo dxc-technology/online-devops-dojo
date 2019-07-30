@@ -2,7 +2,7 @@
 
 This repository contains the **Online DevOps Dojo** Katacoda Scenarios.
 
-In case you are landing here in the first place, please read first [about DevOps Dojo](https://github.com/pberthonneau/about-devops-dojo/blob/initial/README.md).
+In case you are landing here in the first place, please read first [about DevOps Dojo](https://github.dxc.com/pages/pberthonneau/about-devops-dojo/).
 
 # Changelog
 
@@ -10,7 +10,7 @@ You should find [here](./CHANGELOG.md) the history of changes.
 
 # Contributing
 
-The instructions are available just[here](./CONTRIBUTING.md). 
+The instructions are available just [here](./CONTRIBUTING.md). 
 
 # Issues
 
