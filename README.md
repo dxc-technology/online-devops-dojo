@@ -1,8 +1,8 @@
 # Online DevOps Dojo
 
-This repository contains the **Online DevOps Dojo** Katacoda Scenarios.
+This repository contains the source of **Online DevOps Dojo** Katacoda Scenarios.
 
-In case you are landing here in the first place, please read first [about DevOps Dojo](https://github.dxc.com/pages/pberthonneau/about-devops-dojo/).
+In case you are landing here in first place or want to run the trainings, please read first [about DevOps Dojo](https://dxc-technology.github.io/about-devops-dojo/).
 
 # Changelog
 
