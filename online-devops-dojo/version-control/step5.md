@@ -9,9 +9,10 @@ can be reviewed.
 
 ## Steps
 
-* Go to GitHub, in the pet clinic repository https://github.com/YOUR_SHORTNAME/pet-clinic (use your actual GitHub user name)
+* Go to GitHub, in the pet clinic repository (check the terminal window for a link to the issues module in your pet-clinic repository)
+https://github.com/YOUR_SHORTNAME/pet-clinic (use your actual GitHub user name)
 * Click on 'Compare & pull Request'
-* Check that the title of the pull request: is `#1: add support for horses in database initialization`{{copy}}, which corresponds to the first line of your commit message
+* Check that the title of the pull request is `#1: add support for horses in database initialization`{{copy}}, which corresponds to the first line of your commit message
 * Enter the comments and review your changes and click on 'Create Pull Request'.
 
 ✏ **Note**: The title of the pull request, which references a user story in GitHub matters: once the pull request is merged, the corresponding user story (GitHub issue #1) will be automatically closed.

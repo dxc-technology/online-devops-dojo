@@ -1,4 +1,4 @@
-# Contributing to Online DevOps Dojo
+# Contributing to the Online DevOps Dojo
 
 We :heart: [Pull Requests](https://help.github.com/articles/about-pull-requests/) for fixing or adding content. Thanks for your contribution!
 
@@ -83,11 +83,11 @@ git push --delete feature-X
 
 ## GitHub Repository Clone
 
-DevOps Dojo development is managed with two repositories:
-* https://github.com/dxc-technology/devops-dojo-plans - contains the course outlines
-  and module plans
+DevOps Dojo development is managed with one repository:
+<!--* https://github.com/dxc-technology/devops-dojo-plans - contains the course outlines
+  and module plans-->
 * https://github.com/dxc-technology/online-devops-dojo - contains Katacoda
-  implementations of the scenarios above
+  implementations of the scenarios
 
 To prepare your dedicated GitHub repository:
 1. Fork in GitHub https://github.com/dxc-technology/online-devops-dojo
