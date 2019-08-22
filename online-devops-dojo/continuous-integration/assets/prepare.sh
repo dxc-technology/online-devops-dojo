@@ -12,8 +12,8 @@ COLINFO="\u001b[37m"
 COLLOGS="\u001b[35m"
 COLRESET="\u001b[m"
 REPO=pet-clinic
-ORGREPO=pberthonneau
-KATAACCOUNT=pberthonneau
+ORGREPO=dxc-technology
+KATAACCOUNT=online-devops-dojo
 
 if [ "$DEBUG" = false ] ; then
   CURL_NODEBUG="-sS"
