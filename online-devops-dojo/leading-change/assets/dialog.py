@@ -85,7 +85,7 @@ def redraw_on_resize(stdscr, dialog_id):
     stdscr.clear()
     stdscr.refresh()
     redraw_dialog = 0
-    dialogs2 = yaml.load_all(open(dialog_file, 'r'))
+    dialogs2 = yaml.load_all(open(dialog_file, 'r'), Loader=yaml.FullLoader)
     for dialog2 in dialogs2:
         height, width = stdscr.getmaxyx()
         stdscr.addstr(dialog2['speaking'] + ">", curses.color_pair(1))
