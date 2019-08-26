@@ -56,7 +56,7 @@ def main():
 
     # read the labels
     try:
-        labels = yaml.load_all(open(labels_file, 'r'))
+        labels = yaml.load_all(open(labels_file, 'r'), Loader=yaml.FullLoader)
     except yaml.YAMLError as exc:
         print(COLINFO + exc + COLRESET)
     
