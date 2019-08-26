@@ -30,7 +30,7 @@ def main():
 
     # read the issues
     try:
-        issues = yaml.load_all(open(issues_file, 'r'))
+        issues = yaml.load_all(open(issues_file, 'r'), Loader=yaml.FullLoader)
     except yaml.YAMLError as exc:
         print(COLINFO + exc + COLRESET)
     
