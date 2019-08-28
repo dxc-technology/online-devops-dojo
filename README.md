@@ -14,7 +14,7 @@ The instructions are available just [here](./CONTRIBUTING.md).
 
 # Issues
 
-If you experience some problems with the existing scenarios, please open an [issue](./issues/new/choose) and let us know.
+If you experience some problems with the existing scenarios, please open an [issue](https://github.com/dxc-technology/online-devops-dojo/issues/new/choose) and let us know.
 
 # License
 
