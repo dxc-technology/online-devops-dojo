@@ -8,6 +8,5 @@ Let's go ahead and prepare our environment, click this:
 
  `./prepare.sh`{{execute}}
 
-...and wait for the "Click to Continue" message.
-
+...and wait for the "Click on 'CONTINUE'" message.
 💡 **TIP**: 🦊 Firefox user? Use `CTRL`+`INS` / `SHIFT`+`INS` to copy/paste your Personal Access Token in the window.

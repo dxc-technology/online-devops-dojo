@@ -38,9 +38,10 @@
 ## Steps
 
 * In the editor to the right, head to `src/main/resources/db/hsqldb` folder and  open `data.sql`
-* Below `INSERT INTO types VALUES (6, 'hamster');` around line 23, add a new line to insert the horse entry: `INSERT INTO types VALUES (7, 'horse');`{{copy}}
+* Below `INSERT INTO types VALUES (6, 'hamster');` around line 23, add a new line to insert the horse entry: `INSERT INTO types VALUES (7, 'horse');`{{copy}}  
+  Note that changes are saved automatically.
 * Check the branch in which you are working: `git branch`{{execute}}
-* Check the status of the files changed: `git status`{{execute}}
+* Check the status of the file changed: `git status`{{execute}}
 
 ![Dan](../../assets/online-devops-dojo/version-control/dan.png)
 

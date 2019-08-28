@@ -8,9 +8,7 @@
 
 ## Steps
 
-* Go to https://github.com/YOUR_SHORTNAME/pet-clinic/pulls (use your actual GitHub user name).
-* Click on the pull request you just created.
-* Enter a comment to ask for a review from **Paulo**, our product owner: `@paulo - can you please review this pull request?`{{copy}} (It's important you type the comment exactly like that for the lab to work - you may want to copy/paste the comment).
+* In the pull request you have just created, enter a comment to ask for a review from **Paulo**, our product owner: `@paulo - can you please review this pull request?`{{copy}} (It's important you type the comment exactly like that for the lab to work - you may want to copy/paste the comment).
 * Paulo will provide its comments.
 * Back to the editor, change the code according to Paulo's comments.
 * Let's push the code back to GitHub:
