@@ -9,10 +9,10 @@ jobs:
   build:
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Ensure secrets availability
-        if: github == ''
+        if: job == ''
         run: echo "Secret AWS_ACCESS_KEY_ID is missing." && exit 1
       - name: Copy the repository
         uses: actions/checkout@v1
