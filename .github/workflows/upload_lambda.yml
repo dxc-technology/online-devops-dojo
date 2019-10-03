@@ -2,12 +2,20 @@
 name: CD of DevOps Dojo Bot lambda
 
 on: [push]
+  paths-ignore:
+    - docs/**
+    - **/*.md
+    - online-devops-dojo/**
+    - assets/**
 jobs:
   build:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     
     steps:
+      - name: Ensure secrets availability
+        if: ${{ secrets.AWS_ACCESS_KEY_ID }} == ''
+        run: exit 1
       - name: Copy the repository
         uses: actions/checkout@v1
       # install nodejs packages listed in package*.json
