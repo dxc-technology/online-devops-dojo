@@ -11,14 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Only files in bot directory are useful
+      - working-directory: ./bot
 #      - name: Ensure secrets availability (not supported yet)
 #        if: secrets.AWS_ACCESS_KEY_ID == ''
 #        run: echo "Secret AWS_ACCESS_KEY_ID is missing." && exit 1
       - name: Copy the repository
         uses: actions/checkout@v1
-
-      # Only files in bot directory are useful
-      - working-directory: ./bot
 
       # install nodejs packages listed in package*.json
       - uses: actions/setup-node@master
