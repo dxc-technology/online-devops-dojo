@@ -3,7 +3,7 @@ name: CD of DevOps Dojo Bot lambda
 
 on: 
   push:
-    paths-ignore: ['docs/**', '**/*.md', 'online-devops-dojo/**', 'assets/**'' ]
+    paths-ignore: ['docs/**', '**/*.md', 'online-devops-dojo/**', 'assets/**']
 
 jobs:
   build:
