@@ -12,7 +12,7 @@ jobs:
     
     steps:
       - name: Ensure secrets availability
-        if: 'false'
+        if: 'true' #${{ secrets.AWS_ACCESS_KEY_ID }} == ''
         run: exit 1
       - name: Copy the repository
         uses: actions/checkout@v1
