@@ -31,7 +31,7 @@ jobs:
           AWS_REGION: us-west-2    # optional
           AWS_STAGE: dev           # optional
           APP_ID: 42480            # mandatory
-          WEBHOOK_SECRET: ${{ secrets.APP_WEBHOOK_SECRET }} # mandatory
-          PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}       # mandatory
+          WEBHOOK_SECRET: ${{ secrets.APP_WEBHOOK_SECRET }}  # mandatory
+          PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}        # mandatory
         with:
           args: deploy -v
