@@ -3,7 +3,7 @@
 # For full config options, check the docs:
 #    docs.serverless.com
 
-service: devops-dojo-bot
+service: devops-dojo-robot
 
 frameworkVersion: ">=1.4.0 <2.0.0"
 
