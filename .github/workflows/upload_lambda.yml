@@ -16,11 +16,15 @@ jobs:
 #        run: echo "Secret AWS_ACCESS_KEY_ID is missing." && exit 1
       - name: Copy the repository
         uses: actions/checkout@v1
+
+      # Only files in bot directory are useful
+      - working-directory: ./bot
+
       # install nodejs packages listed in package*.json
       - uses: actions/setup-node@master
         with:
           node-version: 12
-      - run: cd bot && npm install
+      - run: npm install
 
       # run "serverless deploy -v in a container" 
       - name: Deploy lambda

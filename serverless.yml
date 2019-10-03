@@ -26,12 +26,14 @@ provider:
 #  environment:
 #    variable1: value1
 
-# Upload to AWS only files useful for the lambda
-package:
-#  include:
+# Upload to AWS only files useful
+#package:
+#  exclude: ./**
 #    - include-me.js
 #    - include-me-dir/**
-  exclude: [.github/**, assets/**, online-devops-dojo/**]
+#  include: bot/**
+#    - include-me.js
+#    - include-me-dir/**
 
 functions:
   lambda:
