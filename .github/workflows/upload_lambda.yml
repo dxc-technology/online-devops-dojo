@@ -12,7 +12,7 @@ jobs:
     
     steps:
       - name: Ensure secrets availability
-        if: github.AWS_ACCESS_KEY_ID == ''
+        if: secrets == ''
         run: echo "Secret AWS_ACCESS_KEY_ID is missing." && exit 1
       - name: Copy the repository
         uses: actions/checkout@v1
@@ -26,12 +26,12 @@ jobs:
       - name: Deploy lambda
         uses: serverless/github-action@v1.49.0
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-west-2
-          AWS_STAGE: dev
-          APP_ID: 42480
-          WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}         # mandatory
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # mandatory
+          AWS_REGION: us-west-2    # optional
+          AWS_STAGE: dev           # optional
+          APP_ID: 42480            # mandatory
+          WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }} # mandatory
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}       # mandatory
         with:
           args: deploy -v
