@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Ensure secrets availability
         if: github.AWS_ACCESS_KEY_ID == ''
-        run: exit 1
+        run: echo "Secret AWS_ACCESS_KEY_ID is missing." && exit 1
       - name: Copy the repository
         uses: actions/checkout@v1
       # install nodejs packages listed in package*.json
