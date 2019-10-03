@@ -9,8 +9,7 @@ jobs:
   build:
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    if: '' == ''
-
+    
     steps:
       - name: Ensure secrets availability
         if: github == ''
