@@ -2,5 +2,4 @@
 
 High level architecture of the DevOps Dojo coach bot:
 
-![](online-devops-dojo-bot.svg)
-
+![Architecture diagram](online-devops-dojo-bot.svg)

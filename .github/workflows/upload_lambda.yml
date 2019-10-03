@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ensure secrets availability
-        if: job == ''
-        run: echo "Secret AWS_ACCESS_KEY_ID is missing." && exit 1
+#      - name: Ensure secrets availability (not supported yet)
+#        if: secrets.AWS_ACCESS_KEY_ID == ''
+#        run: echo "Secret AWS_ACCESS_KEY_ID is missing." && exit 1
       - name: Copy the repository
         uses: actions/checkout@v1
       # install nodejs packages listed in package*.json
@@ -31,7 +31,7 @@ jobs:
           AWS_REGION: us-west-2    # optional
           AWS_STAGE: dev           # optional
           APP_ID: 42480            # mandatory
-          WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }} # mandatory
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}       # mandatory
+          WEBHOOK_SECRET: ${{ secrets.APP_WEBHOOK_SECRET }} # mandatory
+          PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}       # mandatory
         with:
           args: deploy -v
