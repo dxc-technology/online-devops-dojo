@@ -4,7 +4,7 @@ name: Deployment of DevOps Dojo Bot lambda
 on: 
   push:
     # change on other files doesn't trigger this pipeline
-    paths: ['bot/**', 'serverless.yml', '.github/workflows/*']
+    paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/*']
 
 jobs:
   build:
