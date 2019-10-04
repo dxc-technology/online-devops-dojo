@@ -26,14 +26,10 @@ provider:
 #  environment:
 #    variable1: value1
 
-# Upload to AWS only files useful
-#package:
-#  exclude: ./**
-#    - include-me.js
-#    - include-me-dir/**
-#  include: bot/**
-#    - include-me.js
-#    - include-me-dir/**
+# Upload only files useful to AWS
+package:
+  exclude: ./**
+  include: ['*.js', 'node_module']
 
 functions:
   lambda:

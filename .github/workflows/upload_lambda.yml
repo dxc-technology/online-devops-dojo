@@ -24,14 +24,14 @@ jobs:
           node-version: 12
       - run: cd bot && npm install
 
-      # run "serverless deploy" -v" with ./bot folder only, in a docker container 
+      # run "serverless deploy --verbose" in a docker container 
       - name: Deploy lambda
         uses: serverless/github-action@v1.49.0  # v1.52/1.53 has a bug
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}         # mandatory
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # mandatory
-          AWS_REGION: us-west-2    # optional
-          AWS_STAGE: dev           # optional
+          AWS_REGION: us-west-2    # mandatory
+          AWS_STAGE: dev           # mandatory
           APP_ID: 42480            # mandatory
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}  # mandatory
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}        # mandatory
