@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
-      - run: npm install
+      - run: cd bot && npm install
 
       # run "serverless deploy" -v" with ./bot folder only, in a docker container 
       - name: Deploy lambda
