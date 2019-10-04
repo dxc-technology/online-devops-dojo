@@ -28,8 +28,11 @@ provider:
 
 # Upload only files useful to AWS
 package:
-  exclude: ./**
-  include: ['*.js', 'node_module']
+  exclude:
+    - './**'
+  include: 
+    - '*.js'
+    - node_modules
 
 functions:
   lambda:
