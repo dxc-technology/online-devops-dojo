@@ -3,7 +3,7 @@ name: CD of DevOps Dojo Bot lambda
 
 on: 
   push:
-    paths-ignore: ['docs/**', '**/*.md', 'online-devops-dojo/**', 'assets/**']
+    paths: ['serverless.yml', 'bot/**'] # change on others files doesn't impact this pipeline
 
 jobs:
   build:
@@ -11,22 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-#      - name: Ensure secrets availability (not supported yet)
+#      - name: Ensure secrets availability (not supported)
 #        if: secrets.AWS_ACCESS_KEY_ID == ''
 #        run: echo "Secret AWS_ACCESS_KEY_ID is missing." && exit 1
       - name: Copy the repository
         uses: actions/checkout@v1
       
-      # Only files in bot directory are useful
-
       # install nodejs packages listed in package*.json
       - uses: actions/setup-node@master
-        working-directory: ./bot
         with:
           node-version: 12
       - run: npm install
 
-      # run "serverless deploy -v in a container" 
+      # run "serverless deploy -v in a container with bot folder only" 
       - name: Deploy lambda
         uses: serverless/github-action@v1.49.0
         env:
@@ -38,4 +35,4 @@ jobs:
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}  # mandatory
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}        # mandatory
         with:
-          args: deploy -v
+          args: deploy -v --package ./bot
