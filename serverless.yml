@@ -37,7 +37,7 @@ package:
 
 functions:
   lambda:
-    handler: bot/handler.probot
+    handler: handler.probot
     
     environment:
       WEBHOOK_SECRET: ${env:WEBHOOK_SECRET}
