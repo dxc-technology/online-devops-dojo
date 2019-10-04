@@ -29,7 +29,7 @@ provider:
 # Upload only files useful to AWS
 package:
   exclude:
-    - './**''
+    - './**'
   include: 
     - handler.js
     - index.js
