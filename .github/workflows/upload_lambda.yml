@@ -18,22 +18,22 @@ jobs:
       - name: Copy the repository
         uses: actions/checkout@v1
       
-      # Install nodejs packages listed in package*.json
-      - uses: actions/setup-node@master
-        with:
-          node-version: 12
+      # Install nodejs packages listed in package*.json.
+      # Node 10 is current default in ubuntu-latest
       - run: npm install
 
       # run "serverless deploy --verbose" in a docker container 
       - name: Deploy lambda
         uses: serverless/github-action@v1.49.0  # v1.52/1.53 have a bug
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}         # mandatory
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # mandatory
-          AWS_REGION: us-west-2    # mandatory
-          AWS_STAGE: dev           # mandatory
-          APP_ID: 42480            # mandatory
-          WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}  # mandatory
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}        # mandatory
+        env: # all mandatory
+          # AWS
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-west-2
+          AWS_STAGE: dev
+          # GITHUB APP
+          APP_ID: 42480
+          WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         with:
           args: deploy --verbose
