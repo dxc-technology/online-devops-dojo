@@ -36,6 +36,4 @@ jobs:
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}  # mandatory
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}        # mandatory
         with:
-          args: 
-            - "deploy -v"
-            - "--package ./bot"
+          args: deploy --verbose
