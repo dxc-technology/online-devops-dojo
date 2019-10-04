@@ -32,7 +32,7 @@ package:
     - './**'
   include: 
     - '*.js'
-    - 'node_modules'
+    - node_modules/**
 
 functions:
   lambda:
