@@ -31,7 +31,8 @@ package:
   exclude:
     - './**'
   include: 
-    - '*.js'
+    - 'handler.js'
+    - 'index.js'
     - node_modules/**
 
 functions:
