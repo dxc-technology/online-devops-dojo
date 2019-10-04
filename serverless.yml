@@ -27,13 +27,14 @@ provider:
 #    variable1: value1
 
 # Upload only files useful to AWS
-#package:
-#  exclude:
-#    - './**'
-#  include: 
-#    - 'handler.js'
-#    - 'index.js'
-#    - node_modules/**
+package:
+  exclude:
+    - './**''
+  include: 
+    - handler.js
+    - index.js
+    - node_modules/**
+    - package*.json
 
 functions:
   lambda:
