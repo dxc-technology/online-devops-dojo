@@ -32,7 +32,7 @@ jobs:
           AWS_REGION: us-west-2
           AWS_STAGE: dev
           # GITHUB APP
-          APP_ID: 42480
+          APP_ID: 43025
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         with:
