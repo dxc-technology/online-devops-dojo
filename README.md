@@ -1,6 +1,7 @@
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 # Online DevOps Dojo
 
-This repository contains the source of **Online DevOps Dojo** Katacoda Scenarios.
+This repository contains the source of **Online DevOps Dojo** [Katacoda Scenarios](./online-devops-dojo-pathway.json) and the source of the [coach](./bot).
 
 In case you are landing here in first place or want to run the trainings, please read first [about DevOps Dojo](https://dxc-technology.github.io/about-devops-dojo/).
 
