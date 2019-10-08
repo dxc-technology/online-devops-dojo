@@ -4,7 +4,7 @@ name: Deployment of Online DevOps Dojo coach lambda
 on: 
   push:
     # change on other files doesn't trigger this pipeline
-    paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/*']
+    paths: ['*.js', 'package*.json', 'serverless.yml']
 
 jobs:
   build:
