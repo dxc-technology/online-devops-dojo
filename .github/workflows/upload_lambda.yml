@@ -33,6 +33,7 @@ jobs:
         uses: serverless/github-action@v1.49.0  # v1.52/1.53 have a bug
         env: # all mandatory
           # AWS
+          DIR: coach
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: us-west-2
