@@ -1,4 +1,4 @@
-# Online DevOps Dojo coach ![](../../../workflows/upload_lambda.yml/badge.svg)
+# Online DevOps Dojo coach ![](../../../workflows/.github/workflows/upload_lambda.yml/badge.svg)
  
 The Online DevOps Dojo coach is here to make the DevOps learning experience
 even more enjoyable.
