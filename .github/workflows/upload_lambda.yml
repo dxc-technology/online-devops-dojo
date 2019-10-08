@@ -19,8 +19,8 @@ jobs:
       - name: Copy the repository
         uses: actions/checkout@v1
         with:
-          ref: ${{ github.ref }} # retrieve only the branch that triggered the wokflow
-          fetch-depth: 1  # retrieve only the latest version
+          ref: ${{ github.ref }} # retrieve only the branch that triggered the wokflow (ignored at this point)
+          fetch-depth: 2  # retrieve only the latest version
       
       - run: git status
       - run: git checkout master
