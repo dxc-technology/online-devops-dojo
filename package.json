@@ -1,16 +1,17 @@
 {
-  "name": "probot",
+  "name": "Online DevOps Dojo Coach",
   "version": "1.0.0",
-  "description": "A Probot app",
+  "description": "The Online DevOps Dojo coach interacts with student's issues and PR in Katacoda trainings.",
   "author": "No user",
-  "license": "ISC",
-  "repository": "https://github.com//probot.git",
-  "homepage": "https://github.com//probot",
-  "bugs": "https://github.com//probot/issues",
+  "license": "MPL 2.0",
+  "repository": "https://github.com/dxc-technology/online-devops-dojo.git",
+  "homepage": "https://dxc-technology.github.io/about-devops-dojo/",
+  "bugs": "https://github.com/dxc-technology/online-devops-dojo/issues/new/choose",
   "keywords": [
-    "probot",
-    "github",
-    "probot-app"
+    "DevOps",
+    "Dojo",
+    "Katacoda",
+    "GitHub Actions"
   ],
   "scripts": {
     "dev": "nodemon",
