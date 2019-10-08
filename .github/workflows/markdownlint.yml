@@ -16,4 +16,5 @@ jobs:
         uses: actions/checkout@v1
       - name: Lint MarkDown files
         uses: tmknom/markdownlint@1.0.0
+        args: -v .
         ##uses: bltavares/actions/mdlint@master
