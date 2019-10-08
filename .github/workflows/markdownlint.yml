@@ -12,4 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: bltavares/actions/mdlint@master
+      - name: Copy the repository
+        uses: actions/checkout@v1
+      - name: Lint MarkDown files
+        uses: bltavares/actions/mdlint@master
