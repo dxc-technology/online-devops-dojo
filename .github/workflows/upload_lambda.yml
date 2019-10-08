@@ -25,14 +25,13 @@ jobs:
         run: npm audit
 
       - uses: bltavares/actions/mdlint
-      
+
       # Install nodejs packages listed in package-lock.json.
       # Node 10 is current default in ubuntu-latest
       - run: npm install --only=prod
 
       # run "serverless deploy --verbose" in a docker container 
       - name: Deploy lambda
-        working-directory: ./coach
         uses: serverless/github-action@v1.49.0  # v1.52/1.53 have a bug
         env: # all mandatory
           # AWS
