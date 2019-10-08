@@ -19,8 +19,11 @@ jobs:
       - name: Copy the repository
         uses: actions/checkout@v1
         with:
+          ref: ${{ github.ref }} # retrieve only the branch that triggered the wokflow
           fetch-depth: 0  # retrieve only the latest version
       
+      - run: echo ${{ github.ref }}
+      - run: ls -l
       - uses: ./coach
 
       - name: Check npm modules vulnerabilities
