@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The Online DevOps Dojo coach interacts with student's issues and PR in Katacoda trainings.",
   "author": "No user",
-  "license": "MPL 2.0",
+  "license": "MPL-2.0",
   "repository": "https://github.com/dxc-technology/online-devops-dojo.git",
   "homepage": "https://dxc-technology.github.io/about-devops-dojo/",
   "bugs": "https://github.com/dxc-technology/online-devops-dojo/issues/new/choose",
