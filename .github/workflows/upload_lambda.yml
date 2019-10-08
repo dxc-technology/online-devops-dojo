@@ -29,7 +29,6 @@ jobs:
 
       # run "serverless deploy --verbose" in a docker container 
       - name: Deploy lambda
-        working-directory: coach
         uses: serverless/github-action@v1.49.0  # v1.52/1.53 have a bug
         env: # all mandatory
           # AWS
