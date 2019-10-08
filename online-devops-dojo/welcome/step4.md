@@ -3,16 +3,16 @@ context of issues or pull requests. This is done through a [GitHub Application](
 which you need to "install" in your pet-clinic repository.
 
 
-* Go to DevOps Dojo Bot web site: https://github.com/github-apps/devops-dojo-bot
+* Go to the Online DevOps Dojo coach web site: https://github.com/apps/online-devops-dojo-coach
 
 ![](../../assets/online-devops-dojo/welcome/probot.jpg)
 
 
-* Click "Install"
-* Under "Where do you want to install DevOps Dojo Bot?", select your user profile
-* Under "Only select repositories", select `your-shortname/pet-clinic`
-* Scroll down and click "Install"
+* Click "Install".
+* If your account belongs to organization(s), you will see a first page
+"Where do you want to install Online DevOps Dojo Coach?", select your user profile.
+* In "Install on your personal account [...]" click "Only select repositories" and select `your-shortname/pet-clinic`.
+* Scroll down and click "Install".
 
 You will get a confirmation at the top of the browser: 
-"**Okay, DevOps Dojo Bot was installed on the @your-shortname account**".
-
+"**Okay, Online DevOps Dojo coach was installed on the @your-shortname account**".

@@ -1,0 +1,119 @@
+# serverless config file to load AWS lambda of DevOps Dojo Bot
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+
+service: devops-dojo-robot
+
+frameworkVersion: ">=1.4.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+  region: ${env:AWS_REGION}
+  stage: ${env:AWS_STAGE}
+
+  tags:
+    Name: "Online DevOps Dojo coach"
+    environment: ${env:AWS_STAGE}
+    application_id: devops-dojo-coach
+    version: "1.0.0"
+    owner: "philippe.berthonneau@dxc.com"
+    group: "doe"
+
+# you can define service wide environment variables here
+#  environment:
+#    variable1: value1
+
+# Upload only files useful to AWS
+package:
+  exclude:
+    - './**'
+  include: 
+    - handler.js
+    - index.js
+    - node_modules/**
+    - package*.json
+
+functions:
+  lambda:
+    handler: handler.probot
+    
+    environment:
+      WEBHOOK_SECRET: ${env:WEBHOOK_SECRET}
+      APP_ID: ${env:APP_ID}
+      PRIVATE_KEY: ${env:PRIVATE_KEY}
+
+    # create the API Gateway
+    events:
+      - http:
+          path: /
+          method: get
+      - http:
+          path: /
+          method: post
+          
+#    The following are a few example events you can configure
+#    NOTE: Please make sure to change your handler code to work with those events
+#    Check the event documentation for details 
+#    events:
+#      - http:
+#          path: users/create
+#          method: get
+#      - s3: ${env:BUCKET}
+#      - schedule: rate(10 minutes)
+#      - sns: greeter-topic
+#      - stream: arn:aws:dynamodb:region:XXXXXX:table/foo/stream/1970-01-01T00:00:00.000
+#      - alexaSkill: amzn1.ask.skill.xx-xx-xx-xx
+#      - alexaSmartHome: amzn1.ask.skill.xx-xx-xx-xx
+#      - iot:
+#          sql: "SELECT * FROM 'some_topic'"
+#      - cloudwatchEvent:
+#          event:
+#            source:
+#              - "aws.ec2"
+#            detail-type:
+#              - "EC2 Instance State-change Notification"
+#            detail:
+#              state:
+#                - pending
+#      - cloudwatchLog: '/aws/lambda/hello'
+#      - cognitoUserPool:
+#          pool: MyUserPool
+#          trigger: PreSignUp
+
+#    Define function environment variables here
+#    environment:
+#      variable2: value2
+
+# you can add CloudFormation resource templates here
+#resources:
+#  Resources:
+#    NewResource:
+#      Type: AWS::S3::Bucket
+#      Properties:
+#        BucketName: my-new-bucket
+#  Outputs:
+#     NewOutput:
+#       Description: "Description for the output"
+#       Value: "Some output value"
+#resources#
+#  Resources:
+#    myDefaultRole:
+#      Type: AWS::IAM::Role
+#      Properties:
+#        Path: /my/default/path/
+#        RoleName: MyDefaultRole # required if you want to use 'serverless deploy --function' later on
+#        AssumeRolePolicyDocument:
+#          Version: '2017'
+#          Statement:
+#            - Effect: Allow
+#              Principal:
+#                Service:
+#                  - lambda.amazonaws.com
+#              Action: sts:AssumeRole
+#        # note that these rights are needed if you want your function to be able to communicate with resources within your vpc
+#        ManagedPolicyArns:
+#          - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+#          - arn:aws:iam::aws:policy/AmazonSSMFullAccess
