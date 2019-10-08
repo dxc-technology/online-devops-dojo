@@ -5,10 +5,6 @@ on:
   push:
     # change on other files doesn't trigger this pipeline
     paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/*']
-on: 
-  push:
-    # change on other files doesn't trigger this pipeline
-    paths: ['.github/workflows/*']
 
 jobs:
   build:
@@ -27,8 +23,6 @@ jobs:
       
       - name: Check npm modules vulnerabilities
         run: npm audit
-
-      - uses: bltavares/actions/mdlint@master
 
       # Install nodejs packages listed in package-lock.json.
       # Node 10 is current default in ubuntu-latest
