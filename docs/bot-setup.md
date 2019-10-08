@@ -76,8 +76,8 @@ GitHub secret of `<my_account>/online-devops-dojo`
    1. In GitHub app Install app menu, on Repository access, click *Only select
    repositories* and select your forked pet-clinic repository
    1. Click install.
-   1. On the menu, click Public page and <ins>record its URL</ins>: this is the URL that
-   must be documented in Welcome module to invite students to install the bot.
+   1. On the menu, click Public page and <ins>record its URL</ins>: this is the URL
+   that must be documented in Welcome module to invite students to install the bot.
 
 Note:  
 Upload action had to run twice: before and after the GitHub app creation
