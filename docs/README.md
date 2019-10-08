@@ -3,7 +3,7 @@
 The Online DevOps Dojo coach is here to make the DevOps learning experience
 even more enjoyable.
 
-Actually the coach is a robot which allow you to interact with "Charlie
+Actually the coach is a robot which allows you to interact with "Charlie
 Veterinary Clinic" virtual team in the context of GitHub issues and pull requests.
 
 ![Team chat](https://s3.amazonaws.com/devopsdojoassets/team-chat.jpg)
