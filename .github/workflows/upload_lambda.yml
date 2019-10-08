@@ -1,5 +1,5 @@
 # GitHub Action file
-name: Deployment of DevOps Dojo Bot lambda
+name: Deployment of Online DevOps Dojo coach lambda
 
 on: 
   push:
