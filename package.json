@@ -1,5 +1,5 @@
 {
-  "name": "Online DevOps Dojo Coach",
+  "name": "online-devops-dojo-coach",
   "version": "1.0.0",
   "description": "The Online DevOps Dojo coach interacts with student's issues and PR in Katacoda trainings.",
   "author": "No user",
