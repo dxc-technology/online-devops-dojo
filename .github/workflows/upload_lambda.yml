@@ -23,10 +23,10 @@ jobs:
           fetch-depth: 1  # retrieve only the latest version
       
       - run: git status
-      - run: git check master
+      - run: git checkout master
       - run: git status
       - run: ls -l
-      - uses: ./coach
+      #- uses: ./coach
 
       - name: Check npm modules vulnerabilities
         run: npm audit
