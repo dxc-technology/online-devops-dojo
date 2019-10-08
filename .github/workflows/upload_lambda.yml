@@ -18,8 +18,6 @@ jobs:
 
       - name: Copy the repository
         uses: actions/checkout@v1
-        with:
-          fetch-depth: 1  # retrieve only the latest version
       
       - name: Check npm modules vulnerabilities
         run: npm audit
