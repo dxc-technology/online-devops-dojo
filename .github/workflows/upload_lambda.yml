@@ -18,11 +18,7 @@ jobs:
 
       - name: Copy the repository
         uses: actions/checkout@v1
-        with:
-          ref: ${{ github.ref }}
-      
-      - run: export GITHUB_WORKSPACE=$GITHUB_WORKSPACE/coach
-      - run: echo $GITHUB_WORKSPACE
+
       - name: Check npm modules vulnerabilities
         run: npm audit
 
