@@ -1,5 +1,5 @@
 # Online DevOps Dojo coach
-
+ 
 The Online DevOps Dojo coach is here to make the DevOps learning experience
 even more enjoyable.
 
