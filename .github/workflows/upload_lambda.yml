@@ -5,6 +5,10 @@ on:
   push:
     # change on other files doesn't trigger this pipeline
     paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/*']
+on: 
+  push:
+    # change on other files doesn't trigger this pipeline
+    paths: ['.github/workflows/*']
 
 jobs:
   build:
