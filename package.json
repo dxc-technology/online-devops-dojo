@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The Online DevOps Dojo coach interacts with student's issues and PR in Katacoda trainings.",
   "author": "No user",
-  "license": "MPL 2.0",
+  "license": "MPL-2.0",
   "repository": "https://github.com/dxc-technology/online-devops-dojo.git",
   "homepage": "https://dxc-technology.github.io/about-devops-dojo/",
   "bugs": "https://github.com/dxc-technology/online-devops-dojo/issues/new/choose",
@@ -22,14 +22,14 @@
   },
   "dependencies": {
     "@probot/serverless-lambda": "^0.3.0",
-    "probot": "^7.2.0"
+    "probot": "^9.5.1"
   },
   "devDependencies": {
-    "jest": "^25.0.0",
-    "nock": "^10.0.0",
-    "nodemon": "^1.17.2",
-    "smee-client": "^1.0.2",
-    "standard": "^10.0.3"
+    "jest": "^24.9.0",
+    "nock": "^11.4.0",
+    "nodemon": "^1.19.3",
+    "smee-client": "^1.1.0",
+    "standard": "^14.3.1"
   },
   "engines": {
     "node": ">= 8.3.0"

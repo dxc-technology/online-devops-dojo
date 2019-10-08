@@ -29,7 +29,7 @@ module.exports = (app) => {
     app.log('This is a comment on a pull request ' + number + ' in ' + owner + '/' + repo + ' repo...')
 
     // Get the list of comments in this PR
-    const issueComments = await context.github.issues.getComments({owner, repo, number})
+    const issueComments = await context.github.issues.listComments({owner, repo, number})
     botComments = 0
     issueComments.data.forEach(function(comment) {
       if (comment.user.type == 'Bot') {
