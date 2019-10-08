@@ -15,11 +15,14 @@ jobs:
 #      - name: Ensure secrets availability (not supported)
 #        if: secrets.AWS_ACCESS_KEY_ID == ''
 #        run: echo "Secret AWS_ACCESS_KEY_ID is missing." && exit 1
-      - run: echo $GITHUB_WORKSPACE
-      
+
       - name: Copy the repository
         uses: actions/checkout@v1
+          with:
+            ref: ${{ github.ref }}
       
+      - run: export GITHUB_WORKSPACE=$GITHUB_WORKSPACE:/coach
+
       - name: Check npm modules vulnerabilities
         run: npm audit
 
