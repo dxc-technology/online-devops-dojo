@@ -19,7 +19,6 @@ jobs:
       - name: Copy the repository
         uses: actions/checkout@v1
         with:
-          ref: ${{ github.ref }} # retrieve only the branch that triggered the wokflow (ignored at this point)
           fetch-depth: 1  # retrieve only the latest version
       
       - name: Check npm modules vulnerabilities
@@ -31,6 +30,7 @@ jobs:
 
       # run "serverless deploy --verbose" in a docker container 
       - name: Deploy lambda
+        working-directory: ./coach
         uses: serverless/github-action@v1.49.0  # v1.52/1.53 have a bug
         env: # all mandatory
           # AWS
