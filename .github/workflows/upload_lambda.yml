@@ -3,8 +3,8 @@ name: Deployment of Online DevOps Dojo coach lambda
 
 on: 
   push:
-    # change on other files doesn't trigger this pipeline
-    paths: ['*.js', 'package*.json', 'serverless.yml']
+    # change(s) on those files trigger this pipeline
+    paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
 
 jobs:
   build:
@@ -26,15 +26,15 @@ jobs:
       # Node 10 is current default in ubuntu-latest
       - run: npm install --only=prod
 
-      # run "serverless deploy --verbose" in a docker container 
+      # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda
         uses: serverless/github-action@v1.49.0  # v1.52/1.53 have a bug
         env: # all mandatory
           # AWS
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-west-2
-          AWS_STAGE: dev
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_STAGE: ${{ secrets.AWS_STAGE }}
           # GITHUB APP
           APP_ID: 43025
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
