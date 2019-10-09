@@ -1,4 +1,4 @@
-# GitHub Action file
+# GitHub workflow file
 name: Deployment of Online DevOps Dojo coach lambda
 
 on: 
