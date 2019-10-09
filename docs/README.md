@@ -1,4 +1,4 @@
-# Online DevOps Dojo coach ![](https://github.com/pberthonneau/online-devops-dojo/workflows/Deployment%20of%20Online%20DevOps%20Dojo%20coach%20lambda/badge.svg)
+# Online DevOps Dojo coach ![](../../../workflows/Deployment%20of%20Online%20DevOps%20Dojo%20coach%20lambda/badge.svg)
 
 The Online DevOps Dojo coach is here to make the DevOps learning experience
 even more enjoyable.
