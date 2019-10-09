@@ -29,6 +29,7 @@ module.exports = (app) => {
     app.log('This is a comment on a pull request ' + number + ' in ' + owner + '/' + repo + ' repo...')
 
     // Get the list of comments in this PR
+    // Note that warning about deprecated number instead of issue_number is a wrong warning https://github.com/probot/probot/pull/926
     const issueComments = await context.github.issues.listComments({owner, repo, number})
     botComments = 0
     issueComments.data.forEach(function(comment) {
