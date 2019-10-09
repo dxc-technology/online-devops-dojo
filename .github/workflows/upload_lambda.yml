@@ -26,7 +26,7 @@ jobs:
       # Node 10 is current default in ubuntu-latest
       - run: npm install --only=prod
 
-      # run "serverless deploy --verbose" in a docker container 
+      # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda
         uses: serverless/github-action@v1.49.0  # v1.52/1.53 have a bug
         env: # all mandatory
