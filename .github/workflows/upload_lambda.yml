@@ -3,8 +3,8 @@ name: Deployment of Online DevOps Dojo coach lambda
 
 on: 
   push:
-    # change on other files doesn't trigger this pipeline
-    paths: ['*.js', 'package*.json', 'serverless.yml'n '.github/workflows/upload_lambda.yml']
+    # change(s) on those files trigger this pipeline
+    paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
 
 jobs:
   build:
