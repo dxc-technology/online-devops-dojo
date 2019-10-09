@@ -20,4 +20,4 @@
 * From the pull request, ask Paulo for another review by adding a new comment: `@paulo, can you check now?`{{copy}}
 * Once Paulo is happy with the changes, **Paulo** will merge the pull request.
 
-🤖 **Note**: Paulo is a bot, implemented as a "[GitHub app](https://developer.github.com/apps/about-apps/)". Its code is Inner Source, here: https://github.com/dxc-technology/devops-githubapp-dojo-bot. 
+🤖 **Note**: Paulo is a bot, implemented as a "[GitHub app](https://developer.github.com/apps/about-apps/)". Its code is Inner Source, here: https://github.com/dxc-technology/online-devops-dojo. 
