@@ -17,9 +17,9 @@ You should find [here](./CHANGELOG.md) the history of changes.
 - [/online-devops-dojo-pathway.json](./online-devops-dojo-pathway.json): Index of
 Katacoda scenarios
 - [/online-devops-dojo/](./online-devops-dojo/): Katacoda scenarios: one sub-folder
-for each training.
+for each training
 - [/assets/online-devops-dojo/](./assets/online-devops-dojo/): Images used in
-training pages.
+training pages
 
 ### Dojo coach
 
