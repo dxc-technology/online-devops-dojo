@@ -4,12 +4,6 @@ This document is useful only for contributors who wants improve the DevOps Dojo
 coach and install their own instance.  
 Student who wants to run the training can ignore this page.
 
-Our implementation uses a GitHub application with [Probot](https://probot.github.io/)
-and upload a lambda function using [GitHub Actions](https://github.com/features/actions)
-and [Serverless](https://serverless.com/).  
-Other
-alternatives are of course possible.
-
 This setup requires:
 
 - an AWS account with policies allowing to create an API Gateway and Lambda

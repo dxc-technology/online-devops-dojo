@@ -23,6 +23,7 @@ training pages
 
 ### Dojo coach
 
+- [/docs/](./docs): Some documentation about the coach bot
 - [/handler.js](./handler.js): Handler for the lambda function
 - [/index.js](./index.js): Coach code
 - [/package.json](./package.json): Node package dependencies

@@ -13,7 +13,7 @@ COLLOGS="\u001b[35m"
 COLRESET="\u001b[m"
 REPO=pet-clinic
 ORGREPO=dxc-technology
-KATAACCOUNT=online-devops-dojo
+WELCOME_URL=https://dxc-technology.github.io/about-devops-dojo/katacoda/os1-welcome/
 
 if [ "$DEBUG" = false ] ; then
   CURL_NODEBUG="-sS"
@@ -50,7 +50,7 @@ if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
   echo -e "> I was expecting to find the $REPO repository under your GitHub username and I didn't, or the content does not look right."
   echo -e "> That must be me. But just in case:"
   echo -e "> - Close this Katacoda window: the environment will expire soon and you need ample time to complete the module"
-  echo -e "> - Go through the Welcome module which will set everything up for you: https://katacoda.com/${KATAACCOUNT}/courses/online-belt-devops-dojo/welcome"
+  echo -e "> - Go through the Welcome module which will set everything up for you: $WELCOME_URL"
   echo -e ""
   exit 1
 fi
