@@ -6,6 +6,9 @@ even more enjoyable.
 Actually the coach is a robot which allows you to interact with "Charlie
 Veterinary Clinic" virtual team in the context of GitHub issues and pull requests.
 
+One can imagine a lot of funny exchanges which at some point will require a
+genuine test pipeline!
+
 ![Team chat](https://s3.amazonaws.com/devopsdojoassets/team-chat.jpg)
 
 ## Setup
@@ -13,6 +16,11 @@ Veterinary Clinic" virtual team in the context of GitHub issues and pull request
 How to [Setup](./bot-setup.md) your custom instance of the robot.
 
 ## High level architecture
+
+Our implementation uses a GitHub application with [Probot](https://probot.github.io/)
+and upload a lambda function using [GitHub Actions](https://github.com/features/actions)
+and [Serverless](https://serverless.com/).  
+Other alternatives would of course be possible.
 
 ![Architecture diagram](online-devops-dojo-bot.svg)
 
