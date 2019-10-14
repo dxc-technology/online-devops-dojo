@@ -96,9 +96,9 @@ bringing_up_jenkins()
 {
 echo -e "${COLINFO}Bringing up Jenkins...${COLRESET}"
 echo -e "${COLLOGS}"
-# YB docker image updated weekly with security dependencies => only need to do pull in shift left on security module
-#docker pull devopsdojo/jenkins-yb:latest
-docker run --name jenkins-yb -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/shortname.txt:/tmp/shortname.txt devopsdojo/jenkins-yb:latest
+# Open Source docker image updated weekly with security dependencies => only need to do pull in shift left on security module
+docker pull devopsdojo/opensource:latest
+docker run --name opensource -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/shortname.txt:/tmp/shortname.txt devopsdojo/opensource:latest
 }
 bringing_up_jenkins
 
