@@ -102,8 +102,8 @@ bringing_up_jenkins()
 {
 echo -e "${COLINFO}Bringing up Jenkins...${COLRESET}"
 echo -e "${COLLOGS}"
-docker pull devopsdojo/jenkins-yb:latest
-docker run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/shortname.txt:/tmp/shortname.txt devopsdojo/jenkins-yb:latest
+docker pull devopsdojo/opensource:latest
+docker run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/shortname.txt:/tmp/shortname.txt devopsdojo/opensource:latest
 }
 bringing_up_jenkins
 
