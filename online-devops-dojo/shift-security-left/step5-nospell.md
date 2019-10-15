@@ -6,7 +6,7 @@
 
 * Navigate to your GitHub copy of the pet clinic application to find [`pom.xml`](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#pomfile).
 * Click on the pencil icon in the top right corner to edit the file.
-* Add the OWASP dependency checker as one of the plugins, at the beginning of line 207 (before `</plugins>`):
+* Add the OWASP dependency checker as one of the plugins, at the beginning of line 208 (before `</plugins>`):
 
 <pre class="file" data-target="clipboard">
              &lt;plugin&gt;
