@@ -1,40 +1,50 @@
 <html>
-    <header>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
-        <style>
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+
+        @media (max-width: 767px) {
             .markdown-body {
-                box-sizing: border-box;
-                min-width: 200px;
-                max-width: 980px;
-                margin: 0 auto;
-                padding: 45px;
+                padding: 15px;
             }
-        
-            @media (max-width: 767px) {
-                .markdown-body {
-                    padding: 15px;
-                }
-            }
-            :target {
-                background-color: #ffa;
-                -webkit-transition: all 1s linear;
-            }
-        </style>
-    </header>
-    <body>
-        <article class="markdown-body">
-                <h1>pom.xml file</h1>
-                <div id="pomfile"><h2>pom.xml file in master branch</h2>
-                    <a href="https://github_url/edit/master/pom.xml" target="_blank">github_url/blob/master/pom.xml</a>
-                </div>
-                <div id="pomfilebranch"><h2>pom.xml file in deps-check branch</h2>
-                    <a href="https://github_url/edit/deps-check/pom.xml" target="_blank">github_url/blob/deps-check/pom.xml</a>
-                </div>
-                <h1>Jenkinsfile</h1>
-                <div id="jenkinsfile"><h2>Jenkinsfile file</h2>
-                    <a href="https://github_url/edit/deps-check/Jenkinsfile#L13" target="_blank">github_url/blob/deps-check/Jenkinsfile</a>
-                </div>
-            </article>
-    </body>
+        }
+
+        :target {
+            background-color: #ff8;
+            -webkit-transition: all 1.5s linear 0.5s;
+            transition: all 1.5s linear 0.5s;
+        }
+    </style>
+</header>
+
+<body>
+    <article class="markdown-body">
+        <h1>pom.xml file</h1>
+        <div id="pomfile">
+            <h2>pom.xml file in master branch</h2>
+            <a href="https://github_url/edit/master/pom.xml" target="_blank">github_url/blob/master/pom.xml</a>
+        </div>
+        <div id="pomfilebranch">
+            <h2>pom.xml file in deps-check branch</h2>
+            <a href="https://github_url/edit/deps-check/pom.xml" target="_blank">github_url/blob/deps-check/pom.xml</a>
+        </div>
+        <h1>Jenkinsfile</h1>
+        <div id="jenkinsfile">
+            <h2>Jenkinsfile file</h2>
+            <a href="https://github_url/edit/deps-check/Jenkinsfile#L13"
+                target="_blank">github_url/blob/deps-check/Jenkinsfile</a>
+        </div>
+    </article>
+</body>
+
 </html>

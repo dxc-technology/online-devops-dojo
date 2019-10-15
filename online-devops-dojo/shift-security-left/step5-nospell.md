@@ -1,12 +1,12 @@
 ![Dan](../../assets/online-devops-dojo/shift-security-left/dan.png)
 
-> As Pet Clinic is a Java project, we can easily add the [OWASP dependency check](https://www.owasp.org/index.php/OWASP_Dependency_Check) as part of our pipeline, in our `pom.xml` file, as a Maven plugin. Let's do this! 
+> As Pet Clinic is a Java project, we can easily add the [OWASP dependency check](https://www.owasp.org/index.php/OWASP_Dependency_Check) as part of our pipeline, in our `pom.xml` file, as a Maven plugin. Let's do this!
 
 ## Steps
 
 * Navigate to your GitHub copy of the pet clinic application to find [`pom.xml`](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#pomfile).
 * Click on the pencil icon in the top right corner to edit the file.
-* Add the OWASP dependency checker as one of the plugins, around line 207 (after `</plugin>`): 
+* Add the OWASP dependency checker as one of the plugins, at the beginning of line 208 (before `</plugins>`):
 
 <pre class="file" data-target="clipboard">
              &lt;plugin&gt;
