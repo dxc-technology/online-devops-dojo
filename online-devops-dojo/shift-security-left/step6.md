@@ -10,24 +10,24 @@
 * Add the following stage after the build stage: 
 <pre class="file" data-target="clipboard">
 
-        stage('Dependency check') {
-            steps {
-                sh "mvn --batch-mode dependency-check:check"
-            }
-            post {
-                always {
-                    publishHTML(target:[
-                         allowMissing: true,
-                         alwaysLinkToLastBuild: true,
-                         keepAll: true,
-                         reportDir: 'target',
-                         reportFiles: 'dependency-check-report.html',
-                         reportName: "OWASP Dependency Check Report"
-                    ])
+            stage('Dependency check') {
+                steps {
+                    sh "mvn --batch-mode dependency-check:check"
+                }
+                post {
+                    always {
+                        publishHTML(target:[
+                            allowMissing: true,
+                            alwaysLinkToLastBuild: true,
+                            keepAll: true,
+                            reportDir: 'target',
+                            reportFiles: 'dependency-check-report.html',
+                            reportName: "OWASP Dependency Check Report"
+                        ])
+                    }
                 }
             }
-        } 
- 
+
 </pre>
 * Commit in `deps-check` branch.
 * The build will trigger automatically.
