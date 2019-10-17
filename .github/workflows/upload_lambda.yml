@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+      - name: Skip work in progress PR (WIP)
+        uses: wip/action@v1.0.0
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
       - name: Copy the repository
         uses: actions/checkout@v1
       
