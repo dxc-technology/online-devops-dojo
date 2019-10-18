@@ -62,3 +62,5 @@ Now let's look at the dependency tree:
   * `git push`{{execute}}
 * Check the execution of the pipeline and the results.
 * Repeat until dependency check is green.
+
+Note that a training session lasts one hour maximum. Beyond, since your repository is saved in GitHub, you will just need to restart the module (F5) and fast forward.
