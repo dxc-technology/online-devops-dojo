@@ -43,7 +43,7 @@ there. Help is welcome.
 If you want to contribute to the DevOps trainings, the instructions are available
 just [here](./CONTRIBUTING.md).
 
-If you are interested by the coach, please read its [setup](./docs/bot-setup.md).
+If you are interested by the coach, please read its [setup](./docs/bot-setup.md) process.
 
 ## Issues
 
