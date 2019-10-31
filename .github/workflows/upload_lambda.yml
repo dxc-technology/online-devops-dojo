@@ -18,8 +18,8 @@ jobs:
     steps:
       - name: Job info
         env:
-          XTMP: ${{ github.actor }}
-        run: @echo "Job started by $XTMP"
+          XTMP: "Job started by ${{ github.actor }} on ${{github.event_name}} event."
+        run: echo $XTMP
 
       - name: Copy the repository
         uses: actions/checkout@v1
