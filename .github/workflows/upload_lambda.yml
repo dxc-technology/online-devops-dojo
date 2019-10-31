@@ -27,10 +27,10 @@ jobs:
       - name: Install node modules
         run: npm ci --only=prod
   
-      if: github.branch == 'master'
+      - if: github.branch == 'master'
 
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
-      - name: Deploy lambda
+        name: Deploy lambda
         uses: serverless/github-action@v1.54.0  # v1.52/1.53 have a bug
         env: # all mandatory
           # AWS
