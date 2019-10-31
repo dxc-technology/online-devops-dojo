@@ -26,6 +26,8 @@ jobs:
       # Node 10 is current default in ubuntu-latest
       - name: Install node modules
         run: npm ci --only=prod
+  
+      if: github.branch == 'master'
 
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda
