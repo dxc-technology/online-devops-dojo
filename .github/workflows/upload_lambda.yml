@@ -30,7 +30,7 @@ jobs:
       - if: github.branch == 'master'
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
         name: Deploy lambda
-        uses: serverless/github-action@v1.54.0  # v1.52/1.53 have a bug
+        uses: serverless/github-action@v1.54.0
         env: # all mandatory
           # AWS
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
