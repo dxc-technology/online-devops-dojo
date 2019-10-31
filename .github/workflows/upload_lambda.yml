@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Job info
+        run: echo "Job started by : ${{github.actor}}"
+
       - name: Copy the repository
         uses: actions/checkout@v1
       
