@@ -1,0 +1,18 @@
+# GitHub Action file
+name: Lint MarkDown files
+
+on: 
+  push:
+    # change on other files doesn't trigger this pipeline
+    paths: ['*.md', 'docs/*.md']
+
+jobs:
+  build:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Copy the repository
+        uses: actions/checkout@v1
+      - name: Lint MarkDown files
+        uses: bltavares/actions/mdlint@master

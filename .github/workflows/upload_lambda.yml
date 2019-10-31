@@ -16,10 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo "GITHUB_EVENT_PATH=$GITHUB_EVENT_PATH"
       - name: Job info
         env:
-          TMP: ${{ github.actor }}
-        run: echo "Job started by : $TMP"
+          XTMP: ${{ github.actor }}
+        run: echo "Job started by X$TMP"
 
       - name: Copy the repository
         uses: actions/checkout@v1
@@ -29,11 +30,11 @@ jobs:
 
       # Install nodejs packages listed in package-lock.json.
       # Node 10 is current default in ubuntu-latest
-      - name: Install node modules
+      - if: github.branch == 'master'
+        name: Install node modules
         run: npm ci --only=prod
   
       - if: github.branch == 'master'
-
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
         name: Deploy lambda
         uses: serverless/github-action@v1.54.0  # v1.52/1.53 have a bug
