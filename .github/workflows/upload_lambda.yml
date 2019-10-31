@@ -20,7 +20,7 @@ jobs:
       - name: Job info
         env:
           XTMP: ${{ github.actor }}
-        run: echo "Job started by X$TMP"
+        run: echo "Job started by $XTMP"
 
       - name: Copy the repository
         uses: actions/checkout@v1
