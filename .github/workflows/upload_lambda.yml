@@ -1,9 +1,11 @@
 # GitHub workflow file
 name: Deployment of Online DevOps Dojo coach lambda
 
-on: 
-  pull_request:
+on:
+  push:
     # change(s) on those files trigger this pipeline
+    paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
+  pull_request:
     paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
     branch: master
 
@@ -21,12 +23,14 @@ jobs:
 
       # Install nodejs packages listed in package-lock.json.
       # Node 10 is current default in ubuntu-latest
-      - name: Install node modules
+      - if: github.branch == 'master'
+        name: Install node modules
         run: npm ci --only=prod
-
+  
+      - if: github.branch == 'master'
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
-      - name: Deploy lambda
-        uses: serverless/github-action@v1.54.0  # v1.52/1.53 have a bug
+        name: Deploy lambda
+        uses: serverless/github-action@v1.54.0
         env: # all mandatory
           # AWS
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
