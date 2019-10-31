@@ -17,7 +17,9 @@ jobs:
 
     steps:
       - name: Job info
-        run: echo "Job started by : ${{github.actor}}"
+        env:
+          TMP: ${{ github.actor }}
+        run: echo "Job started by : $TMP"
 
       - name: Copy the repository
         uses: actions/checkout@v1
