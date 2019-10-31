@@ -1,8 +1,12 @@
 # GitHub workflow file
 name: Deployment of Online DevOps Dojo coach lambda
 
-on: [push, pull_request]
+on:
+  push:
     # change(s) on those files trigger this pipeline
+    paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
+    branch: master
+  pull_request:
     paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
     branch: master
 
