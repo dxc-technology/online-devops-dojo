@@ -16,11 +16,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "GITHUB_EVENT_PATH=$GITHUB_EVENT_PATH"
       - name: Job info
         env:
           XTMP: ${{ github.actor }}
-        run: echo "Job started by $XTMP"
+        run: @echo "Job started by $XTMP"
 
       - name: Copy the repository
         uses: actions/checkout@v1
