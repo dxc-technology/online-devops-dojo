@@ -23,11 +23,11 @@ jobs:
 
       # Install nodejs packages listed in package-lock.json.
       # Node 10 is current default in ubuntu-latest
-      - if: github.branch == 'master'
+      - if: $GITHUB_REF##*/ == 'master'
         name: Install node modules
         run: npm ci --only=prod
   
-      - if: github.branch == 'master'
+      - if: $GITHUB_REF##*/ == 'master'
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
         name: Deploy lambda
         uses: serverless/github-action@v1.54.0
