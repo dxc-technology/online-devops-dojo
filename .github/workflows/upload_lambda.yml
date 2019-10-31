@@ -5,7 +5,6 @@ on:
   push:
     # change(s) on those files trigger this pipeline
     paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
-    branch: master
   pull_request:
     paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
     branch: master
@@ -16,11 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Job info
-        env:
-          XTMP: "Job started by ${{ github.actor }} on ${{github.event_name}} event."
-        run: echo $XTMP
-
       - name: Copy the repository
         uses: actions/checkout@v1
       
