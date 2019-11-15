@@ -22,14 +22,15 @@
   },
   "dependencies": {
     "@probot/serverless-lambda": "^0.3.0",
-    "probot": "^9.6.1"
+    "npm": "^6.13.0",
+    "probot": "^9.6.4"
   },
   "devDependencies": {
-    "jest": "^24.9.0",
-    "nock": "^11.7.0",
-    "nodemon": "^1.19.4",
-    "smee-client": "^1.1.0",
-    "standard": "^14.3.1"
+    "jest": ">=24.9.0",
+    "nock": ">=11.7.0",
+    "nodemon": ">=1.19.4",
+    "smee-client": ">=1.1.0",
+    "standard": ">=14.3.1"
   },
   "engines": {
     "node": ">= 8.3.0"
