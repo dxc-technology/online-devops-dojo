@@ -12,7 +12,7 @@
              &lt;plugin&gt;
                 &lt;groupId&gt;org.owasp&lt;/groupId&gt;
                 &lt;artifactId&gt;dependency-check-maven&lt;/artifactId&gt;
-                &lt;version&gt;3.3.2&lt;/version&gt;
+                &lt;version&gt;5.2.4&lt;/version&gt;
                 &lt;configuration&gt;
                     &lt;format&gt;ALL&lt;/format&gt;
                     &lt;failBuildOnCVSS&gt;7&lt;/failBuildOnCVSS&gt;
