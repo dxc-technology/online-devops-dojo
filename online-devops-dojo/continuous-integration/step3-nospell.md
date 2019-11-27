@@ -1,12 +1,12 @@
 As Dan the developer
 
-![](../../assets/online-devops-dojo/continuous-integration/dan.png)
+![](/online-devops-dojo/assets/online-devops-dojo/continuous-integration/dan.png)
 
  you are working on the user story which was prioritized by Paulo, the product owner.
 
-![](../../assets/online-devops-dojo/continuous-integration/paulo.png)
+![](/online-devops-dojo/assets/online-devops-dojo/continuous-integration/paulo.png)
 
-![](../../assets/online-devops-dojo/continuous-integration/user-story.png)
+![](/online-devops-dojo/assets/online-devops-dojo/continuous-integration/user-story.png)
 
 The user story is visible as a GitHub issue in your GitHub repo: [https://github.com/[your_username]/pet-clinic/issues](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#user-story)
 
@@ -27,4 +27,4 @@ You are about to modify the pet clinic code. In the Version Control module, we u
 * Do not save or commit your changes yet!
 
 **NOTE**: Yes, there is an error on the "Jolly Jumper" line - well done if you catch it! This is on purpose, so
-that you can see the checks which are automatically performed during continuous integration. 
+that you can see the checks which are automatically performed during continuous integration.

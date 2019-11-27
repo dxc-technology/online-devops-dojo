@@ -1,20 +1,20 @@
 # User story is ongoing
 
-![Santhosh](../../assets/online-devops-dojo/version-control/santhosh.png)
+![Santhosh](/online-devops-dojo/assets/online-devops-dojo/version-control/santhosh.png)
 
-> I see that you have worked on the changes as per the user story, 
+> I see that you have worked on the changes as per the user story,
 > you submitted them in GitHub, and Paulo has reviewed and merged your changes.
 > Are we done now?
 
-![Dan](../../assets/online-devops-dojo/version-control/dan.png)
+![Dan](/online-devops-dojo/assets/online-devops-dojo/version-control/dan.png)
 
 > No Santhosh. We are meeting the first acceptance criteria, but there is more work
 > to be done. We can't close the user story just now.
 
-![Santhosh](../../assets/online-devops-dojo/version-control/santhosh.png)
+![Santhosh](/online-devops-dojo/assets/online-devops-dojo/version-control/santhosh.png)
 
 > Yes, that was a trap! The user story stays opened until we meet all of the acceptance
-> criteria. 
+> criteria.
 
 ## Steps
 
