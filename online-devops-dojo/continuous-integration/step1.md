@@ -8,4 +8,4 @@ Run the following command to bring up Jenkins and connect it to your copy of the
 
 Note: Jenkins is an open source automation server used for automating continuous integration and facilitating the technical aspects of continuous delivery.
 
-💡 **TIP**: 🦊 Firefox user? Use `CTRL`+`INS` / `SHIFT`+`INS` to copy/paste your Personal Access Token in the window.
+💡 **TIP**: 🦊 Firefox user? Use <kbd>CTRL</kbd>+<kbd>INS</kbd> / <kbd>SHIFT</kbd>+<kbd>INS</kbd> to copy/paste your Personal Access Token in the window.
