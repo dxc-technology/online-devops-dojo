@@ -14,7 +14,7 @@ The team recognized quickly that a move to DevOps involved more than a change in
 
 After an extensive search they appointed **Chun** as a DevOps coach to help guide the team through the transformation and they asked **Paulo** the product owner to work with her in support of the DevOps Transformation.
 
-The team realized that DevOps Transformations like all other change initiatives would inevitably conflict with ongoing business operations and as such would involve both disruption and innovation, and that for this disruption and innovation to succeed that they needed to create a Safety Culture. 
+The team realized that DevOps Transformations like all other change initiatives would inevitably conflict with ongoing business operations and as such would involve both disruption and innovation, and that for this disruption and innovation to succeed that they needed to create a Safety Culture.
 
 A Safety Culture has been defined as _“a culture where employees can tell the boss bad news.”_ in a culture of this nature there is a focus on accepting that the team are working on complex system, that things will go wrong and that - when they do - blameless post-mortems are conducted to determine _what_ rather than _who_ caused the problem.
 
@@ -26,13 +26,12 @@ This is **Leading Change** and these are the change agents
 
 |   |   |
 |---|---|
-|![](../../assets/online-devops-dojo/leading-change/charlie.png)|**Charlie** Pet Clinic CEO who is keen to disrupt to the pet clinic market and sees the introduction of DevOps as a key part of his plans to achieve that goal. |
-|![](../../assets/online-devops-dojo/leading-change/chun.png)|**Chun** DevOps coach engaged to help the company and development team make the shift to a new way of working by mentoring, empowering and coaching the team. |
-|![](../../assets/online-devops-dojo/leading-change/paulo.png)|**Paulo** Product Owner appointed to facilitate the change, experienced Agile practitioner with some exposure to DevOps tools and processes. |
-|![](../../assets/online-devops-dojo/leading-change/santhosh.png)|**Santhosh** Scrum Master participating in the DevOps transformation. |
-|![](../../assets/online-devops-dojo/leading-change/brenda.png)|**Brenda** Business representative struggling to resolve issues following problems detected following a major systems upgrade. |
-|![](../../assets/online-devops-dojo/leading-change/selma.png)|**Selma** Security representative participating in the DevOps transformation. |
-|![](../../assets/online-devops-dojo/leading-change/adam.png)|**Adam** IT Admin representative participating in the DevOps transformation. |
-|![](../../assets/online-devops-dojo/leading-change/dan.png)|**Dan** Developer representative participating in the DevOps transformation. |
-|![](../../assets/online-devops-dojo/leading-change/tina.png)|**Tina** Test representative participating in the DevOps transformation. |
-
+|![](/online-devops-dojo/assets/online-devops-dojo/leading-change/charlie.png)|**Charlie** Pet Clinic CEO who is keen to disrupt to the pet clinic market and sees the introduction of DevOps as a key part of his plans to achieve that goal. |
+|![](/online-devops-dojo/assets/online-devops-dojo/leading-change/chun.png)|**Chun** DevOps coach engaged to help the company and development team make the shift to a new way of working by mentoring, empowering and coaching the team. |
+|![](/online-devops-dojo/assets/online-devops-dojo/leading-change/paulo.png)|**Paulo** Product Owner appointed to facilitate the change, experienced Agile practitioner with some exposure to DevOps tools and processes. |
+|![](/online-devops-dojo/assets/online-devops-dojo/leading-change/santhosh.png)|**Santhosh** Scrum Master participating in the DevOps transformation. |
+|![](/online-devops-dojo/assets/online-devops-dojo/leading-change/brenda.png)|**Brenda** Business representative struggling to resolve issues following problems detected following a major systems upgrade. |
+|![](/online-devops-dojo/assets/online-devops-dojo/leading-change/selma.png)|**Selma** Security representative participating in the DevOps transformation. |
+|![](/online-devops-dojo/assets/online-devops-dojo/leading-change/adam.png)|**Adam** IT Admin representative participating in the DevOps transformation. |
+|![](/online-devops-dojo/assets/online-devops-dojo/leading-change/dan.png)|**Dan** Developer representative participating in the DevOps transformation. |
+|![](/online-devops-dojo/assets/online-devops-dojo/leading-change/tina.png)|**Tina** Test representative participating in the DevOps transformation. |
