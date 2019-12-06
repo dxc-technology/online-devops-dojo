@@ -1,21 +1,20 @@
-![Selma](../../assets/online-devops-dojo/shift-security-left/selma.png)
+![Selma](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/selma.png)
 
 > According to the OWASP scan, at least the `spring-boot-starter-cache-1.4.7` dependency has a critical vulnerability ([CVSS>7](https://www.cvedetails.com/)).
 > I'm glad we find this now before it gets exploited!
 
-![Hal](../../assets/online-devops-dojo/shift-security-left/hal.png)
+![Hal](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/hal.png)
 
 > That's right, even if the application you build is secure, you have to watch the entire ecosystem, continuously.
 > The custom code you build is harder for me to penetrate because it's... custom.
 > But, the operating system, libraries, and all the other dependencies that the application relies upon are an easier target for me:
 > I can find information on the internet to exploit newly discovered vulnerabilities.
 
-![Dan](../../assets/online-devops-dojo/shift-security-left/dan.png)
+![Dan](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/dan.png)
 
 > The `spring-boot-starter-cache-1.4.7` dependency is in the `pom.xml` file. 
-> I remember we had to "pin" (stick to) this version previously, but we fixed the issue some time back. 
+> I remember we had to "pin" (stick to) this version previously, but we fixed the issue some time back.
 > Let's update to the latest version.
-
 
 ## Steps
 
@@ -30,7 +29,7 @@
 ---
 ## The pipeline still fails?
 
-![Selma](../../assets/online-devops-dojo/shift-security-left/selma.png)
+![Selma](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/selma.png)
 
 > As Hal said, new vulnerabilities are found all the time. It can be that a
 > new vulnerability has been found since we last updated the Pet Clinic
@@ -52,7 +51,7 @@ Now let's look at the dependency tree:
 * `mvn dependency:tree`{{execute}} (or `mvn dependency:tree | egrep --color=auto 'my-vulnerable-dep|$'` to highlight "`my-vulnerable-dep`" without version number)
 * Look for the dependency that has been identified as vulnerable in the OWASP dependency check report .
 * Walk up the tree and find the library which includes the vulnerable dependency. In this example, `databind` is vulnerable:
-![](../../assets/online-devops-dojo/shift-security-left/mvn-tree.png)
+![](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/mvn-tree.png)
 * In this example, you need to locate `spring-boot-actuator-autoconfigure` in `pom.xml` or update an higher level dependency.
 * Go to https://mvnrepository.com/ to find a new version of that library. Using the smallest minor revision is always preferred to not destabilize the code. That said, automated tests provide a good safety.
 * Update the `pom.xml` file with the new version - `nano pom.xml`{{execute}}
