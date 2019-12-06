@@ -31,4 +31,4 @@ The script will ask you for your github.com Personal Access Token. See below for
 8. Click the clipboard icon to copy the token in your clipboard.
 9. **Make note of the personal access token**. This token will be used throughout the Online DevOps Dojo. Note that it is OK if you lose it, as you can always generate a new one.
 
-💡 **TIP**: 🦊 Firefox user? Use `CTRL`+`INS` / `SHIFT`+`INS` to copy/paste your Personal Access Token in the window.
+💡 **TIP**: 🦊 Firefox user? Use <kbd>CTRL</kbd>+<kbd>INS</kbd> / <kbd>SHIFT</kbd>+<kbd>INS</kbd> to copy/paste your Personal Access Token in the window.
