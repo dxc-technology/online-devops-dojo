@@ -17,7 +17,7 @@ provider:
   tags:
     Name: "Online DevOps Dojo coach"
     environment: ${env:AWS_STAGE}
-    application_id: devops-dojo-coach
+    application-id: online-devops-dojo
     version: "1.0.0"
     owner: "philippe.berthonneau@dxc.com"
     group: "doe"
