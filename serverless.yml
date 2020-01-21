@@ -9,7 +9,7 @@ frameworkVersion: ">=1.4.0 <2.0.0"
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
 
   region: ${env:AWS_REGION}
   stage: ${env:AWS_STAGE}
@@ -18,6 +18,7 @@ provider:
     Name: "Online DevOps Dojo coach"
     environment: ${env:AWS_STAGE}
     application-id: online-devops-dojo
+    Application: online-devops-dojo
     version: "1.0.0"
     owner: "philippe.berthonneau@dxc.com"
     group: "doe"
