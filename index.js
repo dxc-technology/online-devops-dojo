@@ -39,7 +39,7 @@ module.exports = app => {
     })
     app.log('Found ' + botComments + ' comments by the bot in this PR')
 
-    if (commentBody.match(/@paulo\s.*(?:review|check|verify)/i)){
+    if (commentBody.match(/@paulo\s.*(?:review|check|verify)/)){
       switch (botComments) {
         case 0:
           issuesComment = context.issue({ body: '![Paulo](https://s3.amazonaws.com/devopsdojoassets/paulo.png)\n Sure! I looked at the changes, and Brenda wants us to not only have horses but also ponies. So, we need to add `pony` in addition to `horse`. Can you do that?' })
@@ -52,7 +52,7 @@ module.exports = app => {
           break;
       }
       return ret // Return the last result. Not very accurate, but will do.
-    } else if (commentBody.match(/@tina\s.*(?:review|check|verify|look|done|finish)/i)){
+    } else if (commentBody.match(/@tina\s.*(?:review|check|verify|look|done|finish)/)){
       switch (botComments) {
         case 0:
           issuesComment = context.issue({ body: '![Tina](https://s3.amazonaws.com/devopsdojoassets/tina.png)\n That looks good. Yet, I think we should replace `Jolly Jumper` by `Silver Blaze`. Can you make the change?' })
@@ -64,7 +64,7 @@ module.exports = app => {
           break;
       }
       return ret // Return the last result. Not very accurate, but will do.
-    } else if (commentBody.match(/@brenda\s.*(?:review|check|verify|look|done|finish)/i)){
+    } else if (commentBody.match(/@brenda\s.*(?:review|check|verify|look|done|finish)/)){
       switch (botComments) {
         case 0:
           issuesComment = context.issue({ body: '![Brenda](https://s3.amazonaws.com/devopsdojoassets/brenda.png)\n Excellent! This is exactly what I was looking for. Going ahead and merging the changes.' })
