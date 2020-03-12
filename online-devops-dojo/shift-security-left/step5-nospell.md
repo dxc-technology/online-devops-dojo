@@ -1,4 +1,4 @@
-![Dan](../../assets/online-devops-dojo/shift-security-left/dan.png)
+![Dan](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/dan.png)
 
 > As Pet Clinic is a Java project, we can easily add the [OWASP dependency check](https://www.owasp.org/index.php/OWASP_Dependency_Check) as part of our pipeline, in our `pom.xml` file, as a Maven plugin. Let's do this!
 
@@ -12,7 +12,7 @@
              &lt;plugin&gt;
                 &lt;groupId&gt;org.owasp&lt;/groupId&gt;
                 &lt;artifactId&gt;dependency-check-maven&lt;/artifactId&gt;
-                &lt;version&gt;3.3.2&lt;/version&gt;
+                &lt;version&gt;5.2.4&lt;/version&gt;
                 &lt;configuration&gt;
                     &lt;format&gt;ALL&lt;/format&gt;
                     &lt;failBuildOnCVSS&gt;7&lt;/failBuildOnCVSS&gt;

@@ -1,10 +1,11 @@
 ## Continuous Integration runs
 
-Go to Jenkins to see Continuous Integration happening: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/blue/organizations/jenkins/pet-clinic/activity/
+Go to Jenkins to see Continuous Integration happening: <https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/blue/organizations/jenkins/pet-clinic/activity/>
 
-![CI Pipeline in Jenkins](../../assets/online-devops-dojo/continuous-integration/ci-blue-ocean.png)
+![CI Pipeline in Jenkins](/online-devops-dojo/assets/online-devops-dojo/continuous-integration/ci-blue-ocean.png)
 
-This will take some time to: 
+This will take some time to:
+
 * Download the dependencies of the Pet Clinic application
 * Build the application to generate a package
 * Run unit tests
@@ -18,8 +19,7 @@ As the pull request is created, a series of automated actions happen in the back
 * Jenkins reads the content of the [`Jenkinsfile`](https://jenkins.io/doc/book/pipeline/jenkinsfile/) at the root of your repository. The Jenkinsfile is the file which has the implementation of your applications' continuous integration pipeline.
 * The stages and steps in the Jenkinsfile are executed on the Jenkins server.
 
-
 ## Tasks
 
 * Review the result of the pipeline: note the "build" step has caught the error we introduced in a previous step.
-* Click on the step which is in error and review the logs of the error. 
+* Click on the step which is in error and review the logs of the error.

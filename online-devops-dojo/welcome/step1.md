@@ -5,6 +5,6 @@ The team is part of the IT organization of a large Pet Clinic. The Pet Clinic ru
 
 The Pet Clinic IT team develops, tests, deploys and supports the Java application.
 
-![Pet Clinic application](../../assets/online-devops-dojo/welcome/petclinic.jpg)
+![Pet Clinic application](/online-devops-dojo/assets/online-devops-dojo/welcome/petclinic.jpg)
 
 <div style="text-align: right">💡 **TIP**: Adjust the window size vertical scroller to make the welcome module easier to read ◀▶</div>

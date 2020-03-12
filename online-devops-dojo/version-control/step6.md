@@ -1,8 +1,8 @@
 # Peer review
 
-![Dan](../../assets/online-devops-dojo/version-control/dan.png)
+![Dan](/online-devops-dojo/assets/online-devops-dojo/version-control/dan.png)
 
-> OK, you submitted your changes. They are ready to be reviewed by someone 
+> OK, you submitted your changes. They are ready to be reviewed by someone
 > before they get merged.
 > Let's ask for a lightweight peer review within the pull request.
 
