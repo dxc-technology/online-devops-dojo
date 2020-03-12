@@ -2,7 +2,7 @@
   "default": true,
   "line-length": false,
   "no-inline-html": {
-    "allowed_elements": [ "svg", "path", "ins", "kbd", "pre", "a", "details", "summary", "div" ]
+    "allowed_elements": [ "svg", "path", "ins", "kbd", "pre", "a", "details", "summary", "div", "br" ]
     },
   "first-line-h1": false
 }

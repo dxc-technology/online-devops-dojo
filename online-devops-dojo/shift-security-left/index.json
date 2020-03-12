@@ -30,7 +30,7 @@
       },
       {
         "title": "Add scanner in the pipeline",
-        "text": "step6.md"
+        "text": "step6-nospell.md"
       },
       {
         "title": "Fixing the vulnerability",
@@ -38,7 +38,7 @@
       },
       {
         "title": "Continuous checking",
-        "text": "step8.md"
+        "text": "step8-nospell.md"
       }
     ],
     "intro": {
