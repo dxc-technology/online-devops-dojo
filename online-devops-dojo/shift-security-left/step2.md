@@ -8,7 +8,7 @@ Let's go ahead and prepare our environment, click this:
 
  `./prepare.sh`{{execute}}
 
-answer the question and wait for the "Click on 'CONTINUE'." message.
+answer the question and wait for the "Click on 'CONTINUE'" message.
 
 <details>
 <summary>💣Workspace reset instructions</summary>

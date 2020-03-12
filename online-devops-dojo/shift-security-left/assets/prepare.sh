@@ -55,8 +55,8 @@ if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
   echo -e "> I was expecting to find the $REPO repository under your GitHub username and I didn't, or the content does not look right."
   echo -e "> That must be me. But just in case:"
   echo -e "> - Close this Katacoda window: the environment will expire soon and you need ample time to complete the module"
-  echo -e "> - Go through the Welcome module which will set everything up for you: $WELCOME_URL"
-  echo -e ""
+  echo -e "> - Go through the Welcome module which will set everything up for you:"
+  echo -e "> $WELCOME_URL"
   exit 1
 fi
 
