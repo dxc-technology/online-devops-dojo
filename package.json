@@ -21,13 +21,14 @@
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
-    "@probot/serverless-lambda": "^0.3.0",
-    "probot": "^9.6.4"
+    "@probot/serverless-lambda": "^0.5.0",
+    "node": "^12.16.1",
+    "probot": "^9.10.1"
   },
   "devDependencies": {
-    "jest": ">=24.9.0",
-    "nock": ">=11.7.0",
-    "nodemon": ">=1.19.4",
+    "jest": "^25.1.0",
+    "nock": "^12.0.2",
+    "nodemon": ">=2.0.2",
     "smee-client": ">=1.1.0",
     "standard": ">=14.3.1"
   },

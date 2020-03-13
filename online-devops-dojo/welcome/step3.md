@@ -22,13 +22,13 @@ The script will ask you for your github.com Personal Access Token. See below for
 
 1. Create a personal [github.com](https://github.com) account (Sign Up)
 1. Log in to [github.com](https://github.com)
-2. On any GitHub page, click your profile icon at the top right and then click Settings.
-3. On the sidebar menu, click Developer settings and then click Personal access tokens.
-4. Click Generate new token.
-5. Enter a Token description of your choice.
-6. Select `repo` so that the token can read/write in your repository and `admin:repo_hook` so that it can update GitHub repository web hooks. Make sure to select everything within those scopes. 
-7. Click Generate token.
-8. Click the clipboard icon to copy the token in your clipboard.
-9. **Make note of the personal access token**. This token will be used throughout the Online DevOps Dojo. Note that it is OK if you lose it, as you can always generate a new one.
+1. On any GitHub page, click your profile icon at the top right and then click Settings.
+1. On the sidebar menu, click Developer settings and then click Personal access tokens.
+1. Click Generate new token.
+1. Enter a Token description of your choice.
+1. Select `repo` so that the token can read/write in your repository and `admin:repo_hook` so that it can update GitHub repository web hooks. Make sure to select everything within those scopes.
+1. Click Generate token.
+1. Click the clipboard icon to copy the token in your clipboard.
+1. **Make note of the personal access token**. This token will be used throughout the Online DevOps Dojo. Note that it is OK if you lose it, as you can always generate a new one.
 
-💡 **TIP**: 🦊 Firefox user? Use `CTRL`+`INS` / `SHIFT`+`INS` to copy/paste your Personal Access Token in the window.
+💡 **TIP**: 🦊 Firefox user? Use <kbd>CTRL</kbd>+<kbd>INS</kbd> / <kbd>SHIFT</kbd>+<kbd>INS</kbd> to copy/paste your Personal Access Token in the window.

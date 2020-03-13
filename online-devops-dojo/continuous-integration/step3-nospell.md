@@ -19,11 +19,11 @@ You are about to modify the pet clinic code. In the Version Control module, we u
 * Head over to your copy of the pet clinic application on GitHub, and navigate to the file in the [`src/main/resources/db/hsqldb`](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#datasql) folder named `data.sql`. This file is used to populate the application database with data when the pet clinic application is started
 * Click on the pencil icon in the top right corner to edit the file
 * Below `INSERT INTO pets VALUES (13, 'Sly', '2012-06-08', 1, 10);` around line 51, add two new lines for individual horses:
-<pre class="file" data-target="clipboard">
+  <pre class="file" data-target="clipboard">
 
-  INSERT INTO pets VALUES (14, 'Jolly Jumper', '2012-09-20', 7, 5;
-  INSERT INTO pets VALUES (15, 'Flycka', '2012-07-14', 7, 9);
-</pre>
+    INSERT INTO pets VALUES (14, 'Jolly Jumper', '2012-09-20', 7, 5;
+    INSERT INTO pets VALUES (15, 'Flycka', '2012-07-14', 7, 9);
+  </pre>
 * Do not save or commit your changes yet!
 
 **NOTE**: Yes, there is an error on the "Jolly Jumper" line - well done if you catch it! This is on purpose, so

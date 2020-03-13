@@ -2,7 +2,7 @@
 
 ![Selma](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/selma.png)
 
-> Now that the fire drill is over, we need to take advantage of this incident (some call it an "unplanned investment opportunity") to invest and include security early in our cycle. 
+> Now that the fire drill is over, we need to take advantage of this incident (some call it an "unplanned investment opportunity") to invest and include security early in our cycle.
 > Between Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST), I suggest we start with SAST and include this activity in our Continuous Integration pipeline.
 
 ![Tina](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/tina.png)
@@ -11,7 +11,7 @@
 
 ![Chun](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/chun.png)
 
-> The Continuous Integration Pipeline is the perfect place to add quality gates such as SAST. There are many tools we can use - including Open Source ones - such as the [OWASP dependency check](https://www.owasp.org/index.php/OWASP_Dependency_Check). 
+> The Continuous Integration Pipeline is the perfect place to add quality gates such as SAST. There are many tools we can use - including Open Source ones - such as the [OWASP dependency check](https://www.owasp.org/index.php/OWASP_Dependency_Check).
 > We want this gate to run not only when we introduce changes in the code, but also on a regular basis - for example daily. This way, when (**not if**) a vulnerability is discovered in one of our dependency, our CI pipeline will detect it and notify us so that we can take action.
 
 ![Selma](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/selma.png)

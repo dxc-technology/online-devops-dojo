@@ -43,9 +43,11 @@ with the rest of the module.
 
 You will need to walk the dependency tree. Let's first go to the correct branch in the repository:
 * Go to the terminal window
-* `cd ~/pet-clinic`{{execute}}
-* `git pull`{{execute}}
-* `git checkout deps-check`{{execute}}
+  ```
+  cd ~/pet-clinic
+  git pull
+  git checkout deps-check
+```{{execute}}
 
 Now let's look at the dependency tree:
 * `mvn dependency:tree`{{execute}} (or `mvn dependency:tree | egrep --color=auto 'my-vulnerable-dep|$'` to highlight "`my-vulnerable-dep`" without version number)
@@ -56,9 +58,11 @@ Now let's look at the dependency tree:
 * Go to https://mvnrepository.com/ to find a new version of that library. Using the smallest minor revision is always preferred to not destabilize the code. That said, automated tests provide a good safety.
 * Update the `pom.xml` file with the new version - `nano pom.xml`{{execute}}
 * Push the updated version:
-  * `git add pom.xml`{{execute}}
-  * `git commit -m "Fix dependency"`{{execute}}
-  * `git push`{{execute}}
+  ```
+  git add pom.xml
+  git commit -m "Fix dependency"
+  git push
+  ```{{execute}}
 * Check the execution of the pipeline and the results.
 * Repeat until dependency check is green.
 

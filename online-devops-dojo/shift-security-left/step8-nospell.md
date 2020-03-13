@@ -13,14 +13,14 @@
 
 ## Steps
 
-* Navigate to your copy of the pet clinic application to find  [`Jenkinsfile`](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#jenkinsfile), in the same `deps-check` branch from the pull request.
+* Navigate to your copy of the Pet Clinic application to find  [`Jenkinsfile`](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#jenkinsfile), in the same `deps-check` branch from the pull request.
 * Click on the pencil icon in the top right corner to edit the file.
-* Below `agent any` in the `Jenkinsfile`, add a scheduled trigger: 
+* Below `agent any` in the `Jenkinsfile`, add a scheduled trigger:
 
 <pre class="file" data-target="clipboard">
 
     // Scan will run everyday on master
-    triggers { cron( '@daily' ) }
+    triggers { cron( (BRANCH_NAME == "master") ? "@daily" : "" ) }
 
 </pre>
 

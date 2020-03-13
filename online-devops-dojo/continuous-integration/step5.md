@@ -1,6 +1,6 @@
 ## Continuous Integration runs
 
-Go to Jenkins to see Continuous Integration happening: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/blue/organizations/jenkins/pet-clinic/activity/
+Go to Jenkins to see Continuous Integration happening: <https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/blue/organizations/jenkins/pet-clinic/activity/>
 
 ![CI Pipeline in Jenkins](/online-devops-dojo/assets/online-devops-dojo/continuous-integration/ci-blue-ocean.png)
 

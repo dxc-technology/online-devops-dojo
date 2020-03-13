@@ -4,7 +4,7 @@
 
 ## Steps
 
-* Navigate to your GitHub copy of the pet clinic application to find [`pom.xml`](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#pomfile).
+* Navigate to your GitHub copy of the Pet Clinic application to find [`pom.xml`](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#pomfile).
 * Click on the pencil icon in the top right corner to edit the file.
 * Add the OWASP dependency checker as one of the plugins, at the beginning of line 208 (before `</plugins>`):
 
@@ -28,8 +28,11 @@
             &lt;/plugin&gt;
 </pre>
 
-* 💡 Note that we fail the build if CVSS is >= 7. It all depends of the context of your project and where you want to put the bar. More information on CVSS at [https://www.first.org/cvss/v2/guide](https://www.first.org/cvss/v2/guide).
-* Create a pull request by committing the changes in a new branch which you will name: `deps-check`{{copy}}
+* 💡 Note that we fail the build if CVSS is >= 7. It all depends of the context
+  of your project and where you want to put the bar. More information on CVSS at
+  [https://www.first.org/cvss/v3.1/user-guide](https://www.first.org/cvss/v3.1/user-guide).
+* Create a pull request by committing the changes in a new branch which you will
+  name: `deps-check`{{copy}}
 * The build will trigger automatically.
 * Navigate to [Jenkins](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/blue/organizations/jenkins/pet-clinic/activity) to see the results of the build.
-* The build will succeed: at this time, we are missing the step in the pipeline (Jenkinsfile) to actually check for dependencies. The plugin is in the `pom` file but is not used.
+* The build will succeed: at this time, we are missing the step in the pipeline (Jenkinsfile) to actually check for dependencies. The plugin is in the `pom.xml` file but is not used.
