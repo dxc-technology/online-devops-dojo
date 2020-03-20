@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2020-03-20
+
+### Changed
+
+- Update Shift Left on Security module with updated dependencies of Pet Clinic
+- Bump NPM dependencies
+
 ## [1.0.0] - 2019-07-16
 
 ### Added
