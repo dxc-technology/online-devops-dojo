@@ -115,7 +115,7 @@ echo -e "${COLINFO}Updating GitHub web hook to point to Katacoda Jenkins...${COL
 echo -e "${COLLOGS}"
 JenkinsUrl=`curl ${CURL_NODEBUG} "https://katacoda.com/metadata/generate-url?port=8080&ip=$(ip addr show ens3 | grep -Po 'inet \K[\d.]+')"`
 
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data '{"name": "web","active": true,"events": [ "push", "pull_request" ], "config":{"url": "https://"$JenkinsUrl"/github-webhook/","content_type":"json"}}' https://${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/hooks
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST --data '{"name": "web","active": true,"events": [ "push", "pull_request" ], "config":{"url": "https://"$JenkinsUrl"/github-webhook/","content_type":"json"}}' ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/hooks
 }
 adding_webhook
 
