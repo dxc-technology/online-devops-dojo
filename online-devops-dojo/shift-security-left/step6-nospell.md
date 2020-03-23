@@ -37,7 +37,7 @@
   to see the results. The pipeline will be marked "failed": read the logs of the stage
   "Dependency check", then click on Artifacts tab on the top right to see the OWASP report.
 
-![OWASP report](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/owasp-report.png)
+![OWASP report](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/owasp-report2.png)
   <div align="center">Blue Ocean view</div>
 * You may also switch to Jenkins' classic view. Click on "Go to classic"
   ![Go to classic](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/jenkins-back-to-classic-icon.png)
@@ -47,5 +47,5 @@
   The build will be marked "failed". Read the logs of the stage "Dependency
   check" and the OWASP report to see what the issue is.
 
-![OWASP report](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/owasp-report2.png)
+![OWASP report](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/owasp-report.png)
  <div align="center">Classic view</div>
