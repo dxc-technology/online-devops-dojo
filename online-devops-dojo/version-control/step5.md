@@ -1,6 +1,6 @@
 # Create a Pull Request
 
-![Dan](/online-devops-dojo/assets/online-devops-dojo/version-control/dan.png)
+![Dan](../../assets/online-devops-dojo/version-control/dan.png)
 
 > Although we pushed the new code back to GitHub, it is still in its isolated branch,
 > not impacting the work of others in the team.

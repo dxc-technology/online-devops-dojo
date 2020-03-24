@@ -1,6 +1,6 @@
 # Understanding the user story
 
-![Paulo](/online-devops-dojo/assets/online-devops-dojo/version-control/paulo.png)
+![Paulo](../../assets/online-devops-dojo/version-control/paulo.png)
 
 > I created a user story, and it is visible in our backlog. We want to link the 
 > code changes to that user story, so that we can ensure traceability and make 
@@ -13,7 +13,7 @@
 
 # Create a feature branch
 
-![Dan](/online-devops-dojo/assets/online-devops-dojo/version-control/dan.png)
+![Dan](../../assets/online-devops-dojo/version-control/dan.png)
 
 > To make sure we isolate work, we use feature branches. We name this short lived
 > branch after the ID and name of the user story
@@ -23,7 +23,7 @@
 * Change directory into the cloned repo: `cd pet-clinic`{{execute}}
 * Create `us-1-horse` branch to cover user story 1 about adding horses: `git checkout -b us-1-horse`{{execute}}
 
-![Dan](/online-devops-dojo/assets/online-devops-dojo/version-control/dan.png)
+![Dan](../../assets/online-devops-dojo/version-control/dan.png)
 
 > This branch is a short lived (e.g. one day) feature branch. We use this feature branch to
 > get feedback from continuous integration (automated checks and gates) and from peers. 
@@ -31,7 +31,7 @@
 
 # Make changes
 
-![Dan](/online-devops-dojo/assets/online-devops-dojo/version-control/dan.png)
+![Dan](../../assets/online-devops-dojo/version-control/dan.png)
 
 > Now, let's implement the user story by making some changes in the code. We will first start by adding `horse` as a pet type.
 
@@ -43,7 +43,7 @@
 * Check the branch in which you are working: `git branch`{{execute}}
 * Check the status of the file changed: `git status`{{execute}}
 
-![Dan](/online-devops-dojo/assets/online-devops-dojo/version-control/dan.png)
+![Dan](../../assets/online-devops-dojo/version-control/dan.png)
 
 > Good! I can see that you are working in the context of the feature branch and that
 > the file has changed, ready to be added: Git reports that changes are not staged for commit yet.

@@ -1,4 +1,4 @@
-![Dan](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/dan.png)
+![Dan](../../assets/online-devops-dojo/shift-security-left/dan.png)
 
 > Now, we need to update the `Jenkinsfile` which describes our Continuous Integration pipeline to add the dependency vulnerability scanner. Initially, I don't want to fail the build because of vulnerabilities in our dependencies. We want to stop the leak and be informed instead. I will mark the build as "unstable" if we have a vulnerability.
 > Also, I am gathering a report for the vulnerabilities so that we can analyze it.
@@ -37,15 +37,15 @@
   to see the results. The pipeline will be marked "failed": read the logs of the stage
   "Dependency check", then click on Artifacts tab on the top right to see the OWASP report.
 
-![OWASP report](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/owasp-report2.png)
+![OWASP report](../../assets/online-devops-dojo/shift-security-left/owasp-report2.png)
   <div align="center">Blue Ocean view</div>
 * You may also switch to Jenkins' classic view. Click on "Go to classic"
-  ![Go to classic](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/jenkins-back-to-classic-icon.png)
+  ![Go to classic](../../assets/online-devops-dojo/shift-security-left/jenkins-back-to-classic-icon.png)
   logo in the upper right corner. Select the "pet-clinic" pipeline, choose "Pull
   Requests" and select the latest build from the Build History along the left
   side to get to a Jenkins view that matches the below images.  
   The build will be marked "failed". Read the logs of the stage "Dependency
   check" and the OWASP report to see what the issue is.
 
-![OWASP report](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/owasp-report.png)
+![OWASP report](../../assets/online-devops-dojo/shift-security-left/owasp-report.png)
  <div align="center">Classic view</div>
