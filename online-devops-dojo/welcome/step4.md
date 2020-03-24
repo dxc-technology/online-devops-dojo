@@ -9,8 +9,8 @@ which you need to "install" in your pet-clinic repository.
 * Click "Install".
 * If your account belongs to organization(s), you will see a first page
 "Where do you want to install Online DevOps Dojo Coach?", select your user profile.
-* In "Install on your personal account [...]" click "Only select repositories" and select `your-shortname/pet-clinic`.
+* In "Install on your personal account [...]" click "Only select repositories" and select `your-github-username/pet-clinic`.
 * Scroll down and click "Install".
 
 You will get a confirmation at the top of the browser:
-"**Okay, Online DevOps Dojo coach was installed on the @your-shortname account**".
+"**Okay, Online DevOps Dojo coach was installed on the @your-github-username account**".
