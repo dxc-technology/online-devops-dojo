@@ -1,0 +1,16 @@
+# GitHub workflow file
+name: Check links in markdown
+
+on:
+  push
+
+jobs:
+  check-links:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - uses: gaurav-nelson/github-action-markdown-link-check@0.6.0
+      with:
+        config-file: 'md-link-check.json'
