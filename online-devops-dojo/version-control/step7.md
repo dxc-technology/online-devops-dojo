@@ -18,6 +18,8 @@
 
 ## Steps
 
-* Go and check the pet clinic backlog to inspect the user story (check the terminal window for a link to the issues module in your pet-clinic repository)
-* Verify that there is a link between the user story and the pull request which implements the user story
+* Go and check the Pet Clinic backlog to inspect the user story (check the
+  terminal window for a link to the issues module in your pet-clinic repository)
+* Verify that there is a link between the user story and the pull request which
+  implements the user story
 * Verify that the user story is not closed. Don't close it yet.

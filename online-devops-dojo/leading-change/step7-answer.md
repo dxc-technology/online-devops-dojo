@@ -1,6 +1,6 @@
 The correct answer is **None of the above**
 
-The following are principles which contribute to a successful DevOps Transformation 
+The following are principles which contribute to a successful DevOps Transformation:
 
 * Continuous Improvement via DevOps Kaizen NOT a Big Bang approach
 
