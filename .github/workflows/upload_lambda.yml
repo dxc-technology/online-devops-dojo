@@ -5,9 +5,7 @@ on:
   push:
     # change(s) on those files trigger this pipeline
     paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
-  pull_request:
-    paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
-    branch: master
+    branches: master
 
 jobs:
   build:
