@@ -2,7 +2,9 @@
 name: Check links in markdown
 
 on:
-  push
+  schedule:
+  - cron: "0 8 * * *"
+  push:
 
 jobs:
   check-links:
