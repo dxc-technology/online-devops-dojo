@@ -19,11 +19,11 @@ So, go grab a cup of your favorite caffeinated beverage, close your email, put y
 ## Welcome module
 
 In this Welcome module lab, we will get you started and setup a dedicated environment for you, to allow you complete the labs for
-the other modules in the  **Online DevOps Dojo** at your own pace.
+the other modules in the **Online DevOps Dojo** at your own pace.
 
 First, to begin let us introduce you to the story of a business formed by the CEO Charlie, a DevOps team, an application and its
 delivery chain (continuous delivery pipeline).
 
 Once upon a time, not so long ago in a galaxy not so far away...
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/onceuponatime.jpg)
+![](../../assets/online-devops-dojo/welcome/onceuponatime.jpg)

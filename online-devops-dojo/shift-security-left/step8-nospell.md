@@ -1,13 +1,13 @@
-![Hal](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/hal.png)
+![Hal](../../assets/online-devops-dojo/shift-security-left/hal.png)
 
 > Dang! You make my job really hard now! That's OK though, I continuously monitor for new vulnerabilities.
 > This is a waiting game at this point.  
 
-![Selma](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/selma.png)
+![Selma](../../assets/online-devops-dojo/shift-security-left/selma.png)
 
 > Now that we have our dependency scanner in place, how can we continuously scan for new vulnerabilities to defeat the hackers?
 
-![Dan](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/dan.png)
+![Dan](../../assets/online-devops-dojo/shift-security-left/dan.png)
 
 > The pipeline is perfect for that. Let's update the `Jenkinsfile` to trigger daily, even if there are no new code changes.
 

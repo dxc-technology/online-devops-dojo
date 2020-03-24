@@ -2,7 +2,7 @@ The **Online DevOps Dojo** has several characters which play a role throughout t
 
 ### Charlie (CEO)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/charlie.png)
+![](../../assets/online-devops-dojo/welcome/charlie.png)
 
 **C**harlie is the **C**EO of the company; a technology entrepreneur, investor, and philanthropist.
 
@@ -10,7 +10,7 @@ Charlie is intent on disrupting the world of Pet Clinics and sees DevOps as key 
 
 ### Chun (Coach)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/chun.png)
+![](../../assets/online-devops-dojo/welcome/chun.png)
 
 **C**hun is a **c**oach, change facilitator and technologist. She has been helping organizations make the transition from
 traditional development practices to DevOps practices and culture supported by tooling, and processes to increase the release
@@ -26,7 +26,7 @@ committed to growing the DevOps coaching community by leveraging her experience 
 
 ### Brenda (Business)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/brenda.png)
+![](../../assets/online-devops-dojo/welcome/brenda.png)
 
 **B**renda is from the **b**usiness. One of her goals is to help grow the company. The more she sells, the happier Brenda gets, and
 key to this is the availability and functionality of the Pet Clinic application. Of course, she is aware of engineering capacity,
@@ -51,7 +51,7 @@ Clinic application are ready in time for the planned marketing launch in support
 
 ### Paulo (Product Owner)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/paulo.png)
+![](../../assets/online-devops-dojo/welcome/paulo.png)
 
 **P**aulo is the **P**roduct Owner, he is a cat person and volunteers at a local animal rescue center.
 
@@ -76,7 +76,7 @@ scrum team who regularly and rather unfairly question it in his opinion.
 
 ### Santhosh (Scrum Master)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/santhosh.png)
+![](../../assets/online-devops-dojo/welcome/santhosh.png)
 
 **S**anthosh is the **S**crum Master. He is the advisor to and facilitator for the agile development team. He helps everybody
 including our cast (Brenda from the business, Paulo the product owner, Tina the tester and Dan the developer) understand Scrum
@@ -97,7 +97,7 @@ team to the business.
 
 ### Adam (Site Reliability Engineer)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/adam.png)
+![](../../assets/online-devops-dojo/welcome/adam.png)
 
 **A**dam is a System **A**dministrator who is transitioning to the role of Site Reliability Engineer (SRE). SRE is a discipline that
 combines software and systems engineering to create ultra-scalable and massively distributed, fault-tolerant systems.
@@ -116,7 +116,7 @@ the Bird, Reptile and Small Animal product lines offered by Pet Clinic.
 
 ### Dan (Developer)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/dan.png)
+![](../../assets/online-devops-dojo/welcome/dan.png)
 
 **D**an, one of the Pet Clinic development team, is a full stack **D**eveloper originally from Mos Eisley. He has worked as a senior
 developer for a number of years, most recently for First Order Inc., and has mentored new hires and interns in a number of the
@@ -137,7 +137,7 @@ way that meets the stated acceptance criteria and delivers value to the Pet Clin
 
 ### Tina (Tester)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/tina.png)
+![](../../assets/online-devops-dojo/welcome/tina.png)
 
 **T**ina is a **T**ester. Her motto, which she is apt to quote often, is "You can't test in quality; you have to build it into the
 DNA of the software development process."
@@ -160,7 +160,7 @@ shelter.
 
 ### Selma (Security)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/selma.png)
+![](../../assets/online-devops-dojo/welcome/selma.png)
 
 **S**elma is the company's **S**ecurity Officer, and is the proud owner of a German Shepherd called Arnold. Selma is currently under
 pressure due to the sudden spike in security vulnerabilities being identified as a result of Hal the hacker's efforts.
@@ -183,7 +183,7 @@ hack.
 
 ### Hal (Hacker)
 
-![](/online-devops-dojo/assets/online-devops-dojo/welcome/hal.png)
+![](../../assets/online-devops-dojo/welcome/hal.png)
 
 **H**al is a white hat **H**acker, engaged by the company to find and expose vulnerabilities in the company's applications. A
 vulnerability is a weakness which can be exploited by a Threat Actor, such as an attacker, to perform unauthorized actions within a

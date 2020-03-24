@@ -2,7 +2,7 @@
 
 Go to Jenkins to see Continuous Integration happening: <a href="https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/blue/organizations/jenkins/pet-clinic/activity/" target="jenkins">https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/blue/organizations/jenkins/pet-clinic/activity/</a>
 
-![CI Pipeline in Jenkins](/online-devops-dojo/assets/online-devops-dojo/continuous-integration/ci-blue-ocean.png)
+![CI Pipeline in Jenkins](../../assets/online-devops-dojo/continuous-integration/ci-blue-ocean.png)
 
 This will take some time to:
 

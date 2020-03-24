@@ -4,7 +4,7 @@ which you need to "install" in your pet-clinic repository.
 
 * Go to the Online DevOps Dojo coach web site: <https://github.com/apps/online-devops-dojo-coach>
 
-![Dojo coach](/online-devops-dojo/assets/online-devops-dojo/welcome/probot.jpg)
+![Dojo coach](../../assets/online-devops-dojo/welcome/probot.jpg)
 
 * Click "Install".
 * If your account belongs to organization(s), you will see a first page
