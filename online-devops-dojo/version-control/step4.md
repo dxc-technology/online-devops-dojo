@@ -1,6 +1,6 @@
 # Add, commit and push
 
-![Dan](/online-devops-dojo/assets/online-devops-dojo/version-control/dan.png)
+![Dan](../../assets/online-devops-dojo/version-control/dan.png)
 
 > Let's add the change to the staging area. In other words, that we have marked a modified file in its current version to go into our next commit snapshot.
 > Then, let's commit locally and push back to our GitHub repository
