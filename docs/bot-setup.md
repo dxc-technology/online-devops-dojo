@@ -9,7 +9,7 @@ This setup requires:
 - an AWS account with policies allowing to create an API Gateway and Lambda
 function, for example [this](./lambda-dojo-upload.json);  
 - a GitHub.com account with [GitHub Actions](https://github.com/features/actions)
- enabled (currently in beta);  
+ enabled;  
 - a fork of [dxc-technology/online-devops-dojo](https://github.com/dxc-technology/online-devops-dojo)
 repository. We will name it below `<my_account>\online-devops-dojo` where you
 will substitute `<my_account>` by your GitHub account.  

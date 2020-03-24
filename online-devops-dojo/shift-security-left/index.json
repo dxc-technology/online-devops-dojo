@@ -60,7 +60,6 @@
     "uilayout": "terminal-iframe",
     "showdashboard": true,
     "dashboards": [
-      { "name": "Jenkins", "port": 8080},
       { "name": "GitHub", "port": 9876},
       { "name": "Pet Clinic", "port": 9966}
     ],

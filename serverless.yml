@@ -23,11 +23,14 @@ provider:
     owner: "philippe.berthonneau@dxc.com"
     group: "doe"
 
+  iamManagedPolicies:
+    - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+  
 # you can define service wide environment variables here
 #  environment:
 #    variable1: value1
 
-# Upload only files useful to AWS
+# Upload only files useful on AWS
 package:
   exclude:
     - './**'

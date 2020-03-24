@@ -4,15 +4,15 @@
 
 ## Steps
 
-* Navigate to your GitHub copy of the Pet Clinic application to find [`pom.xml`](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#pomfile).
+* Navigate to your GitHub copy of the Pet Clinic application to find [`pom.xml`](https://[[HOST_SUBDOMAIN]]-9876-[[KATACODA_HOST]].environments.katacoda.com/#pomfile) in the master branch.
 * Click on the pencil icon in the top right corner to edit the file.
-* Add the OWASP dependency checker as one of the plugins, at the beginning of line 208 (before `</plugins>`):
+* Add the OWASP dependency checker as one of the plugins, around line 306 (after `</plugin>` without s):
 
 <pre class="file" data-target="clipboard">
              &lt;plugin&gt;
                 &lt;groupId&gt;org.owasp&lt;/groupId&gt;
                 &lt;artifactId&gt;dependency-check-maven&lt;/artifactId&gt;
-                &lt;version&gt;5.2.4&lt;/version&gt;
+                &lt;version&gt;5.3.0&lt;/version&gt;
                 &lt;configuration&gt;
                     &lt;format&gt;ALL&lt;/format&gt;
                     &lt;failBuildOnCVSS&gt;7&lt;/failBuildOnCVSS&gt;
@@ -34,5 +34,7 @@
 * Create a pull request by committing the changes in a new branch which you will
   name: `deps-check`{{copy}}
 * The build will trigger automatically.
-* Navigate to [Jenkins](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/blue/organizations/jenkins/pet-clinic/activity) to see the results of the build.
-* The build will succeed: at this time, we are missing the step in the pipeline (Jenkinsfile) to actually check for dependencies. The plugin is in the `pom.xml` file but is not used.
+* Navigate to <a href="https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/blue/organizations/jenkins/pet-clinic/activity" target="jenkins">Jenkins</a> to see the results of the build.
+* Be patient. The build will succeed: at this time, we are missing the step in the pipeline
+  (Jenkinsfile) to actually check for dependencies. The plugin is in the
+  `pom.xml` file but is not used yet.
