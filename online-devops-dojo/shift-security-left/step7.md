@@ -77,7 +77,7 @@ Now let's look at the dependency tree:
   dependency check report.
 * Walk up the tree and find the library which includes the vulnerable
   dependency. In this example, `databind` is vulnerable:
-  ![](/online-devops-dojo/assets/online-devops-dojo/shift-security-left/mvn-tree.png)
+  ![](../../assets/online-devops-dojo/shift-security-left/mvn-tree.png)
 * In this example, you need to locate `spring-boot-actuator-autoconfigure` in
   `pom.xml` or update an higher level dependency.
 * Go to <https://mvnrepository.com/> to find a new version of that library.

@@ -6,11 +6,11 @@ Welcome to the **Online DevOps Dojo** lab on Continuous Integration.
 
 **Previously**, Dan the developer
 
-![](/online-devops-dojo/assets/online-devops-dojo/continuous-integration/dan.png)
+![](../../assets/online-devops-dojo/continuous-integration/dan.png)
 
 and his peers on the team, worked away developing business features on separate branches for up to weeks at a time. When the feature was complete they would commit their work to the central source code management system. Typically this was followed by 1 to 2 days integration phase as the release manager was gathering and merging the changes from all the team members. This was taking time and involved a lot of rework, merge conflicts which took time to be resolve, and often resulted in unplanned activities. To be able to produce deployable packages out of the code, they had to have a "code freeze" phase until a working build could be sent to QA/Testing.
 
-![](/online-devops-dojo/assets/online-devops-dojo/continuous-integration/tina.png)
+![](../../assets/online-devops-dojo/continuous-integration/tina.png)
 
 Testing led by Tina would then proceed identify issues with the development team having to fix the bugs before they could release the application to the business.
 
