@@ -18,8 +18,7 @@
       },
       {
         "title": "Step 3",
-        "text": "step3-nospell.md",
-        "code": "assets/step3.sh"
+        "text": "step3-nospell.md"
       },
       {
         "title": "Step 4",
@@ -27,18 +26,15 @@
       },
       {
         "title": "Step 5",
-        "text": "step5.md",
-        "code": "assets/step5.sh"
+        "text": "step5.md"
       },
       {
         "title": "Step 6",
-        "text": "step6.md",
-        "code": "assets/step6.sh"
+        "text": "step6.md"
       },
       {
         "title": "Step 7",
-        "text": "step7.md",
-        "code": "assets/step7.sh"
+        "text": "step7.md"
       }
     ],
     "intro": {
