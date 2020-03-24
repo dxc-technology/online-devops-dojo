@@ -1,0 +1,10 @@
+{
+    "ignorePatterns": [
+        {"pattern": "HOST_SUBDOMAIN" },
+        {"pattern": "jdoe1000"},
+        {"pattern": "editor.katacoda.com"},
+        {"pattern": "YOUR_SHORTNAME"},
+        {"pattern": ".spelling"},
+        {"pattern": "workflows"}
+    ]
+}
