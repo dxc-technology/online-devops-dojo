@@ -27,7 +27,7 @@ method, through GitHub's web interface.
   folder named `data.sql`. This file is used to populate the application
   database with data when the pet clinic application is started
 * Click on the pencil icon in the top right corner to edit the file
-* Below `INSERT INTO pets VALUES (13, 'Sly', '2012-06-08', 1, 10);` around line 49, add two new lines for individual horses:
+* Below `INSERT INTO pets VALUES (13, 'Sly', '2012-06-08', 1, 10);` at line 49, add two new lines for individual horses:
   <pre class="file" data-target="clipboard">
 
   INSERT INTO pets VALUES (14, 'Jolly Jumper', '2012-09-20', 7, 5;
