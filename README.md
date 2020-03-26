@@ -14,26 +14,26 @@ See a [history of the changes](CHANGELOG.md) to the **Online DevOps Dojo**.
 
 ### Training scenarios
 
-- [`/online-devops-dojo-pathway.json`](online-devops-dojo-pathway.json): Index of
+- [`online-devops-dojo-pathway.json`](online-devops-dojo-pathway.json): Index of
 Katacoda scenarios
-- [`/online-devops-dojo/`](online-devops-dojo/): Katacoda scenarios: one sub-folder
+- [`online-devops-dojo/`](online-devops-dojo/): Katacoda scenarios: one sub-folder
 for each training
-- [`/assets/online-devops-dojo/`](assets/online-devops-dojo/): Images used in
+- [`assets/online-devops-dojo/`](assets/online-devops-dojo/): Images used in
 training pages
 
 ### Dojo coach
 
-- [`/docs/`](docs): Some documentation about the coach bot
-- [`/handler.js`](handler.js): Handler for the Lambda function
-- [`/index.js`](index.js): Coach code
-- [`/package.json`](package.json): Node package dependencies
-- [`/package-lock.json`](package-lock.json): Tested set of Node module dependencies
+- [`docs/`](docs): Some documentation about the coach bot
+- [`handler.js`](handler.js): Handler for the Lambda function
+- [`index.js`](index.js): Coach code
+- [`package.json`](package.json): Node package dependencies
+- [`package-lock.json`](package-lock.json): Tested set of Node module dependencies
 
 ### Continuous delivery
 
-- [`/.github/workflows/upload_lambda.yml`](.github/workflows/upload_lambda.yml):
+- [`.github/workflows/upload_lambda.yml`](.github/workflows/upload_lambda.yml):
   GitHub workflow triggered on repository pushes, which upload the coach lambda function.
-- [`/serverless.yml`](serverless.yml): Serverless deployment configuration file
+- [`serverless.yml`](serverless.yml): Serverless deployment configuration file
 
 We have not found a way to isolate the coach files in a sub-folder and execute Serverless
 there. Help is welcome.
