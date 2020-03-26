@@ -57,7 +57,7 @@ section for more details why the development is done directly on fork's `master`
    git push
    ```
 
-1. Your changes should be visible in Katacoda at h&#8203;ttps://katacoda.com/your_katacoda_user
+1. Your changes should be visible in Katacoda at https://katacoda.com/your_katacoda_user
 1. To continue development of your feature:
 
    ```sh
