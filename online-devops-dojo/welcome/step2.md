@@ -125,8 +125,8 @@ programming paradigms using his weapons of choice PHP and Node.js on cloud platf
 problems.
 
 He is also keen to learn more about the practical applications of test-driven development, continuous integration and build
-pipelines. When not jumping out of buses on Fortnite Battle Royale, he admits to a slight obsession learning about Serverless
-computing and Microservices.
+pipelines. When not jumping out of buses on Fortnite Battle Royale, he admits to a slight obsession learning about serverless
+computing and microservices.
 
 Dan's workmates still fondly recall the fun and games which ensued when Shelob, his pet tarantula, got lose in the Pet Clinic office
 on *"Bring Your Pets to Work"* day.
