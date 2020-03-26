@@ -30,8 +30,8 @@ method, through GitHub's web interface.
 * Below `INSERT INTO pets VALUES (13, 'Sly', '2012-06-08', 1, 10);` around line 49, add two new lines for individual horses:
   <pre class="file" data-target="clipboard">
 
-    INSERT INTO pets VALUES (14, 'Jolly Jumper', '2012-09-20', 7, 5;
-    INSERT INTO pets VALUES (15, 'Flycka', '2012-07-14', 7, 9);
+  INSERT INTO pets VALUES (14, 'Jolly Jumper', '2012-09-20', 7, 5;
+  INSERT INTO pets VALUES (15, 'Flycka', '2012-07-14', 7, 9);
   </pre>
 * Do not save or commit your changes yet!
 
