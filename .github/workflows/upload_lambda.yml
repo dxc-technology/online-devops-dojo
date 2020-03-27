@@ -14,15 +14,12 @@ jobs:
 
     steps:
       - name: Copy the repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2.0.0
       
-      #- name: Check npm modules vulnerabilities
-      #  run: npm audit || true
-
       # Install nodejs packages listed in package-lock.json.
       # Node 10 is current default in ubuntu-latest
-      - if: github.base_ref == 'master'
-        name: Install node modules
+      # - if: github.base_ref == 'master'
+      - name: Install node modules
         run: npm ci --only=prod
   
       - if: github.base_ref == 'master'
