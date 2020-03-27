@@ -23,7 +23,7 @@ GitHub secret of `<my_account>/online-devops-dojo`
 1. Set AWS_STAGE & AWS_REGION in GitHub Secrets of `<my_account>/online-devops-dojo`.
    For example `dev` or `prod` & `us-east-1`.
 1. Since the workflow which uploads the lambda function is triggered by a push:  
-    1. Commit a small change on whatever file in the repository `<my_account>/online-devops-dojo` (on this bot-setup.md for example).
+    1. Commit a small change like a space in `index.js` in the repository `<my_account>/online-devops-dojo`.
     1. Click on <svg class="octicon octicon-play" viewBox="0 0 14 16"
     version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 8A7 7 0 1 1 0 8a7 7 0 0 1 14 0zm-8.223 3.482l4.599-3.066a.5.5 0 0 0 0-.832L5.777 4.518A.5.5 0 0 0 5 4.934v6.132a.5.5 0 0 0 .777.416z"></path></svg> Actions tab and verify that the workflow runs without error.
 1. GitHub app creation

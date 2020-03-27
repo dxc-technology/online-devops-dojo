@@ -1,5 +1,5 @@
 module.exports = app => {
-  app.log('Yay! The app was loaded!')
+  app.log('Yay! The app was run!')
   app.on('issue_comment.created', async context => {
     const { github, payload } = context
     const isPR = !!payload.issue.pull_request
@@ -10,7 +10,6 @@ module.exports = app => {
     const isBot = user.type === 'Bot'
     const {owner, repo, number} = context.issue()
   
-
     // Let's not make anything if it is our Bot
     if (isBot) {
       return
@@ -18,7 +17,7 @@ module.exports = app => {
 
     // We only want this on pet-clinic repository
     if (repo != 'pet-clinic') {
-      app.log('Skipping - not pet-clinic repo')
+      app.log('Skipping - not pet-clinic repository.')
       return
     }
 
@@ -26,7 +25,7 @@ module.exports = app => {
     if (!isPR) {
       return
     }
-    app.log('This is a comment on a pull request ' + number + ' in ' + owner + '/' + repo + ' repo...')
+    app.log('This is a comment on a pull request ' + number + ' in ' + owner + '/' + repo + ' repository...')
 
     // Get the list of comments in this PR
     // Note that warning about deprecated number instead of issue_number is a wrong warning https://github.com/probot/probot/pull/926
