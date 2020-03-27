@@ -4,6 +4,7 @@ It is time to involve Tina again, as build and automated tests are passing:
   `@tina, done.`{{copy}}
 * Tina will review and comment positively on the changes.
 * Merge the pull request by clicking the "Merge pull request" button.
+* Delete the branch `us-1-horse-db`.
 
 Now that you have merged the pull request, the new code is merged to the
 `master` branch, making it usable by the rest of the team.
