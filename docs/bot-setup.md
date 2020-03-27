@@ -71,7 +71,8 @@ GitHub secret of `<my_account>/online-devops-dojo`
    1. On the menu, click Public page and <ins>record its URL</ins>: this is the URL
    that must be documented in Welcome module to invite students to install the bot.
 
-Note:  
+### Note
+
 Upload action had to run twice: before and after the GitHub app creation
 because the installations are mutually dependent (App requires AWS' generated
 API endpoint, and AWS requires App's generated PRIVATE KEY).
