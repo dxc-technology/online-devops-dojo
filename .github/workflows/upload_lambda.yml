@@ -16,8 +16,8 @@ jobs:
       - name: Copy the repository
         uses: actions/checkout@v1
       
-      - name: Check npm modules vulnerabilities
-        run: npm audit || true
+      #- name: Check npm modules vulnerabilities
+      #  run: npm audit || true
 
       # Install nodejs packages listed in package-lock.json.
       # Node 10 is current default in ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_STAGE: ${{ secrets.AWS_STAGE }}
           # GITHUB APP
-          APP_ID: 43025
+          APP_ID: ${{ secrets.APP_ID }}
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         with:
