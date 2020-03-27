@@ -3,7 +3,7 @@
 The Online DevOps Dojo coach is here to make the DevOps learning experience
 even more enjoyable.
 
-Actually the coach is a robot which allows you to interact with "Charlie
+Actually the coach is a robot which allows you to interact with the "Charlie
 Veterinary Clinic" virtual team in the context of GitHub issues and pull requests.
 
 One can imagine a lot of funny exchanges which at some point will require a
@@ -18,7 +18,7 @@ How to [Setup](./bot-setup.md) your custom instance of the robot.
 ## High level architecture
 
 Our implementation uses a GitHub application with [Probot](https://probot.github.io/)
-and upload a lambda function using [GitHub Actions](https://github.com/features/actions)
+and upload an AWS Lambda function using [GitHub Actions](https://github.com/features/actions)
 and [Serverless](https://serverless.com/).  
 Other alternatives would of course be possible.
 
@@ -33,5 +33,5 @@ report a bug, open an issue! We'd love all and any contributions.
 
 We are interested in adding the following features in the near future:
 
-- Replace the GitHub app / lambda by a GitHub action.
+- Replace the GitHub app / Lambda function by a GitHub action.
 - Make the bot more robust / versatile.
