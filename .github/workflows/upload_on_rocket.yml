@@ -1,28 +1,44 @@
 # GitHub workflow file
-name: Deployment of Online DevOps Dojo coach lambda
+name: rocket
 
+# triggered when :rocket: 
 on:
-  push:
-    # change(s) on those files trigger this pipeline
-    paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
-    branches: master
-
+  issue_comment:
+    types: [edited]
+  
 jobs:
-  build:
-    timeout-minutes: 10
+  rocket:
     runs-on: ubuntu-latest
+    if: github.event.comment.reactions == 'rocket'
 
     steps:
+    - run: echo ${{ github.event.comment.reactions }}
+    - name: Acknowledge deployment request
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issue-number: github.event.comment.id
+        body: |
+          Deployment triggered!
+
+  deploy:
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.comment.body, '@deploy')
+    timeout-minutes: 10
+    needs: rocket
+
+    steps:
+      - name: "Trigger"
+        run: echo Workflow triggered by $GITHUB_ACTOR
+
       - name: Copy the repository
         uses: actions/checkout@v2.0.0
       
       # Install nodejs packages listed in package-lock.json.
       # Node 10 is current default in ubuntu-latest
-      # - if: github.base_ref == 'master'
       - name: Install node modules
         run: npm ci --only=prod
   
-      # - if: github.base_ref == 'master'
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda
         uses: serverless/github-action@v1.54.0
