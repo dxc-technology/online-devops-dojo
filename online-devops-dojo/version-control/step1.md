@@ -7,7 +7,7 @@
 
 **Previously**, Dan was not using version control. Every now and then, he has been saving his code to a directory on a file share. This quickly became a problem when more people got added to the team: it was hard to collaborate, with others overwriting changes, creating regressions which got caught late in production. Managing backups of earlier versions to keep a history of the changes was also problematic: he implemented workarounds by adding versions in the file names: `main.java`, `main-1.0.java`, `main-1.1.java` and `main-1.1.final.java`. This became unmanageable when several files had to be kept "in sync" for the application to work. Finally, the team could not easily spot what was changed between those versions, making production troubleshooting a very difficult and cumbersome activity.
 
-**Then** Dan's team invested in a proper version control system. They picked GIT, the defacto standard version control system. GIT is a Distributed Version Control System, which makes it extremely fast as it mainly runs disconnected from the network. GIT alone did not provide all of the collaboration capabilities they needed, so they started to use GitHub which wraps GIT and provides additional collaboration capabilities.
+**Then** Dan's team invested in a proper version control system. They picked GIT, the de facto standard version control system. GIT is a Distributed Version Control System, which makes it extremely fast as it mainly runs disconnected from the network. GIT alone did not provide all of the collaboration capabilities they needed, so they started to use GitHub which wraps GIT and provides additional collaboration capabilities.
 
 |   |   |
 |---|---|
