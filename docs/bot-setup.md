@@ -6,7 +6,7 @@ Student who wants to run the training can ignore this page.
 
 This setup requires:
 
-- an AWS account with policies allowing to create an API Gateway and Lambda
+- an AWS user with policies allowing to create an API Gateway and Lambda
 function, for example [this](./lambda-dojo-upload.json);  
 - a GitHub.com account with [GitHub Actions](https://github.com/features/actions)
  enabled;  
@@ -16,8 +16,8 @@ will substitute `<my_account>` by your GitHub account.
 
 ## Steps
 
-1. Get credentials of your AWS account (**AWS_ACCESS_KEY_ID** &
-**AWS_SECRET_ACCESS_KEY**) from the AWS Console in IAM and store each in a
+1. Get credentials of your AWS user:  (**AWS_ACCESS_KEY_ID** &
+**AWS_SECRET_ACCESS_KEY**) from the AWS Console in IAM (Users / *Select a user* / Security Credentials / Create Access Key) and store each in a
 GitHub secret of `<my_account>/online-devops-dojo`
 (click repository tab Settings, then Secrets).  
 1. Set AWS_STAGE & AWS_REGION in GitHub Secrets of `<my_account>/online-devops-dojo`.
