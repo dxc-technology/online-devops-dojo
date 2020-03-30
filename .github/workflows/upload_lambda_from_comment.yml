@@ -8,7 +8,7 @@ on:
 jobs:
   deploy_on_comment:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.comment.body, '@deploy') && github.base_ref == 'master' 
+    if: startsWith(github.event.comment.body, '@deploy')
     timeout-minutes: 10
 
     steps:
