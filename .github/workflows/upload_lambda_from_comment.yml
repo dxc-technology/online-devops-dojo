@@ -8,12 +8,12 @@ on:
 jobs:
   deploy_on_comment:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.comment.body, '@deploy')
+    if: startsWith(github.event.comment.body, '@deploy') && github.base_ref == 'master' 
     timeout-minutes: 10
 
     steps:
       - name: "Trigger"
-        run: echo "Workflow triggered by $GITHUB_ACTOR from a comment" $GITHUB_BASE_REF
+        run: echo "Workflow triggered by $GITHUB_ACTOR from a comment $GITHUB_BASE_REF X $GITHUB_REF" 
       
       - name: Copy the repository
         uses: actions/checkout@v2.0.0
