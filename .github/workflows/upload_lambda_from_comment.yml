@@ -8,10 +8,13 @@ on:
 jobs:
   ondemand:
     runs-on: ubuntu-latest
-    if: github.event.comment.body == '@deploy'
+    if: startsWith(github.event.comment.body, '@deploy')
     timeout-minutes: 10
 
     steps:
+      - name:
+        run: echo "Workflow triggered by $GITHUB_ACTOR from a comment"
+        
       - name: Copy the repository
         uses: actions/checkout@v2.0.0
       
