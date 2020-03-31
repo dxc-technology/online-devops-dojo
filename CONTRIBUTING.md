@@ -57,7 +57,7 @@ section for more details why the development is done directly on fork's `master`
    git push
    ```
 
-1. Your changes should be visible in Katacoda at https://katacoda.com/your_katacoda_user
+1. Your changes should be visible in Katacoda at `https://katacoda.com/<your_katacoda_user>`
 1. To continue development of your feature:
 
    ```sh
@@ -173,4 +173,4 @@ each time you push updates to your repository.
 If all the setup is done correctly you should be able to access your
 Katacoda environment at:
 
-> https://katacoda.com/<your_katacoda_user>
+> `https://katacoda.com/<your_katacoda_user>`
