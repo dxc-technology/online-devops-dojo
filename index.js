@@ -55,6 +55,8 @@ module.exports = app => {
     } 
     // Continuous integration module
     else if (commentBody.match(/@tina\s.*(?:review|check|verify|look|done|finish)/)){
+      app.log('Tina')
+
       switch (botComments) {
         case 0:
           issuesComment = context.issue({ body: '![Tina](https://s3.amazonaws.com/devopsdojoassets/tina.png)\n That looks good. Yet, I think we should replace `Jolly Jumper` by `Silver Blaze`. Can you make the change?' })
@@ -66,16 +68,6 @@ module.exports = app => {
           break;
       }
       return ret // Return the last result. Not very accurate, but will do.
-    } /* TDD module
-    else if (commentBody.match(/@brenda\s.*(?:review|check|verify|look|done|finish)/)){
-      switch (botComments) {
-        case 0:
-          issuesComment = context.issue({ body: '![Brenda](https://s3.amazonaws.com/devopsdojoassets/brenda.png)\n Excellent! This is exactly what I was looking for. Going ahead and merging the changes.' })
-          ret = context.github.issues.createComment(issuesComment)
-          ret = await context.github.pullRequests.merge({ owner, repo, number });
-          break;
-      }
-      return ret // Return the last result. Not very accurate, but will do.
-    }*/
+    }
   })
 }
