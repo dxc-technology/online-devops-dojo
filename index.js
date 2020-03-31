@@ -36,6 +36,19 @@ function process_comments(context) {
   app.log('This is a comment on a pull request ' + number + ' in ' + owner + '/' + repo + ' repository...')
   const issueComments = context.github.issues.listComments({owner, repo, number})
 
+  // Get the list of comments in this PR
+  // Note that warning about deprecated number instead of issue_number could only be fixed with next major Probot release (10)
+  // https://github.com/probot/probot/pull/926
+  const issueComments = await context.github.issues.listComments({owner, repo, number})
+  botComments = 0
+  issueComments.data.forEach(function(comment) {
+    if (comment.user.type == 'Bot') {
+      botComments++
+      app.log('botName:'+ comment.user.login)
+    }
+  })
+  app.log('Found ' + botComments + ' comment' + ((botComments>1) ? 's':'') +' by the bot in this PR.')
+
   // Note that GitHub usernames paulo and tina seem reserved by people who have never used their account for 3 and 10 years.
 
   // Version control module
@@ -70,17 +83,6 @@ function process_comments(context) {
   }
 }
 
-// Get the list of comments for the bot named botName
-function countBotComments(issueComments, botName) {
-  // Note that warning about deprecated number instead of issue_number could only be fixed with next major Probot release (10)
-  // https://github.com/probot/probot/pull/926
-  botComments = 0
-  issueComments.data.forEach(function(comment) {
-    if (comment.user.type == 'Bot') {
-      botComments++
-      app.log('botName:'+ botName) // comment.user.login)
-    }
-  })
-  app.log('Found ' + botComments + ' comments by the bot in this PR')
+
   return botComments
 }
