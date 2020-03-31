@@ -1,5 +1,5 @@
 # GitHub workflow file
-name: Deployment of Online DevOps Dojo coach lambda on demand
+name: rocket
 
 # triggered when :rocket: 
 on:
@@ -12,6 +12,7 @@ jobs:
     if: github.event.comment.reactions == 'rocket'
 
     steps:
+    - run: echo ${{ github.event.comment.reactions }}
     - name: Acknowledge deployment request
       uses: peter-evans/create-or-update-comment@v1
       with:
@@ -53,16 +54,3 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         with:
           args: deploy --verbose
-
-  test_stage:
-    runs-on: ubuntu-latest
-    if: startsWith(github.event.comment.body, '@deploy')
-    env:
-      target: ${{ 1 }}
-
-    steps:
-      - name: "Evaluate target"
-        run: echo Target $TARGET
-        id: Obu-Wan
-      - name: Echo time
-        run: echo 'The time was ${{ steps.Obu-Wan.outputs.time }}.'

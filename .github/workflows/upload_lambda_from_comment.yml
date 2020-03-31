@@ -10,10 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     if: startsWith(github.event.comment.body, '@deploy')
     timeout-minutes: 10
-    env:
-      target: ${{ github.event.comment.body }}
 
     steps:
+      - name: Update comment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          comment-id: github.event.comment.id
+          body: |
+            **Go!**
+          reaction-type: rocket
+
       - name: "Trigger"
         run: echo Workflow triggered by $GITHUB_ACTOR
 
@@ -40,16 +47,3 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         with:
           args: deploy --verbose
-
-  test_stage:
-    runs-on: ubuntu-latest
-    if: startsWith(github.event.comment.body, '@deploy')
-    env:
-      target: ${{ 1 }}
-
-    steps:
-      - name: "Evaluate target"
-        run: echo Target $TARGET
-        id: Obu-Wan
-      - name: Echo time
-        run: echo 'The time was ${{ steps.Obu-Wan.outputs.time }}.'

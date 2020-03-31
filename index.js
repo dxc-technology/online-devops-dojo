@@ -7,13 +7,12 @@ module.exports = app => {
     const comment = payload.comment
     const user = comment.user
     const commentBody = comment.body && comment.body.toLowerCase()
-    const userName = user.login
     const isBot = user.type === 'Bot'  // for a genuine user this would be 'User'
     const {owner, repo, number} = context.issue()
 
     // Let's not do anything if comment was made by a bot
     if (isBot) {
-      app.log('Skipping event from bot ' + userName + ' (' + owner + '/' + repo + ').')
+      app.log('Skipping event from bot ' + user.login + ' (' + owner + '/' + repo + ').')
       return
     }
 
@@ -39,7 +38,7 @@ module.exports = app => {
     issueComments.data.forEach(function(comment) {
       if (comment.user.type == 'Bot') {
         botComments++
-        app.log('botName:') // + comment.user.login)
+        app.log('botName:' + comment.user.login)
       }
     })
     app.log('Found ' + botComments + ' comment' + ((botComments>1) ? 's':'') +' by the bot in this PR.')
@@ -76,5 +75,5 @@ module.exports = app => {
       }
       return ret // Return the last result. Not very accurate, but will do.
     }
-  }
+  })
 }
