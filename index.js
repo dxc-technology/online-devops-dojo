@@ -8,7 +8,7 @@ module.exports = app => {
     const commentBody = comment.body && comment.body.toLowerCase()
     const userName = user.login
     const isBot = user.type === 'Bot'
-    const {owner, repo, issue_number} = context.issue()
+    const {owner, repo, number} = context.issue()
   
     // Let's not make anything if it is our Bot
     if (isBot) {
@@ -25,11 +25,11 @@ module.exports = app => {
     if (!isPR) {
       return
     }
-    app.log('This is a comment on a pull request ' + issue_number + ' in ' + owner + '/' + repo + ' repository by...')
+    app.log('This is a comment on a pull request ' + number + ' in ' + owner + '/' + repo + ' repository by...')
 
     // Get the list of comments in this PR
     // Note that warning about deprecated number instead of issue_number is a wrong warning https://github.com/probot/probot/pull/926
-    const issueComments = await context.github.issues.listComments({owner, repo, issue_number})
+    const issueComments = await context.github.issues.listComments({owner, repo, number})
     botComments = 0
     issueComments.data.forEach(function(comment) {
       if (comment.user.type == 'Bot') {
@@ -38,6 +38,7 @@ module.exports = app => {
     })
     app.log('Found ' + botComments + ' comments by the bot in this PR ' + comment.user.type)
 
+    // Version control module
     if (commentBody.match(/@paulo\s.*(?:review|check|verify)/)){
       switch (botComments) {
         case 0:
@@ -47,11 +48,13 @@ module.exports = app => {
         case 1:
           issuesComment = context.issue({ body: '![Paulo](https://s3.amazonaws.com/devopsdojoassets/paulo.png)\n Looks good :+1: ! Merging this pull request.' })
           ret = context.github.issues.createComment(issuesComment) 
-          ret = await context.github.pullRequests.merge({ owner, repo, issue_number });
+          ret = await context.github.pullRequests.merge({ owner, repo, number });
           break;
       }
       return ret // Return the last result. Not very accurate, but will do.
-    } else if (commentBody.match(/@tina\s.*(?:review|check|verify|look|done|finish)/)){
+    } 
+    // Continuous integration module
+    else if (commentBody.match(/@tina\s.*(?:review|check|verify|look|done|finish)/)){
       switch (botComments) {
         case 0:
           issuesComment = context.issue({ body: '![Tina](https://s3.amazonaws.com/devopsdojoassets/tina.png)\n That looks good. Yet, I think we should replace `Jolly Jumper` by `Silver Blaze`. Can you make the change?' })
@@ -63,15 +66,16 @@ module.exports = app => {
           break;
       }
       return ret // Return the last result. Not very accurate, but will do.
-    } else if (commentBody.match(/@brenda\s.*(?:review|check|verify|look|done|finish)/)){
+    } /* TDD module
+    else if (commentBody.match(/@brenda\s.*(?:review|check|verify|look|done|finish)/)){
       switch (botComments) {
         case 0:
           issuesComment = context.issue({ body: '![Brenda](https://s3.amazonaws.com/devopsdojoassets/brenda.png)\n Excellent! This is exactly what I was looking for. Going ahead and merging the changes.' })
           ret = context.github.issues.createComment(issuesComment)
-          ret = await context.github.pullRequests.merge({ owner, repo, issue_number });
+          ret = await context.github.pullRequests.merge({ owner, repo, number });
           break;
       }
       return ret // Return the last result. Not very accurate, but will do.
-    }
+    }*/
   })
 }
