@@ -42,7 +42,7 @@ module.exports = app => {
         case 1:
           issuesComment = context.issue({ body: '![Paulo](https://s3.amazonaws.com/devopsdojoassets/paulo.png)\n Looks good :+1: ! Merging this pull request.' })
           ret = context.github.issues.createComment(issuesComment) 
-          ret = await context.github.pullRequests.merge({ owner, repo, number });
+          ret = context.github.pullRequests.merge({ owner, repo, number });
           break;
       }
       return ret // Return the last result. Not very accurate, but will do.
@@ -68,7 +68,7 @@ module.exports = app => {
 function countBotComments(botName) {
   // Note that warning about deprecated number instead of issue_number could only be fixed with next major Probot release (10)
   // https://github.com/probot/probot/pull/926
-  const issueComments = await context.github.issues.listComments({owner, repo, number})
+  const issueComments = context.github.issues.listComments({owner, repo, number})
   botComments = 0
   issueComments.data.forEach(function(comment) {
     if (comment.user.type == 'Bot') {
