@@ -1,17 +1,29 @@
 # GitHub workflow file
 name: Deployment of Online DevOps Dojo coach lambda on demand
 
+# triggered when :rocket: 
 on:
-  issue_comment:
-    types: [created, edited]
+  issue_comment.reactions:
+    content: 'rocket'
 
 jobs:
-  deploy_on_comment:
+  rocket:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Acknowledge deployment request
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issue-number: github.event.comment.id
+        body: |
+          Deployment triggered!
+
+  deploy:
     runs-on: ubuntu-latest
     if: startsWith(github.event.comment.body, '@deploy')
     timeout-minutes: 10
-    env:
-      target: ${{ github.event.comment.body }}
+    needs: rocket
 
     steps:
       - name: "Trigger"
