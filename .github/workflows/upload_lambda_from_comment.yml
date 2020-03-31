@@ -15,12 +15,7 @@ jobs:
 
     steps:
       - name: "Trigger"
-        run: echo Workflow triggered by $GITHUB_ACTOR from a comment $GITHUB_BASE_REF X $GITHUB_REF
-      - name: "Target"
-        run: echo Target $TARGET
-        id: Obu-Wan
-      - name: Echo time
-        run: echo 'The time was ${{ steps.Obu-Wan.outputs.time }}.'
+        run: echo Workflow triggered by $GITHUB_ACTOR
 
       - name: Copy the repository
         uses: actions/checkout@v2.0.0
@@ -45,3 +40,15 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         with:
           args: deploy --verbose
+
+  test_stage:
+    if: startsWith(github.event.comment.body, '@deploy')
+    env:
+      target: ${{ 1 }}
+
+    steps:
+      - name: "Evaluate target"
+        run: echo Target $TARGET
+        id: Obu-Wan
+      - name: Echo time
+        run: echo 'The time was ${{ steps.Obu-Wan.outputs.time }}.'
