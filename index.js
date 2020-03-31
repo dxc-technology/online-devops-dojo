@@ -27,23 +27,13 @@ module.exports = app => {
     if (!isPR) {
       return
     }
-    app.log('This is a comment on a pull request ' + number + ' in ' + owner + '/' + repo + ' repository by...')
+    app.log('This is a comment on a pull request ' + number + ' in ' + owner + '/' + repo + ' repository...')
 
-    // Get the list of comments in this PR
-    // Note that warning about deprecated number instead of issue_number is a wrong warning https://github.com/probot/probot/pull/926
-    const issueComments = await context.github.issues.listComments({owner, repo, number})
-    botComments = 0
-    issueComments.data.forEach(function(comment) {
-      if (comment.user.type == 'Bot') {
-        botComments++
-      }
-    })
-    app.log('Found ' + botComments + ' comments by the bot in this PR ' + comment.user.type)
-
-    // Note that GitHub usernames paulo and tina seem reserved for years by people who have never used their account for 3 and 10 years.
+    // Note that GitHub usernames paulo and tina seem reserved by people who have never used their account for 3 and 10 years.
 
     // Version control module
     if (commentBody.match(/@paulo\s.*(?:review|check|verify)/)){
+
       switch (countBotComments('paulo')) {
         case 0:
           issuesComment = context.issue({ body: '![Paulo](https://s3.amazonaws.com/devopsdojoassets/paulo.png)\n Sure! I looked at the changes, and Brenda wants us to not only have horses but also ponies. So, we need to add `pony` in addition to `horse`. Can you do that?' })
@@ -86,4 +76,6 @@ function countBotComments(botName) {
       app.log('botName:'+ botName) // comment.user.login)
     }
   })
+  app.log('Found ' + botComments + ' comments by the bot in this PR')
+  return botComments
 }
