@@ -3,12 +3,13 @@ name: Deployment of Online DevOps Dojo coach lambda on demand
 
 # triggered when :rocket: 
 on:
-  issue_comment.reactions:
-    content: 'rocket'
-
+  issue_comment:
+    types: [edited]
+  
 jobs:
   rocket:
     runs-on: ubuntu-latest
+    if: github.event.comment.reactions == 'rocket'
 
     steps:
     - name: Acknowledge deployment request

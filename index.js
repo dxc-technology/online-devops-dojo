@@ -83,7 +83,7 @@ function countBotComments(botName) {
   issueComments.data.forEach(function(comment) {
     if (comment.user.type == 'Bot') {
       botComments++
-      app.log('botName:'+ comment.user.login)
+      app.log('botName:'+ botName) // comment.user.login)
     }
   })
 }
