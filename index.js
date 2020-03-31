@@ -1,9 +1,9 @@
 module.exports = app => {
   app.log('Yay! The DevOps Dojo coach was run!')
-  app.on('issue_comment.created', async context => process_comments(context))
+  app.on('issue_comment.created', async context => process_comments(context, app))
 }
 
-function process_comments(context) {
+function process_comments(context, app) {
   const { github, payload } = context
   const isPR = !!payload.issue.pull_request
   const isIssue = !!payload.issue.pull_request
