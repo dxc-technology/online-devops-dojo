@@ -1,9 +1,12 @@
-module.exports = app => {
+var app
+module.exports = appx => {
+  app = appx
   app.log('Yay! The DevOps Dojo coach was run!')
-  app.on('issue_comment.created', async context => process_comments(context, app))
+  app.on('issue_comment.created', async context => process_comments(context))
+  app.on('issue_comment.edited', async context => process_comments(context))
 }
 
-function process_comments(context, app) {
+function process_comments(context) {
   const { github, payload } = context
   const isPR = !!payload.issue.pull_request
   const isIssue = !!payload.issue.pull_request
@@ -12,7 +15,7 @@ function process_comments(context, app) {
   const user = comment.user
   const commentBody = comment.body && comment.body.toLowerCase()
   const userName = user.login
-  const isBot = user.type === 'Bot'  // for a genuine user this 'User'
+  const isBot = user.type === 'Bot'  // for a genuine user this would be 'User'
   const {owner, repo, number} = context.issue()
 
   // Let's not make anything if comment was made by a bot
