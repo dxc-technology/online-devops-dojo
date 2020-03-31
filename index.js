@@ -1,5 +1,5 @@
 module.exports = app => {
-  app.log('Yay! The DevOps Dojo coach Test 1.01 was run!')
+  app.log('Yay! The DevOps Dojo coach was run!')
   app.on('issue_comment.created', async context => {
     const { github, payload } = context
     const isPR = !!payload.issue.pull_request
