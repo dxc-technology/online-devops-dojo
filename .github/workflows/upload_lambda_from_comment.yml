@@ -18,6 +18,9 @@ jobs:
         run: echo Workflow triggered by $GITHUB_ACTOR from a comment $GITHUB_BASE_REF X $GITHUB_REF
       - name: "Target"
         run: echo Target $TARGET
+        id: Obu-Wan
+      - name: Echo time
+        run: echo 'The time was ${{ steps.Obu-Wan.outputs.time }}.'
 
       - name: Copy the repository
         uses: actions/checkout@v2.0.0
