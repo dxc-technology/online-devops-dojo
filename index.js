@@ -1,12 +1,10 @@
-var app
-module.exports = appx => {
-  app = appx
+module.exports = app => {
   app.log('Yay! The DevOps Dojo coach was run!')
-  app.on('issue_comment.created', async context => process_comments(context))
-  app.on('issue_comment.edited', async context => process_comments(context))
+  app.on('issue_comment.created', async context => process_comments(context, app))
+//  app.on('issue_comment.edited', async context => process_comments(context))
 }
 
-function process_comments(context) {
+function process_comments(context, app) {
   const { github, payload } = context
   const isPR = !!payload.issue.pull_request
   const isIssue = !!payload.issue.pull_request
@@ -81,8 +79,4 @@ function process_comments(context) {
     }
     return ret // Return the last result. Not very accurate, but will do.
   }
-}
-
-
-  return botComments
 }
