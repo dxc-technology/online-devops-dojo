@@ -5,7 +5,7 @@ on:
   push:
     # change(s) on those files trigger this pipeline
     paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
-    branches: master
+    branches: ['master']
 
 jobs:
   build:
@@ -39,7 +39,7 @@ jobs:
       # - if: github.base_ref == 'master'
       - name: Install node modules
         run: npm ci --only=prod
-  
+
       # - if: github.base_ref == 'master'
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda

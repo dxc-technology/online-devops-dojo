@@ -1,7 +1,7 @@
 {
   "name": "online-devops-dojo-coach",
   "version": "1.0.1",
-  "description": "The Online DevOps Dojo coach interacts with student's issues and PR in Katacoda trainings.",
+  "description": "The Online DevOps Dojo coach interacts with student's PR in Katacoda trainings.",
   "author": "No user",
   "license": "MPL-2.0",
   "repository": "https://github.com/dxc-technology/online-devops-dojo.git",
@@ -16,19 +16,24 @@
   "scripts": {
     "dev": "nodemon",
     "start": "probot run ./index.js",
-    "lint": "standard --fix",
+    "lint": "eslint",
+    "eslint:github-action": "eslint functions/**",
     "test": "jest && standard",
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
     "@probot/serverless-lambda": "^0.5.0",
     "node": "^12.16.1",
-    "probot": "^9.11.1"
+    "probot": "^9.11.1",
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
     "jest": "^25.1.0",
     "nock": "^12.0.3",
     "nodemon": ">=2.0.2",
+    "prettier": "1.19.1",
     "smee-client": ">=1.1.0",
     "standard": ">=14.3.3"
   },

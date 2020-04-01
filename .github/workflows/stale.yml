@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "30 6 * * 1-5"
 
 name: Run Stale Bot on Issue Comments
 jobs:
