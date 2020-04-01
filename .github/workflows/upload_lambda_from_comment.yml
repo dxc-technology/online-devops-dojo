@@ -16,16 +16,13 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           comment-id: ${{ github.event.comment.id }}
-            body: |
-              **Go!**
+          body: '**Go!**'
           reaction-type: rocket
   
   deploy_on_comment:
     runs-on: ubuntu-latest
     needs: reaction_on_comment
     timeout-minutes: 10
-    env:
-      environment: '_TEST'
      
     steps:
       - name: "Triggered by ${{ github.actor }}"
