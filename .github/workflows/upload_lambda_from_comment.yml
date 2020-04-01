@@ -14,21 +14,22 @@ jobs:
       environment: '_TEST'
      
     steps:
+      - name: Print env
+        run: echo ${{ env.environment }}
       - name: Print test
         run: echo ${{ join('AWS_STAGE', env.environment) }}
-
 
       - name: Update comment
         uses: peter-evans/create-or-update-comment@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          comment-id: 607114794 # github.event.comment.id
+          comment-id: 607145544 # github.event.comment.id
           body: |
             **Go!**
           reaction-type: rocket
 
-      - name: "Trigger $GITHUB_ACTOR ${{ github.actor }}"
-        run: echo Workflow triggered by $GITHUB_ACTOR
+      - name: "Triggered by ${{ github.actor }}"
+   #     run: echo Workflow triggered by $GITHUB_ACTOR
 
       - name: Copy the repository
         uses: actions/checkout@v2.0.0
