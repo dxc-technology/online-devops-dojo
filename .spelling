@@ -1,0 +1,32 @@
+# Custom spelling dictionary for use with Node.js Markdown Spellcheck (mdspell)
+
+DevOps
+dojo
+# "de facto" not well recognized
+facto
+Kaizen
+LessOps
+NoOps
+repo
+serverless
+webhook
+
+e.g.
+i.e.
+# as in Mos Eisley
+Eisley
+
+# Proper Names from the course
+Chun
+Paulo
+Santhosh
+
+# Product & Vendor Names
+# Place them here with their proper case to help enforce consistently aligned with that product or vendor's preference.
+Fortnite
+Royale
+GitHub
+JFrog
+Katacoda
+Kubernetes
+Node.js
