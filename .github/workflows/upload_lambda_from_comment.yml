@@ -15,7 +15,7 @@ jobs:
      
     steps:
       - name: Print test
-        run: echo join('AWS_STAGE', ${{ env.environment }})
+        run: echo ${{ join('AWS_STAGE', ${{ env.environment }}) }}
       - name: Print commentid
         run: echo ${{ toJson(github.event.comment) }}
       - name: Update comment
@@ -35,7 +35,8 @@ jobs:
       
       # Node 10 is current default in ubuntu-latest (https://github.com/actions/virtual-environments/blob/master/images/linux/Ubuntu1804-README.md)
       # then we install 12, same as for AWS Lambda
-      - uses: actions/setup-node@v1.4.1
+      - name: Install Node 12
+        uses: actions/setup-node@v1.4.1
         with:
           node-version: 12
 
