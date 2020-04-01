@@ -16,8 +16,8 @@ will substitute `<my_account>` by your GitHub account.
 
 ## Steps
 
-1. Get credentials of your AWS user:  (**AWS_ACCESS_KEY_ID** &
-**AWS_SECRET_ACCESS_KEY**) from the AWS Console in IAM (Users / *Select a user* / Security Credentials / Create Access Key) and store each in a
+1. Get credentials of your AWS user:  (**AWS_ACCESS_KEY** &
+**AWS_SECRET_KEY**) from the AWS Console in IAM (Users / *Select a user* / Security Credentials / Create Access Key) and store each in a
 GitHub secret of `<my_account>/online-devops-dojo`
 (click repository tab Settings, then Secrets).  
 1. Set AWS_STAGE & AWS_REGION in GitHub Secrets of `<my_account>/online-devops-dojo`.

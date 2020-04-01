@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: Copy the repository
         uses: actions/checkout@v2.0.0
-      -run: echo ${{ secrets.AWS_STAGE }}
       
       # Node 10 is current default in ubuntu-latest (https://github.com/actions/virtual-environments/blob/master/images/linux/Ubuntu1804-README.md)
       # then we install 12, same as for AWS Lambda
-      - uses: actions/setup-node@v1.4.1
-          with:
-            node-version: '12.x'
+      - name: Install Node 12
+        uses: actions/setup-node@v1.4.1
+        with:
+          node-version: 12
 
       # Install nodejs packages listed in package-lock.json.
       # - if: github.base_ref == 'master'
