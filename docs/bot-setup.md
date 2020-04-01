@@ -47,28 +47,28 @@ GitHub secret of `<my_account>/online-devops-dojo`
         `<my_account>/online-devops-dojo`.  
     1. The correct permissions and events have already been pre-filled.  
     1. To **Where can this GitHub App be installed?** answer **Any account**.
-    1. Click *Create GitHub app*.
-    1. Click on Generate a private key (at the bottom), save it in a file
+    1. Click **Create GitHub app**.
+    1. Click on **Generate a private key** (at the bottom), save it in a file
     like `certificate.private-key.pem`.
-    1. In a terminal, run the following command on the .pem file in order to get
+    1. In a terminal, run the following command on the `.pem` file in order to get
     a single-line string:
 
        ```sh
        cat certificate.private-key.pem | base64 -w 0
        ```
 
-    1. Copy the string into a new `<my_account>/online-devops-dojo` secret named **PRIVATE_KEY**.
-    1. On the top of the GitHub app About page, copy the **App ID** and copy it in a new  `<my_account>/online-devops-dojo` secret named **APP_ID**.
+    1. Copy the output string into a new `<my_account>/online-devops-dojo` secret named **PRIVATE_KEY**.
+    1. On the top of the GitHub app About page, copy the **App ID** and paste it in a new  `<my_account>/online-devops-dojo` secret named **APP_ID**.
     1. Commit a minor change on `index.js` (like a space) in master branch. This will
        trigger the <svg class="octicon octicon-play" viewBox="0 0 14 16"
     version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 8A7 7 0 1 1 0 8a7 7 0 0 1 14 0zm-8.223 3.482l4.599-3.066a.5.5 0 0 0 0-.832L5.777 4.518A.5.5 0 0 0 5 4.934v6.132a.5.5 0 0 0 .777.416z"></path></svg> Action
     workflow again and set the **PRIVATE_KEY** in lambda environment.
 
 1. GitHub App installation  
-   1. In GitHub app Install app menu, on Repository access, click *Only select
-   repositories* and select your forked pet-clinic repository.
-   1. Click install.
-   1. On the menu, click Public page and <ins>record its URL</ins>: this is the URL
+   1. In GitHub app **Install app** menu, on Repository access, click **Only select
+   repositories** and select your forked pet-clinic repository.
+   1. Click **Install**.
+   1. On the menu, click **Public page** and <ins>note its URL</ins>: this is the URL
    that must be documented in Welcome module to invite students to install the bot.
 
 ### Note
