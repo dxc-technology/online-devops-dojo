@@ -14,13 +14,11 @@ jobs:
       environment: '_TEST'
      
     steps:
-      - name: Print commentid
-        run: echo ${{ toJson(github.event) }}
       - name: Update comment
-        uses: peter-evans/create-or-update-comment@v1.1.0
+        uses: peter-evans/create-or-update-comment@v1.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          comment-id: 607145544 # github.event.comment.id
+          comment-id: github.event.comment.id # 607145544
           body: |
             **Go!**
           reaction-type: rocket
