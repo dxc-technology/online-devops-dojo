@@ -40,6 +40,14 @@ jobs:
       - name: Install node modules
         run: npm ci --only=prod
   
+      - name: Run linters
+        uses: samuelmeuli/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Enable linters
+          eslint: true
+          prettier: true
+      
       # - if: github.base_ref == 'master'
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda
