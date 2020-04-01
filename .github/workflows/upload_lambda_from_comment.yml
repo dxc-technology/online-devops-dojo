@@ -24,7 +24,7 @@ jobs:
             **Go!**
           reaction-type: rocket
 
-      - name: "Trigger $GITHUB_ACTOR " + github.actor
+      - name: "Trigger $GITHUB_ACTOR ${{ github.actor }}"
         run: echo Workflow triggered by $GITHUB_ACTOR
 
       - name: Copy the repository
