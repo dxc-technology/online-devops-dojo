@@ -40,6 +40,12 @@ jobs:
       - name: Install node modules
         run: npm ci --only=prod
   
+      - name: Publish Artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: webpack artifacts
+          path: public/
+
       # - if: github.base_ref == 'master'
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda
@@ -95,5 +101,5 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           # Enable linters
-          eslint: true
+          eslint: false
           prettier: true
