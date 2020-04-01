@@ -1,3 +1,5 @@
+const coachName = "online-devops-dojo-coach"
+
 module.exports = app => {
   app.log('Yay! The DevOps Dojo coach was run!')
   app.on('issue_comment.created', async context => {
@@ -36,9 +38,8 @@ module.exports = app => {
     const issueComments = await context.github.issues.listComments({owner, repo, number})
     botComments = 0
     issueComments.data.forEach(function(comment) {
-      if (comment.user.type == 'Bot') {
+      if (comment.user.type == 'Bot' && comment.user.login.startsWith(coachName)) {
         botComments++
-        app.log('botName:' + comment.user.login)
       }
     })
     app.log('Found ' + botComments + ' comment' + ((botComments>1) ? 's':'') +' by the bot in this PR.')
