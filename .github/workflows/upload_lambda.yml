@@ -39,7 +39,10 @@ jobs:
       # - if: github.base_ref == 'master'
       - name: Install node modules
         run: npm ci --only=prod
-  
+
+      - name: Create folder
+        run: mkdir public
+
       - name: Publish Artifacts
         uses: actions/upload-artifact@master
         with:
@@ -94,7 +97,10 @@ jobs:
       # Install nodejs packages listed in package-lock.json.
       # - if: github.base_ref == 'master'
       - name: Install node modules
-        run: npm install eslint --save-dev && npm install --save-dev --save-exact prettier && npm ci --only=prod
+        run: |
+          npm install eslint --save-dev
+          npm install --save-dev --save-exact prettier
+          npm ci --only=prod
   
       - name: Run linters
         uses: samuelmeuli/lint-action@v1
@@ -102,4 +108,4 @@ jobs:
           github_token: ${{ secrets.github_token }}
           # Enable linters
           eslint: true
-          prettier: true
+          prettier: false
