@@ -14,8 +14,6 @@ jobs:
       environment: '_TEST'
      
     steps:
-      - name: Print test
-        run: echo ${{ join('AWS_STAGE', ${{ env.environment }}) }}
       - name: Print commentid
         run: echo ${{ toJson(github.event.comment) }}
       - name: Update comment
