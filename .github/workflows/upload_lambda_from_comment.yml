@@ -12,6 +12,9 @@ jobs:
     timeout-minutes: 10
 
     steps:
+      - name: Print test
+        run: echo ${{ secrets.AWS_STAGE + "45" }}
+
       - name: Update comment
         uses: peter-evans/create-or-update-comment@v1
         with:
@@ -21,7 +24,7 @@ jobs:
             **Go!**
           reaction-type: rocket
 
-      - name: "Trigger"
+      - name: "Trigger $GITHUB_ACTOR " + github.actor
         run: echo Workflow triggered by $GITHUB_ACTOR
 
       - name: Copy the repository
@@ -31,7 +34,7 @@ jobs:
       # then we install 12, same as for AWS Lambda
       - uses: actions/setup-node@v1.4.1
         with:
-          node-version: '12.x'
+          node-version: 12
 
       # Install nodejs packages listed in package-lock.json.
       - name: Install node modules

@@ -14,7 +14,7 @@ module.exports = app => {
 
     // Let's not do anything if comment was made by a bot
     if (isBot) {
-      app.log('Skipping event from bot ' + user.login + ' (' + owner + '/' + repo + ').')
+      app.log('Skipping event triggered by bot: ' + user.login + ' (' + owner + '/' + repo + ').')
       return
     }
 
@@ -42,7 +42,7 @@ module.exports = app => {
         botComments++
       }
     })
-    app.log('Found ' + botComments + ' comment' + ((botComments>1) ? 's':'') +' by the bot in this PR.')
+    app.log('Found ' + botComments + ' comment' + ((botComments>1) ? 's':'') +' by bot ' + coachName + ' in this PR.')
 
     // Note that GitHub usernames paulo and tina were reserved by people who have never used their account for 3 and 10 years.
 
