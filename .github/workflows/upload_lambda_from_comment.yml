@@ -15,7 +15,7 @@ jobs:
      
     steps:
       - name: Print commentid
-        run: echo ${{ toJson(github.event.comment) }}
+        run: echo ${{ toJson(github.event) }}
       - name: Update comment
         uses: peter-evans/create-or-update-comment@v1.1.0
         with:
