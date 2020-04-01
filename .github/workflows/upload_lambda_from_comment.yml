@@ -13,7 +13,11 @@ jobs:
 
     steps:
       - name: Print test
-        run: echo ${{ secrets.AWS_STAGE + "45" }}
+        run: echo ${{ join(secrets.AWS_STAGE, '45') }}
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
 
       - name: Update comment
         uses: peter-evans/create-or-update-comment@v1
