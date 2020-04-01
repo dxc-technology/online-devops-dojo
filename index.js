@@ -35,8 +35,8 @@ module.exports = app => {
     // Get the list of comments in this PR
     // Note that warning about deprecated number instead of issue_number could only be fixed with next major Probot release (10)
     // https://github.com/probot/probot/pull/926
-    const issueComments = await context.github.issues.listComments({ owner, repo, number })
-    botComments = 0
+    var issueComments = await context.github.issues.listComments({ owner, repo, number })
+    var botComments = 0
     issueComments.data.forEach(function (comment) {
       if (comment.user.type == 'Bot' && comment.user.login.startsWith(coachName)) {
         botComments++
@@ -46,6 +46,8 @@ module.exports = app => {
 
     // Note that GitHub usernames paulo and tina were reserved by people who have never used their account for 3 and 10 years.
 
+    var ret = 0
+    var issuesComment
     // Version control module
     if (commentBody.match(/(?:@|\/)paulo\s.*(?:review|check|verify)/)) {
       switch (botComments) {
