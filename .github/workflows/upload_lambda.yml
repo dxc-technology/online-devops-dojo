@@ -15,7 +15,8 @@ jobs:
     steps:
       - name: Copy the repository
         uses: actions/checkout@v2.0.0
-      -run: echo ${{ secrets.AWS_STAGE }}
+      - name: Print test
+        run: echo ${{ secrets.AWS_STAGE }}
       
       # Node 10 is current default in ubuntu-latest (https://github.com/actions/virtual-environments/blob/master/images/linux/Ubuntu1804-README.md)
       # then we install 12, same as for AWS Lambda

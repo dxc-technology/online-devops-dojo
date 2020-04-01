@@ -29,7 +29,7 @@ jobs:
       
       # Node 10 is current default in ubuntu-latest (https://github.com/actions/virtual-environments/blob/master/images/linux/Ubuntu1804-README.md)
       # then we install 12, same as for AWS Lambda
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1.4.1
           with:
             node-version: '12.x'
 
