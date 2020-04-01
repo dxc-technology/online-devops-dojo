@@ -47,7 +47,7 @@ module.exports = app => {
     // Note that GitHub usernames paulo and tina were reserved by people who have never used their account for 3 and 10 years.
 
     // Version control module
-    if (commentBody.match(/@paulo\s.*(?:review|check|verify)/)){
+    if (commentBody.match(/(?:@|\/)paulo\s.*(?:review|check|verify)/)){
 
       switch (botComments) {
         case 0:
@@ -63,7 +63,7 @@ module.exports = app => {
       return ret // Return the last result. Not very accurate, but will do.
     }
     // Continuous integration module
-    else if (commentBody.match(/@tina\s.*(?:review|check|verify|look|done|finish)/)){
+    else if (commentBody.match(/(?:@|\/)tina\s.*(?:review|check|verify|look|done|finish)/)){
       switch (botComments) {
         case 0:
           issuesComment = context.issue({ body: '![Tina](https://s3.amazonaws.com/devopsdojoassets/tina.png)\n That looks good. Yet, I think we should replace `Jolly Jumper` by `Silver Blaze`. Can you make the change?' })
