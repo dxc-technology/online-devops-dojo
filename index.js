@@ -2,7 +2,7 @@ const coachName = 'online-devops-dojo-coach'
 
 module.exports = app => {
   app.log('Yay! The DevOps Dojo coach was run!')
-  app.on('issue_comment.created', async context => {
+  app.on(['issue_comment.created','issue_comment.edited'], async context => {
     const { github, payload } = context
     const isPR = !!payload.issue.pull_request
 
