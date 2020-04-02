@@ -38,7 +38,7 @@ jobs:
         with:
           node-version: 12
 
-      - name: Cache node modules  # not supported yet for such event
+      - name: Cache node modules  # not supported yet for issue_comment event
         uses: actions/cache@v1.1.2
         env:
           cache-name: cache-node-modules
