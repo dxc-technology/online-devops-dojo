@@ -112,7 +112,7 @@ DevOps Dojo development is managed with one repository:
 To prepare your dedicated GitHub repository:
 
 1. Fork in GitHub [https://github.com/dxc-technology/online-devops-dojo](https://github.com/dxc-technology/online-devops-dojo)
-2. Clone *your forked repository* (e.g., `https://github.com/jdoe1000/online-devops-dojo`)
+2. Clone *your forked repository* (e.g., h&#8203;ttps://github.com/jdoe1000/online-devops-dojo )
  to your workstation.
 3. Set your remotes as follows:
 
@@ -147,7 +147,7 @@ have dedicated environments for their class right in the browser.
 3. Go to _Your Profile_ page and then click on _Settings_ icon in the middle of
    the page
 4. Set _Private Git Repository_ to `Yes`
-5. Set _Git Scenario Repository_ to the address of your fork (e.g., `https://github.com/jdoe1000/online-devops-dojo`)
+5. Set _Git Scenario Repository_ to the address of your fork (e.g., h&#8203;ttps://github.com/jdoe1000/online-devops-dojo )
 6. Make sure to click on `SAVE` button
 7. Do not close this window as we will need the values from _Git Deploy Key_
    and _Git Webhook Secret_
@@ -157,7 +157,7 @@ have dedicated environments for their class right in the browser.
 We now need to configure GitHub repository hook so that Katacoda is notified
 each time you push updates to your repository.
 
-1. Open new browser window and go to your fork's URL (e.g., `https://github.com/jdoe1000/online-devops-dojo`)
+1. Open new browser window and go to your fork's URL (e.g., h&#8203;ttps://github.com/jdoe1000/online-devops-dojo )
 2. Open the repository _Settings_ page tab and then _Deploy keys_ (left navigation)
 3. Click on _Add deploy key_ button and use the following information to set it up:
    * _Title_: `katacoda.com`
