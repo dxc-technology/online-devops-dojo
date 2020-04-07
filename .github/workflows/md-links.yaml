@@ -3,8 +3,9 @@ name: Check links in markdown
 
 on:
   schedule:
-  - cron: "0 8 * * *"
+  - cron: "0 6 * * *"
   push:
+  pull_request:
 
 jobs:
   check-links:

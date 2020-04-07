@@ -4,6 +4,7 @@
         {"pattern": "jdoe1000"},
         {"pattern": "editor.katacoda.com"},
         {"pattern": "YOUR_SHORTNAME"},
+        {"pattern": "your_katacoda_user"},
         {"pattern": ".spelling"},
         {"pattern": "workflows"}
     ]

@@ -24,7 +24,23 @@ Other alternatives would of course be possible.
 
 ![Architecture diagram](online-devops-dojo-bot.svg)
 
-## Contributing
+## Developing
+
+DevOps Dojo Coach is a [GitHub App](https://developer.github.com/apps/about-apps/) built with [Probot](https://probot.github.io/) framework on Node.js. Its embedded [logging](https://probot.github.io/docs/logging/) API is [bunyan](https://github.com/trentm/node-bunyan).  
+
+The custom bot code is fully contained in the file index.js.
+
+The bot can be run locally with:
+
+```sh
+# Install dependencies
+npm install
+
+# Run the bot
+npm start
+```
+
+More knowledge on building GitHub apps [here](https://developer.github.com/apps/building-your-first-github-app/).## Contributing
 
 If you have suggestions for how the Dojo coach could be improved, or want to
 report a bug, open an issue! We'd love all and any contributions.

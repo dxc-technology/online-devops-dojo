@@ -32,7 +32,7 @@ training pages
 ### Continuous delivery
 
 - [`.github/workflows/upload_lambda.yml`](.github/workflows/upload_lambda.yml):
-  GitHub workflow triggered on repository pushes, which upload the coach lambda function.
+  GitHub workflow triggered on repository pushes, which uploads the coach lambda function.
 - [`serverless.yml`](serverless.yml): Serverless deployment configuration file
 
 We have not found a way to isolate the coach files in a sub-folder and execute Serverless

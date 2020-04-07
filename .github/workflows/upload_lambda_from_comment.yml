@@ -1,18 +1,33 @@
 # GitHub workflow file
-name: Deployment of Online DevOps Dojo coach lambda
+name: Deploy on demand Online DevOps Dojo coach lambda
 
 on:
-  push:
-    # change(s) on those files trigger this pipeline
-    paths: ['*.js', 'package*.json', 'serverless.yml', '.github/workflows/upload_lambda.yml']
-    branches: ['master']
+  issue_comment:
+    types: [created, edited]
 
 jobs:
-  build:
-    timeout-minutes: 10
+  reaction_on_comment:
     runs-on: ubuntu-latest
+    if: startsWith(github.event.comment.body, '/deploy')
 
     steps:
+      - name: Add reaction
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          comment-id: ${{ github.event.comment.id }}
+          body: '**Go!**'
+          reaction-type: rocket
+  
+  deploy_on_comment:
+    runs-on: ubuntu-latest
+    needs: reaction_on_comment
+    timeout-minutes: 10
+     
+    steps:
+      - name: "Triggered by ${{ github.actor }}"
+        run: echo Workflow triggered by $GITHUB_ACTOR
+
       - name: Copy the repository
         uses: actions/checkout@v2.0.0
       
@@ -23,7 +38,7 @@ jobs:
         with:
           node-version: 12
 
-      - name: Cache node modules
+      - name: Cache node modules  # not supported yet for issue_comment event
         uses: actions/cache@v1.1.2
         env:
           cache-name: cache-node-modules
@@ -36,11 +51,9 @@ jobs:
             ${{ runner.os }}-
 
       # Install nodejs packages listed in package-lock.json.
-      # - if: github.base_ref == 'master'
       - name: Install node modules
         run: npm ci --only=prod
-
-      # - if: github.base_ref == 'master'
+  
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda
         uses: serverless/github-action@v1.54.0
