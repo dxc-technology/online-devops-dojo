@@ -11,7 +11,7 @@
 
 ![Chun](../../assets/online-devops-dojo/shift-security-left/chun.png)
 
-> The Continuous Integration Pipeline is the perfect place to add quality gates such as SAST. There are many tools we can use - including Open Source ones - such as the [OWASP dependency check](https://www.owasp.org/index.php/OWASP_Dependency_Check).
+> The Continuous Integration Pipeline is the perfect place to add quality gates such as SAST. There are many tools we can use - including Open Source ones - such as the [OWASP dependency check](https://owasp.org/www-project-dependency-check/).
 > We want this gate to run not only when we introduce changes in the code, but also on a regular basis - for example daily. This way, when (**not if**) a vulnerability is discovered in one of our dependency, our CI pipeline will detect it and notify us so that we can take action.
 
 ![Selma](../../assets/online-devops-dojo/shift-security-left/selma.png)
