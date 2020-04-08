@@ -1,6 +1,6 @@
 ![Dan](../../assets/online-devops-dojo/shift-security-left/dan.png)
 
-> As Pet Clinic is a Java project, we can easily add the [OWASP dependency check](https://www.owasp.org/index.php/OWASP_Dependency_Check) as part of our pipeline, in our `pom.xml` file, as a Maven plugin. Let's do this!
+> As Pet Clinic is a Java project, we can easily add the [OWASP dependency check](https://owasp.org/www-project-dependency-check/) as part of our pipeline, in our `pom.xml` file, as a Maven plugin. Let's do this!
 
 ## Steps
 
