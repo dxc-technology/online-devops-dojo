@@ -1,7 +1,7 @@
 It is time to involve Tina again, as build and automated tests are passing:
 
 * Ask Tina to have another look by adding a comment in the pull request:
-  `@tina, done.`{{copy}}
+  `/tina - done.`{{copy}}
 * Tina will review and comment positively on the changes.
 * Merge the pull request by clicking the "Merge pull request" button.
 * Delete the branch `us-1-horse-db`.
