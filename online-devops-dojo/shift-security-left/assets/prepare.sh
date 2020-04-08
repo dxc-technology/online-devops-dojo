@@ -80,7 +80,8 @@ echo -e "${COLRESET}"
 #
 echo -e "${COLINFO}Configuring your GitHub $REPO repository...${COLRESET}"
 echo -e "${COLLOGS}"
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/hooks | grep id | cut -d ":" -f2 | cut -c 1-6> ids.txt
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/hooks | jq -r '.[] .id' > ids.txt
+
 
 filename="ids.txt"
 
