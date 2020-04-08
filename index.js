@@ -48,7 +48,7 @@ module.exports = app => {
 
     var issuesComment
     // Version control module
-    if (commentBody.match(/(?:@|\/)paulo\s.*(?:review|check|verify)/)) {
+    if (commentBody.match(/\/\s*paulo\W.*(?:review|check|verify)/)) {
       switch (botComments) {
         case 0:
           issuesComment = context.issue({ body: '![Paulo](https://s3.amazonaws.com/devopsdojoassets/paulo.png)\n Sure! I looked at the changes, and Brenda wants us to not only have horses but also ponies. So, we need to add `pony` in addition to `horse`. Can you do that?' })
@@ -60,7 +60,7 @@ module.exports = app => {
       }
     }
     // Continuous integration module
-    else if (commentBody.match(/(?:@|\/)tina\s.*(?:review|check|verify|look|done|finish)/)) {
+    else if (commentBody.match(/\/\s*tina\W.*(?:review|check|verify|look|done|finish)/)) {
       switch (botComments) {
         case 0:
           issuesComment = context.issue({ body: '![Tina](https://s3.amazonaws.com/devopsdojoassets/tina.png)\n That looks good. Yet, I think we should replace `Jolly Jumper` by `Silver Blaze`. Can you make the change?' })
