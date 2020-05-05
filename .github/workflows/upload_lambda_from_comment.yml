@@ -7,7 +7,7 @@ on:
 
 jobs:
   reaction_on_comment:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     if: startsWith(github.event.comment.body, '/deploy')
 
     steps:
