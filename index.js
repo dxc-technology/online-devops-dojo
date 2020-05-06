@@ -6,6 +6,10 @@
 
 const coachName = 'online-devops-dojo-coach'
 
+function isBot() {
+  const counter = typeof count !== 'undefined' ? " ("+count+")" : ''
+  app.log('Comment ignored' + counter + ': ' + comment.body)
+}
 module.exports = app => {
   app.log('Yay! The ' + coachName + ' was run!')
   app.on(['issue_comment.created','issue_comment.edited'], async context => {
@@ -17,8 +21,9 @@ module.exports = app => {
     const commentBody = comment.body && comment.body.toLowerCase()
     const { owner, repo, number } = context.issue()
 
+
     // Let's not do anything if the comment was made by a bot
-    if (user.isBot()) {
+    if (user.type === 'Bot') {
       app.log('Skipping event triggered by bot: ' + user.login + ' (' + owner + '/' + repo + ').')
       return
     }
@@ -43,14 +48,15 @@ module.exports = app => {
     var issueComments = await context.github.issues.listComments({ owner, repo, number })
     var botComments = 0
     issueComments.data.forEach(function (comment) {
-      if (comment.user.isBot() && comment.user.login.startsWith(coachName)) {
+      if (comment.user.type === 'Bot' && comment.user.login.startsWith(coachName)) {
         botComments++
       }
     })
     app.log('Found ' + botComments + ' comment' + ((botComments > 1) ? 's' : '') + ' by the bot ' + coachName + ' in this PR.')
 
-    function commentIgnored() {
-      app.log('Comment ignored.')
+    function commentIgnored(count) {
+      const counter = typeof count !== 'undefined' ? " ("+count+")" : ''
+      app.log('Comment ignored' + counter + ': ' + comment.body)
     }
     function addComment(msg) {
       const issuesComment = context.issue({ body: msg })
@@ -75,7 +81,7 @@ module.exports = app => {
           }
           break
         default:
-          commentIgnored
+          commentIgnored(botComments)
       }
     }
     // Continuous integration module
@@ -86,8 +92,10 @@ module.exports = app => {
         case 1:
           return addComment('![Tina](https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/continuous-integration/tina.png)\n :+1: thanks!')
         default:
-          commentIgnored
+          commentIgnored(botComments)
       }
+    } else if (commentBody.match(/\/\s*hal/)){   // for the fun and troubleshoot
+      return addComment("![Hal](https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/shift-security-left/hal.png)\n Shh! Don't say anyone that I'm monitoring this thread. Version " + process.env.VERSION + ".")
     } else commentIgnored
   })
 }

@@ -48,6 +48,7 @@ functions:
       WEBHOOK_SECRET: ${env:WEBHOOK_SECRET}
       APP_ID: ${env:APP_ID}
       PRIVATE_KEY: ${env:PRIVATE_KEY}
+      VERSION: "1.2.0"
 
     # create the API Gateway
     events:
