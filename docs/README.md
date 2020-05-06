@@ -9,7 +9,7 @@ Veterinary Clinic" virtual team in the context of GitHub issues and pull request
 One can imagine a lot of funny exchanges which at some point will require a
 genuine test pipeline!
 
-![Team chat](https://s3.amazonaws.com/devopsdojoassets/team-chat.jpg)
+![Team chat](https://raw.githubusercontent.com/pberthonneau/online-devops-dojo/master/assets/online-devops-dojo/leading-change/team-chat.jpg)
 
 ## Setup
 
@@ -40,10 +40,12 @@ npm install
 npm start
 ```
 
-More knowledge on building GitHub apps [here](https://developer.github.com/apps/building-your-first-github-app/).## Contributing
+More knowledge on building GitHub apps [here](https://developer.github.com/apps/building-your-first-github-app/).
+
+## Contributing
 
 If you have suggestions for how the Dojo coach could be improved, or want to
-report a bug, open an issue! We'd love all and any contributions.
+report a bug, open an [issue](https://github.com/dxc-technology/online-devops-dojo/issues/new/choose) or a PR! We'd love all and any contributions.
 
 ## Roadmap
 
