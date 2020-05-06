@@ -20,7 +20,7 @@ jobs:
       # and the latest ubuntu-20.04 is not available yet
       # then we install 12, same as for AWS Lambda
       - name: Install Node 12
-        uses: actions/setup-node@v1.4.1
+        uses: actions/setup-node@v1.4.2
         with:
           node-version: 12
 
