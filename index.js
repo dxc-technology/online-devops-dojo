@@ -5,6 +5,9 @@
 // file, you can obtain one at http://mozilla.org/MPL/2.0/.
 
 const coachName = 'online-devops-dojo-coach'
+const pauloImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/version-control/paulo.png'
+const tinaImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/continuous-integration/tina.png'
+const halImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/shift-security-left/hal.png'
 
 function isBot() {
   const counter = typeof count !== 'undefined' ? " ("+count+")" : ''
@@ -55,12 +58,13 @@ module.exports = app => {
     app.log('Found ' + botComments + ' comment' + ((botComments > 1) ? 's' : '') + ' by the bot ' + coachName + ' in this PR.')
 
     function commentIgnored(count) {
-      const counter = typeof count !== 'undefined' ? " ("+count+")" : ''
+      const counter = "9" // typeof count !== 'undefined' ? " ("+count+")" : ''
       app.log('Comment ignored' + counter + ': ' + comment.body)
+      context.log('Comment ignored' + counter + ': ' + comment.body)
     }
+
     function addComment(msg) {
       const issuesComment = context.issue({ body: msg })
-      app.log(msg)
       return context.github.issues.createComment(issuesComment)
     }
     
@@ -68,15 +72,16 @@ module.exports = app => {
     if (commentBody.match(/\/\s*paulo\W.*(?:review|check|verify)/)) {
       switch (botComments) {
         case 0:
-          return addComment('![Paulo](https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/raw/master/assets/online-devops-dojo/version-control/santhosh.png)\n Sure! I looked at the changes, and Brenda wants us to not only have horses but also ponies. So, we need to add `pony` in addition to `horse`. Can you do that?')
+          return addComment("![Paulo](" + pauloImage + ")\n Sure! I looked at the changes, and Brenda wants us to not only have horses but also ponies. So, we need to add `pony` in addition to `horse`. Can you do that?")
         case 1:
-          addComment('![Paulo](https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/raw/master/assets/online-devops-dojo/version-control/santhosh.png)\n Looks good :+1: ! Merging this pull request.')
-          if ( typeof context.github.pullRequests !== 'undefined' && context.github.pullRequests )
+          addComment('![Paulo](' + pauloImage + ')\n Looks good :+1: ! Merging this pull request.')
+          if ( context.github.pullRequests )
           {
             return await context.github.pullRequests.merge({ owner, repo, number })
           }
           else
           {
+            context.log('context.github.pullRequests undefined')
             app.log('context.github.pullRequests undefined #' + number + ' in ' + owner + '/' + repo + '.')
           }
           break
@@ -88,14 +93,14 @@ module.exports = app => {
     else if (commentBody.match(/\/\s*tina\W.*(?:review|check|verify|look|done|finish)/)) {
       switch (botComments) {
         case 0:
-          return addComment('![Tina](https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/continuous-integration/tina.png)\n That looks good. Yet, I think we should replace `Jolly Jumper` by `Silver Blaze`. Can you make the change?')
+          return addComment("![Tina](" + tinaImage + ")\n That looks good. Yet, I think we should replace `Jolly Jumper` by `Silver Blaze`. Can you make the change?")
         case 1:
-          return addComment('![Tina](https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/continuous-integration/tina.png)\n :+1: thanks!')
+          return addComment("![Tina](" + tinaImage + ")\n :+1: thanks!")
         default:
           commentIgnored(botComments)
       }
     } else if (commentBody.match(/\/\s*hal/)){   // for the fun and troubleshoot
-      return addComment("![Hal](https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/shift-security-left/hal.png)\n Shh! Don't say anyone that I'm monitoring this thread. Version " + process.env.VERSION + ".")
+      return addComment("![Hal](" + halImage + ")\n Shh! Don't say anyone that I'm monitoring this thread. Version " + process.env.VERSION + ".")
     } else commentIgnored
   })
 }
