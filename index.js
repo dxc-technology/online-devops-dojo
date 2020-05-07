@@ -9,10 +9,6 @@ const pauloImage = 'https://raw.githubusercontent.com/dxc-technology/online-devo
 const tinaImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/continuous-integration/tina.png'
 const halImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/shift-security-left/hal.png'
 
-function isBot() {
-  const counter = typeof count !== 'undefined' ? " ("+count+")" : ''
-  app.log('Comment ignored' + counter + ': ' + comment.body)
-}
 module.exports = app => {
   app.log('Yay! The ' + coachName + ' was run!')
   app.on(['issue_comment.created','issue_comment.edited'], async context => {
