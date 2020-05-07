@@ -9,7 +9,7 @@ Veterinary Clinic" virtual team in the context of GitHub issues and pull request
 One can imagine a lot of funny exchanges which at some point will require a
 genuine test pipeline!
 
-![Team chat](https://raw.githubusercontent.com/pberthonneau/online-devops-dojo/master/assets/online-devops-dojo/leading-change/team-chat.jpg)
+![Team chat](https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/leading-change/team-chat.jpg)
 
 ## Setup
 

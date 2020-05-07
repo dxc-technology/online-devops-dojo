@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve coach logging.
 - Use repository images for bot comments and notifications.
 
+### Fixed
+
+- Dojo coach wasn't able to merge PR.
+
 ## [1.1.0] - 2020-04-08
 
 ### Added
