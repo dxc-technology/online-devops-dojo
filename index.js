@@ -1,7 +1,16 @@
+// index.js: core coach code triggered by the DevOps Dojo coach github
+// app on any event to the GitHub repositories where the GitHub app is installed.
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, you can obtain one at http://mozilla.org/MPL/2.0/.
+
 const coachName = 'online-devops-dojo-coach'
+const pauloImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/version-control/paulo.png'
+const tinaImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/continuous-integration/tina.png'
+const halImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/shift-security-left/hal.png'
 
 module.exports = app => {
-  app.log('Yay! The DevOps Dojo coach was run!')
+  app.log('Yay! The ' + coachName + ' was run!')
   app.on(['issue_comment.created','issue_comment.edited'], async context => {
     const { github, payload } = context
     const isPR = !!payload.issue.pull_request
@@ -9,11 +18,11 @@ module.exports = app => {
     const comment = payload.comment
     const user = comment.user
     const commentBody = comment.body && comment.body.toLowerCase()
-    const isBot = user.type === 'Bot' // for a genuine user this would be 'User'
     const { owner, repo, number } = context.issue()
 
-    // Let's not do anything if comment was made by a bot
-    if (isBot) {
+
+    // Let's not do anything if the comment was made by a bot
+    if (user.type === 'Bot') {
       app.log('Skipping event triggered by bot: ' + user.login + ' (' + owner + '/' + repo + ').')
       return
     }
@@ -30,45 +39,53 @@ module.exports = app => {
       return
     }
 
-    app.log('This is a comment on a pull request #' + number + ' in ' + owner + '/' + repo + ' repository...')
+    app.log('Comment on a pull request #' + number + ' in ' + owner + '/' + repo + ' repository...')
 
-    // Get the list of comments in this PR
+    // Count the number of existing comments from this bot in this PR.
     // Note that warning about deprecated number instead of issue_number could only be fixed with next major Probot release (10)
     // https://github.com/probot/probot/pull/926
     var issueComments = await context.github.issues.listComments({ owner, repo, number })
     var botComments = 0
     issueComments.data.forEach(function (comment) {
-      if (comment.user.type == 'Bot' && comment.user.login.startsWith(coachName)) {
+      if (comment.user.type === 'Bot' && comment.user.login.startsWith(coachName)) {
         botComments++
       }
     })
-    app.log('Found ' + botComments + ' comment' + ((botComments > 1) ? 's' : '') + ' by bot ' + coachName + ' in this PR.')
+    app.log('Found ' + botComments + ' comment' + ((botComments > 1) ? 's' : '') + ' by the bot ' + coachName + ' in this PR.')
 
-    // Note that GitHub usernames paulo and tina were reserved by people who have never used their account for 3 and 10 years.
+    function commentIgnored(count) {
+      app.log('Comment ignored (' + count + ' previous bot comment(s)): ' + comment.body)
+    }
 
-    var issuesComment
+    function addComment(msg) {
+      const issuesComment = context.issue({ body: msg })
+      return context.github.issues.createComment(issuesComment)
+    }
+    
     // Version control module
     if (commentBody.match(/\/\s*paulo\W.*(?:review|check|verify)/)) {
       switch (botComments) {
         case 0:
-          issuesComment = context.issue({ body: '![Paulo](https://s3.amazonaws.com/devopsdojoassets/paulo.png)\n Sure! I looked at the changes, and Brenda wants us to not only have horses but also ponies. So, we need to add `pony` in addition to `horse`. Can you do that?' })
-          return context.github.issues.createComment(issuesComment)
+          return addComment("![Paulo](" + pauloImage + ")\n Sure! I looked at the changes, and Brenda wants us to not only have horses but also ponies. So, we need to add `pony` in addition to `horse`. Can you do that?")
         case 1:
-          issuesComment = context.issue({ body: '![Paulo](https://s3.amazonaws.com/devopsdojoassets/paulo.png)\n Looks good :+1: ! Merging this pull request.' })
-          context.github.issues.createComment(issuesComment)
-          return await context.github.pullRequests.merge({ owner, repo, number })
+          addComment('![Paulo](' + pauloImage + ')\n Looks good :+1: ! Merging this pull request.')
+          return await context.github.pulls.merge({ owner, repo, number })
+        default:
+          commentIgnored(botComments)
       }
     }
     // Continuous integration module
     else if (commentBody.match(/\/\s*tina\W.*(?:review|check|verify|look|done|finish)/)) {
       switch (botComments) {
         case 0:
-          issuesComment = context.issue({ body: '![Tina](https://s3.amazonaws.com/devopsdojoassets/tina.png)\n That looks good. Yet, I think we should replace `Jolly Jumper` by `Silver Blaze`. Can you make the change?' })
-          return context.github.issues.createComment(issuesComment)
+          return addComment("![Tina](" + tinaImage + ")\n That looks good. Yet, I think we should replace `Jolly Jumper` by `Silver Blaze`. Can you make the change?")
         case 1:
-          issuesComment = context.issue({ body: '![Tina](https://s3.amazonaws.com/devopsdojoassets/tina.png)\n :+1: thanks!' })
-          return context.github.issues.createComment(issuesComment)
+          return addComment("![Tina](" + tinaImage + ")\n :+1: thanks!")
+        default:
+          commentIgnored(botComments)
       }
-    }
+    } else if (commentBody.match(/\/\s*hal/)){   // for the fun and troubleshoot
+      return addComment("![Hal](" + halImage + ")\n Shh! Don't say anyone that I'm monitoring this thread. Version " + process.env.VERSION + ".")
+    } else commentIgnored(botComments)
   })
 }
