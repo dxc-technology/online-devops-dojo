@@ -58,8 +58,7 @@ module.exports = app => {
     app.log('Found ' + botComments + ' comment' + ((botComments > 1) ? 's' : '') + ' by the bot ' + coachName + ' in this PR.')
 
     function commentIgnored(count) {
-      const counter = typeof count !== 'undefined' ? " ("+count+")" : ''
-      app.log('Comment ignored' + counter + ': ' + comment.body)
+      app.log('Comment ignored (' + count + ' previous bot comment(s)): ' + comment.body)
     }
 
     function addComment(msg) {
@@ -91,6 +90,6 @@ module.exports = app => {
       }
     } else if (commentBody.match(/\/\s*hal/)){   // for the fun and troubleshoot
       return addComment("![Hal](" + halImage + ")\n Shh! Don't say anyone that I'm monitoring this thread. Version " + process.env.VERSION + ".")
-    } else commentIgnored
+    } else commentIgnored(botComments)
   })
 }
