@@ -61,21 +61,22 @@ check_credentials
 # Copy the repository template https://github.com/dxc-technology/pet-clinic to the user
 pet_clinic_copy()
 {
-  echo -e "${COLINFO}Copying $REPO Git repository to user's account ..${COLRESET}"
+  echo -e "${COLINFO}Copying $REPO repository to user's account ..${COLRESET}"
   echo -e "${COLLOGS}"
 
   # node_id of the repository https://github.com/dxc-technology/pet-clinic
-  TEMPLATE_ID = "MDEwOlJlcG9zaXRvcnkyMDM2MDcwNTA="
+  TEMPLATE_ID="MDEwOlJlcG9zaXRvcnkyMDM2MDcwNTA="
+
   # Clone the template repository
-  curl --location --request POST '$GITHUBAPIURL/graphql' \
+  curl --location --request POST $GITHUBAPIURL/graphql \
     --header 'Content-Type: application/json' \
-    --header 'Authorization: token $TOKEN' \
+    --header "Authorization: token $TOKEN" \
     --header 'Cookie: logged_in=no' \
-    --data-raw '{"query":"mutation clonePetClinic {\r\n  cloneTemplateRepository(input: {name: \"$REPO\", ownerId: \"$USER_NODE_ID\", repositoryId: \"$TEMPLATE_ID\", visibility: PUBLIC }) {\r\n    repository {\r\n      name\r\n    }\r\n  }\r\n}","variables":{}}'
+    --data-raw '{"query":"mutation clonePetClinic { cloneTemplateRepository(input: {name: \"'$REPO'\", ownerId: \"'$USER_NODE_ID'\", repositoryId: \"'$TEMPLATE_ID'\", visibility: PUBLIC }) { repository { name } } }","variables":{}}'
   # Disable vulnerability alerts
-  curl --location --request DELETE '$GITHUBAPIURL/repos/$SHORTNAME/$REPO/vulnerability-alerts' \
+  curl --location --request DELETE $GITHUBAPIURL/repos/$SHORTNAME/$REPO/vulnerability-alerts \
     --header 'Accept: application/vnd.github.dorian-preview+json' \
-    --header 'Authorization: token $TOKEN' \
+    --header "Authorization: token $TOKEN" \
     --header 'Cookie: logged_in=no'
 }
 
