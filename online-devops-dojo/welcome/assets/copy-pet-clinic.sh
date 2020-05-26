@@ -42,6 +42,9 @@ if [ -z "$EMAIL" ]; then
 fi
 export EMAIL
 
+USER_NODE_ID=$(echo $USER_JSON | jq -r '.node_id')
+export USER_NODE_ID
+
 git config --global user.email "${EMAIL}"
 
 check_credentials()
@@ -55,21 +58,25 @@ check_credentials()
 }
 check_credentials
 
+# Copy the repository template https://github.com/dxc-technology/pet-clinic to the user
 pet_clinic_copy()
 {
   echo -e "${COLINFO}Copying $REPO Git repository to user's account ..${COLRESET}"
   echo -e "${COLLOGS}"
 
-  rm -fr /tmp/${REPO}
-  git clone https://$TOKEN@${GITHUB}/${ORGREPO}/${REPO}.git /tmp/${REPO}
-  cd /tmp/${REPO}
-  rm -fR .git
-  git init
-  git remote add origin https://$SHORTNAME:$TOKEN@${GITHUB}/${SHORTNAME}/${REPO}.git
-  git add -f .
-  git commit -m "Initial commit for Pet Clinic application"
-  git push origin master
-  cd -
+  # node_id of the repository https://github.com/dxc-technology/pet-clinic
+  TEMPLATE_ID = "MDEwOlJlcG9zaXRvcnkyMDM2MDcwNTA="
+  # Clone the template repository
+  curl --location --request POST '$GITHUBAPIURL/graphql' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: token $TOKEN' \
+    --header 'Cookie: logged_in=no' \
+    --data-raw '{"query":"mutation clonePetClinic {\r\n  cloneTemplateRepository(input: {name: \"$REPO\", ownerId: \"$USER_NODE_ID\", repositoryId: \"$TEMPLATE_ID\", visibility: PUBLIC }) {\r\n    repository {\r\n      name\r\n    }\r\n  }\r\n}","variables":{}}'
+  # Disable vulnerability alerts
+  curl --location --request DELETE '$GITHUBAPIURL/repos/$SHORTNAME/$REPO/vulnerability-alerts' \
+    --header 'Accept: application/vnd.github.dorian-preview+json' \
+    --header 'Authorization: token $TOKEN' \
+    --header 'Cookie: logged_in=no'
 }
 
 # Check if user repository already exists
