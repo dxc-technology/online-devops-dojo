@@ -41,7 +41,6 @@ if [ -z "$EMAIL" ]; then
   EMAIL=${SHORTNAME}@noemail.com
 fi
 export EMAIL
-
 git config --global user.email "${EMAIL}"
 
 check_credentials()
@@ -55,11 +54,13 @@ check_credentials()
 }
 check_credentials
 
+# Copy the repository template https://github.com/dxc-technology/pet-clinic to the user
 pet_clinic_copy()
 {
-  echo -e "${COLINFO}Copying $REPO Git repository to user's account ..${COLRESET}"
+  echo -e "${COLINFO}Copying $REPO repository to user's account ..${COLRESET}"
   echo -e "${COLLOGS}"
 
+  # Clone the template repository
   rm -fr /tmp/${REPO}
   git clone https://$TOKEN@${GITHUB}/${ORGREPO}/${REPO}.git /tmp/${REPO}
   cd /tmp/${REPO}
@@ -69,6 +70,11 @@ pet_clinic_copy()
   git add -f .
   git commit -m "Initial commit for Pet Clinic application"
   git push origin master
+  # Disable vulnerability alerts
+  curl --location --request DELETE $GITHUBAPIURL/repos/$SHORTNAME/$REPO/vulnerability-alerts \
+    --header 'Accept: application/vnd.github.dorian-preview+json' \
+    --header "Authorization: token $TOKEN" \
+    --header 'Cookie: logged_in=no'
   cd -
 }
 
