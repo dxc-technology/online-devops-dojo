@@ -67,14 +67,20 @@ pet_clinic_copy()
   rm -fR .git
   git init
   git remote add origin https://$SHORTNAME:$TOKEN@${GITHUB}/${SHORTNAME}/${REPO}.git
-  git add -f .
-  git commit -m "Initial commit for Pet Clinic application"
+
+  git add LICENSE
+  git commit -m "Add License"
   git push origin master
+
   # Disable vulnerability alerts
   curl --location --request DELETE $GITHUBAPIURL/repos/$SHORTNAME/$REPO/vulnerability-alerts \
     --header 'Accept: application/vnd.github.dorian-preview+json' \
     --header "Authorization: token $TOKEN" \
     --header 'Cookie: logged_in=no'
+  
+  git add -f .
+  git commit -m "Initial commit for Pet Clinic application"
+  git push origin master
   cd -
 }
 
