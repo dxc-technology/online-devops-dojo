@@ -10,7 +10,7 @@ const tinaImage = 'https://raw.githubusercontent.com/dxc-technology/online-devop
 const halImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/shift-security-left/hal.png'
 
 module.exports = app => {
-  app.log('Yay! The ' + coachName + ' was run!')
+  app.log('Yay! The ' + coachName + ' version ' + process.env.VERSION + ' was run!')
   app.on(['issue_comment.created','issue_comment.edited'], async context => {
     const { github, payload } = context
     const isPR = !!payload.issue.pull_request
@@ -58,6 +58,7 @@ module.exports = app => {
     }
 
     function addComment(msg) {
+      app.log('PR commented by bot: ' + msg)
       const issuesComment = context.issue({ body: msg })
       return context.github.issues.createComment(issuesComment)
     }
