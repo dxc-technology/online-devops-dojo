@@ -33,7 +33,7 @@ SHORTNAME=$(echo $USER_JSON | jq -r '.login')
 export SHORTNAME
 echo "export SHORTNAME=${SHORTNAME}" > /tmp/shortname.txt
 
-EMAIL=$(echo $USER_JSON | jq -r '.email')
+EMAIL=$(echo $USER_JSON | jq -r '.email//empty')
 if [ -z "$EMAIL" ]; then
   EMAIL=${SHORTNAME}@noemail.com
 fi
