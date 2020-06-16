@@ -36,7 +36,7 @@ USER_JSON=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -H "Accept: 
 SHORTNAME=$(echo $USER_JSON | jq -r '.login')
 export SHORTNAME
 
-EMAIL=$(echo $USER_JSON | jq -r '.email')
+EMAIL=$(echo $USER_JSON | jq -r '.email//empty')
 if [ -z "$EMAIL" ]; then
   EMAIL=${SHORTNAME}@noemail.com
 fi
