@@ -6,7 +6,7 @@ The **Online DevOps Dojo** has several characters which play a role throughout t
 
 **C**harlie is the **C**EO of the company; a technology entrepreneur, investor, and philanthropist.
 
-Charlie is intent on disrupting the world of Pet Clinics and sees DevOps as key to the company's plans ...
+Charlie is intent on disrupting the world of Pet Clinics and sees DevOps as key to the company's plans.
 
 ### Chun (Coach)
 
@@ -18,10 +18,10 @@ frequency and quality of software.
 
 She grew into the role of a DevOps Coach. Chun’s coaching is based on her experience gained from working from startups and
 multinational companies. In her previous roles she was an avid outdoors person and adrenaline junky, lover of fun, hater of being
-on-call and worked extensively to automate as much as possible of the build, test, package and deploy process to ensure that the
+on-call and worked extensively to automate as much as possible the build, test, package and deploy process to ensure that the
 systems were created with a LessOps model in mind.
 
-Having identified the opportunities DevOps offers she decided to step up and coach others, to practice what she preached. Chun is
+Having identified the opportunities DevOps offers she decided to step up and coach others, to practice what she preaches. Chun is
 committed to growing the DevOps coaching community by leveraging her experience to support / coach others.
 
 ### Brenda (Business)
@@ -32,7 +32,7 @@ committed to growing the DevOps coaching community by leveraging her experience 
 key to this is the availability and functionality of the Pet Clinic application. Of course, she is aware of engineering capacity,
 technical constraints, security and all that but her primary objective is to deliver often, introduce great products for owners and
 their pets, together with features which will leave Pet Clinic's competitors far behind. She is competitive, but has also developed
-empathy for the team and is extremely proud of her two golden retrievers Bonnie and Clyde.
+empathy for the team. She is extremely proud of her two golden retrievers, Bonnie and Clyde.
 
 Brenda works mainly with Paulo, the product owner. She gets to explain what she wants to Paulo and Paulo helps the team to
 prioritize the work so that Brenda can get what the business needs incorporated into the application.
@@ -41,7 +41,7 @@ She participates in end-of-sprint demos, where she appreciates the opportunity t
 the sprint planning and the sprint reviews, Brenda feels she's engaged often - and sometimes too often - by the team. She would like
 to rely on Paulo more.
 
-Brenda heard once from Selma - the security contact in the team - when important customer information got hacked. Not a pleasant
+Brenda heard once from Selma, the security contact in the team, when important customer information got hacked. Not a pleasant
 experience for her, for the company, and definitely not for the customers. They traced it down to a hacker named Hal, who has been
 in communication with the team via anonymous e-mail.
 
@@ -68,11 +68,11 @@ of a rapidly changing environment", Brenda says before uttering the magic words 
 > Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
 
 To the bemusement of the team, Paulo replies that this is INCONCEIVABLE! :) and then works to facilitate the changes via the
-backlog. After which the team point out to Paulo that he keeps using that word and that the team [doesn't think it means what he thinks it means](https://www.youtube.com/watch?v=D58LpHBnvsI).
+backlog. After which the team points out to Paulo that he keeps using that word and that the team [doesn't think it means what he thinks it means](https://www.youtube.com/watch?v=D58LpHBnvsI).
 
-As a key stakeholder in the Agile process, Paulo as part of his product owner responsibilities and from his interactions with Brenda
+As a key stakeholder in the Agile process, as part of his product owner responsibilities and from his interactions with Brenda, Paulo
 has the vision of what is to be built, why it is to be built and in what order it is to be built. He conveys that vision to the
-scrum team who regularly and rather unfairly question it in his opinion.
+scrum team who regularly and rather unfairly questions it in his opinion.
 
 ### Santhosh (Scrum Master)
 
@@ -83,12 +83,12 @@ including our cast (Brenda from the business, Paulo the product owner, Tina the 
 theory, practices, rules, and values.
 
 Santhosh is keen to learn and understand DevOps tools and processes to better understand the nuances in the approach and
-responsibilities of Scrum Teams adopting DevOps and Scrum Team who are not adopting DevOps.
+responsibilities of Scrum Teams adopting DevOps and Scrum Teams who are not adopting DevOps.
 
 Traditional Scrum teams consist of people who deliver the potentially releasable increments at the end of a Sprint. Whereas Scrum
 teams adapting DevOps target the whole value stream so the team includes all the people who work a Product Backlog Item (PBI) in the
 end-to-end value stream. A DevOps scrum team could include some or all of the following: analysts, UI/UX designers, developers,
-operations people, sysadmins, data scientists and site-reliability engineers. A DevOps scrum team works together, collaboratively as
+operations people, sysadmins, data scientists and site reliability engineers. A DevOps scrum team works together, collaboratively as
 one unit, to deliver value to their customers.
 
 Santhosh works diligently as a scrum master to protect the team from anything - typically requests originating from Brenda or Paulo
@@ -147,7 +147,7 @@ assembly line. She is aware that the role of and skills required by a tester are
 comfortable working with code and be able to analyze it. She appreciates that testers need to work within the scrum teams in order
 to ensure quality is built into the software development process during the two week sprint cycle.
 
-She is keen to expand her strong testing skills, to become more technically adept, and learn more about coding so she can start
+She is keen to expand her strong testing skills, to become more technically adept, and to learn more about coding so she can start
 working on test automation. By expanding her skills to become a test automation expert she hopes to play a more active role in the
 sprint cycle.
 
