@@ -21,7 +21,7 @@ with this module.
 By the end of the lesson, you should be able to:
 
 * articulate the need to Shift Left on Security,
-* integrate Security Testing in the daily work of the scrum team as part of a
+* integrate Security Testing in the daily work of the Scrum team as part of a
   CI/CD pipeline,
 * describe how to reduce surface areas of risk and enforce consistency in the
   the application of security testing,
