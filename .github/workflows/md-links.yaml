@@ -5,16 +5,19 @@ on:
   schedule:
   - cron: "0 6 * * *"
   push:
+    paths: ['**.md', 'md-link-check.json', '.github/workflows/md-links.yaml']
+
   pull_request:
+    paths: ['**.md', 'md-link-check.json', '.github/workflows/md-links.yaml']
 
 jobs:
   check-links:
     timeout-minutes: 10
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@master
-    - uses: gaurav-nelson/github-action-markdown-link-check@0.6.0
+    - uses: actions/checkout@v2
+    - uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
         config-file: '.github/workflows/md-link-check.json'
         use-quiet-mode: 'yes'
