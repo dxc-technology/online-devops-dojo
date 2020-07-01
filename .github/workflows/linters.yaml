@@ -38,10 +38,7 @@ jobs:
       # Install nodejs packages listed in package-lock.json.
       # - if: github.base_ref == 'master'
       - name: Install node modules
-        run: |
-          npm install eslint --save-dev
-          npm install --save-dev --save-exact prettier
-          npm ci
+        run: npm ci --no-fund
   
       - name: Run linters
         uses: samuelmeuli/lint-action@v1
