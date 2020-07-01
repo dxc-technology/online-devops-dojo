@@ -25,7 +25,7 @@ jobs:
 
       # not supported yet for issue_comment event
       # - name: Cache node modules  
-      #   uses: actions/cache@v1.1.2
+      #   uses: actions/cache@v2
       #   env:
       #     cache-name: cache-node-modules
       #   with:
@@ -39,7 +39,7 @@ jobs:
       # Install nodejs packages listed in package-lock.json.
       # - if: github.base_ref == 'master'
       - name: Install node modules
-        run: npm ci --only=prod
+        run: npm ci --only=prod --no-fund
 
       # - if: github.base_ref == 'master'
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
