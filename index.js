@@ -12,7 +12,7 @@ const halImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops
 module.exports = app => {
   app.log('Yay! The ' + coachName + ' version ' + process.env.VERSION + ' was run!')
   app.on(['issue_comment.created','issue_comment.edited'], async context => {
-    const { github, payload } = context
+    const { githubIgnored, payload } = context
     const isPR = !!payload.issue.pull_request
 
     const comment = payload.comment
