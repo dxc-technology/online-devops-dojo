@@ -5,9 +5,10 @@
 // file, you can obtain one at http://mozilla.org/MPL/2.0/.
 
 const coachName = 'online-devops-dojo-coach'
-const pauloImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/version-control/paulo.png'
-const tinaImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/continuous-integration/tina.png'
-const halImage = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/shift-security-left/hal.png'
+const imagePath = 'https://raw.githubusercontent.com/dxc-technology/online-devops-dojo/master/assets/online-devops-dojo/'
+const pauloImage = imagePath + 'version-control/paulo.png'
+const tinaImage = imagePath + 'continuous-integration/tina.png'
+const halImage = imagePath + 'shift-security-left/hal.png'
 
 module.exports = app => {
   app.log('Yay! The ' + coachName + ' version ' + process.env.VERSION + ' was run!')
