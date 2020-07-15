@@ -7,5 +7,6 @@
         {"pattern": "your_katacoda_user"},
         {"pattern": ".spelling"},
         {"pattern": "workflows"}
-    ]
+    ],
+    "aliveStatusCodes": [200,206,429]
 }
