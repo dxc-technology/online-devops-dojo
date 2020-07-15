@@ -3,8 +3,6 @@ name: Javascript linter
 
 on:
   push:
-    # change(s) on those files trigger this pipeline
-    paths: ['*.js', '.eslintrc.json', '.github/workflows/linters.yml']
 
 jobs:
   linters:   # run linters in separate job to not delay critical stuff
