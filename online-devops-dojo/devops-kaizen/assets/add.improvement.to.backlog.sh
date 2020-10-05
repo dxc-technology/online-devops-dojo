@@ -19,7 +19,10 @@ export TOKEN
 
 echo -e "${COLLOGS}Fetching your details from GitHub...${COLRESET}"
 
-SHORTNAME=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -X GET https://${GITHUB}/api/v3/user | jq -r '.login')
+echo -e "${COLLOGS}Fetching your details from GitHub...${COLRESET}"
+USER_JSON=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/user)
+
+SHORTNAME=$(echo $USER_JSON | jq -r '.login')
 export SHORTNAME
 
 # Provision user stories in GitHub
