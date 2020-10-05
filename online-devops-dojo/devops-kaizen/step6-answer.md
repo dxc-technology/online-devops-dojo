@@ -1,0 +1,3 @@
+The correct answers are **Ensuring stakeholder participation** and **A focus on identifying and eliminating waste**
+
+Ensuring stakeholder participation and A focus on identifying and eliminating waste are key factors in the formulation of a teams DevOps Kaizen Strategy. A BRD is not as a BRD is typically a contract between a development organization and their customer for the delivery of a service or a product. BRD's, assume the end state is known where as DevOps Kaizen events support continuous incremental improvements towards a desired end state.

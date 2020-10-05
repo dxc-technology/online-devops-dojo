@@ -1,0 +1,30 @@
+---
+title: Implement Continuous Testing
+body: >
+  From **Tina**:
+  ![](https://s3.amazonaws.com/devopsdojoassets/tina.png)
+
+  # DevOps Kaizen Improvement Theme
+
+  ### **:green_book:  Now / Current State**
+
+  Testing is mostly manual, mainly performed after the development is completed, feedback on issues is too late in the process which in turn is leading to rework and delays
+
+  ### **:star: Definition of awesome**
+
+  Any code committed to our source code management system would be continuously integrated via a Jenkins pipeline. 
+
+  The pipeline would execute of a comprehensive set of automated tests (continuous testing) against the code, these tests would include unit tests that cover 70 to 80% of the code and automated acceptance tests of key functional areas.
+
+  ### **:dart: Next target condition**
+
+  Introduce Unit Testing and execute the unit tests from a CI pipeline.
+
+  ### **:feet: First steps**
+
+  Create the Pipeline, have it invoked when code is committed and execute some unit tests from the pipeline
+labels: [":sparkles: epic", "P3", "13"]
+---
+title: Add functional testing stage in CI/CD pipeline
+body: "As part of improvement theme #[previous_issue]:\r\r **As a** tester,\r**I want** automated functional tests to be executed as part of the CI/CD pipeline for each and every code commit,\r**so that** we can get feedback on issues early in the process and avoid rework and delays."
+labels: [":bulb: user_story", "P1", "3"]

@@ -1,0 +1,80 @@
+---
+speaking: Tina
+text: >
+    OK we now have the Value Stream mapped, what do we do next?
+---
+speaking: Chun
+text: >
+    We need to look at what the VSM is telling us and determine where we need to focus our efforts.
+---
+speaking: Selma
+text: >
+    How do we do that?
+---
+speaking: Chun
+text: >
+    We need to look for and eliminate non value add activities in the current state VSM. For example:
+---
+speaking: Chun
+text: >
+    - How do we significantly increase the percent complete and accurate (%C/A) for each activity?
+---
+speaking: Chun
+text: >
+    - How can we improve the processing time (PT) for each activity?
+---
+speaking: Chun
+text: >
+    - How do we reduce, or even eliminate the non-productive time in the lead time (LT) for each activity?
+---
+speaking: Paulo
+text: >
+    Additional questions to be considered include -
+---
+speaking: Paulo
+text: >
+    - What are the boundaries between the activities and why do they exist?
+---
+speaking: Paulo
+text: >
+    - What contributes to the LT for each activity including handoffs, queues, and organizational rules & procedures?
+---
+speaking: Paulo
+text: >
+    - Who performs each activity, including their roles?
+---
+speaking: Paulo
+text: >
+    - What tools are used by people performing each activity?
+---
+speaking: Paulo
+text: >
+    - Are there opportunities for automation and/or integration to help improve efficiency of the activities?
+---
+speaking: Paulo
+text: >
+    Chun anything you would like to add to that list?
+---
+speaking: Chun
+text: >
+    Just a couple.
+---
+speaking: Chun
+text: >
+    How can we shift activities left to provide faster feedback?
+---
+speaking: Chun
+text: >
+    What other DevOps principles, practices or tools could be applied to improve the end-to-end LT?
+---
+speaking: Adam
+text: >
+    Better put on some more coffee and order more pizza, because I for one am keen to start looking for improvements.
+---
+speaking: Santhosh
+text: >
+    Consider it done. A word of caution for us as a team, we need to be aware that the debate that leads to answers to those questions can result in a new desired state VSM. 
+---
+speaking: Chun
+text: >
+    The desired state VSM may have more challenging targets for each of the three key metrics - %C/A, LT, and PT per activity. These targets may need to be implemented over a couple of sprints.
