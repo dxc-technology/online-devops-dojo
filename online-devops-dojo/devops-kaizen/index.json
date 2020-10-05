@@ -75,14 +75,14 @@
     "assets": {
       "host01": [
         { "file": "dialog.py", "target": "~/", "chmod": "+x" },
-        { "file": "prereq.sh", "target": "~/", "chmod": "+x" },
+        { "file": "prepare.sh", "target": "~/", "chmod": "+x" },
         { "file": "dialog1.sh", "target": "~/", "chmod": "+x" },
         { "file": "dialog2.sh", "target": "~/", "chmod": "+x" },
         { "file": "add.improvement.to.backlog.sh", "target": "~/", "chmod": "+x" },
         { "file": "github-issues.py", "target": "~/", "chmod": "+x" },
         { "file": "github-issues.yaml", "target": "~/" },
         { "file": "dialog1.yaml", "target": "~/" },
-        { "file": "dialog2.yaml", "target": "~/" }       
+        { "file": "dialog2.yaml", "target": "~/" }
       ]
     },
     "finish": {
