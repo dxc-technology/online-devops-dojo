@@ -26,5 +26,5 @@ body: >
 labels: [":sparkles: epic", "P3", "13"]
 ---
 title: Add functional testing stage in CI/CD pipeline
-body: "As part of improvement theme #[previous_issue]:\r\r **As a** tester,\r**I want** automated functional tests to be executed as par of the CI/CD pipeline for each and every code commit,\r**so that** we can get feedback on issues early in the process and avoid rework and delays."
+body: "As part of improvement theme #[previous_issue]:\r\r **As a** tester,\r**I want** automated functional tests to be executed as part of the CI/CD pipeline for each and every code commit,\r**so that** we can get feedback on issues early in the process and avoid rework and delays."
 labels: [":bulb: user_story", "P1", "3"]
