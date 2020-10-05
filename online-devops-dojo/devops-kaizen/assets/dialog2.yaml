@@ -1,0 +1,52 @@
+---
+speaking: Santhosh
+text: >
+    Welcome to our first DevOps Kaizen event.
+---
+speaking: Dan
+text: >
+    Thanks Santhosh, how are we to approach this session?
+---
+speaking: Santhosh
+text: >
+    We know Improvements are needed, and that we can't change everything at the same time so we need to identify some focus areas based on the VSM.
+---
+speaking: Selma
+text: >
+    I have been proposing a Shift Left on Security for some time, can that be one?
+---
+speaking: Tina
+text: >
+    Dan and I have been discussing increasing the use of test automation, can we look at that?
+---
+speaking: Adam
+text: >
+    Tina and Selma, I think both of those are needed and what's more I think they would fit nicely with some ideas I have around Source Code Management, Continuous Integration and Continuous Deployment.
+---
+speaking: Chun
+text: >
+    Guys, guys, great ideas but we can't boil the ocean. Can we look at these suggestions, prioritize them based on expected value and time to implement with a view to incorporating them in to an Improvement Theme?
+---
+speaking: Dan
+text: >
+    I think so, especially as they are all inter-related, as Adam pointed out. They all will help facilitate flow and eliminate waste in our development process.
+---
+speaking: Chun
+text: >
+    Exactly! Automated testing, automated security scans, version control, and CI/CD will allow problems to be identified earlier and feedback amplified as per the three ways of DevOps.
+---
+speaking: Paulo
+text: >
+    Agree, but think we also need to be mindful of the metrics we collected during the VSM exercise lead time, processing time, and %C/A when prioritizing the next steps for the Improvement Theme.
+---
+speaking: Santhosh
+text: >
+    I agree, being able to track progress against key metrics will help us quantify the progress we make and prioritize items for inclusion in the themes.
+---
+speaking: Tina
+text: >
+    We may need more than one Improvement Theme given the breadth and scale of the issues we are trying to address.
+---
+speaking: Paulo
+text: >
+    That is fine, after all the resulting work will eventually be tracked in our Agile tool under the DevOps Kaizen epic we created. That will give us the holistic view of the improvements underway.

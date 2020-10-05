@@ -1,0 +1,52 @@
+---
+speaking: Brenda
+text: >
+    VSM sounds interesting what exactly is it?
+---
+speaking: Chun
+text: >
+    A Value Stream describes the process used to create and deliver goods, services, solutions and in our case, software. While a Value Stream Map is a pictorial representation of a value stream.
+---
+speaking: Santhosh
+text: >
+    A VSM will enable us to see the end to end flow of software from idea to delivery including branches, feedback loops and queues in our process.
+---
+speaking: Dan
+text: >
+    We already understand our process why do we need to draw it? We already work as fast as we can, this just seems to be a distraction from writing code.
+---
+speaking: Paulo
+text: >
+    I agree we all understand the general process as it applies to our functional areas and our interactions with our direct upstream and downstream activities but I think we don't have a shared understanding of the complete end to end flow. 
+---
+speaking: Paulo
+text: >
+    The understanding I am referring to would include the nature of handoffs between functions, the lead times, the activity times and the quality of work reaching each of us. I think that lack of understanding is contributing to the problems we have been experiencing.
+---
+speaking: Santhosh
+text: >
+    Maybe another way to look at this is to agree what contributes to the time it takes for a feature to be delivered?
+---
+speaking: Chun
+text: >
+    Exactly, basically for a work item the Total Duration = Processing Time (Actual Time spent working ) + Waste Time (Handoffs etc.)
+---
+speaking: Chun
+text: >
+    A VSM is a pictorial representation, using a standard set of symbols, of an end to end process including lead and activity times for all steps in the process.
+---
+speaking: Dan
+text: >
+    OK I think I am starting to understand where you are going with this, what do we do with the VSM once we create it?
+---
+speaking: Paulo
+text: >
+    We use it to identify and eliminate waste, waste is any non value add activities in the value stream including handoffs, rework, manual activities, wait times etc.
+---
+speaking: Brenda
+text: >
+    We need to do that yesterday, how do we begin?
+---
+speaking: Brenda
+text: >
+    First, let's ask some questions to [student].
