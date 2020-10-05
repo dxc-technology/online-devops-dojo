@@ -1,3 +1,3 @@
 #!/bin/bash 
 
-[ -f /tmp/jenkins_ready ] && echo "done"
+[ -f /tmp/firstname.txt ] && echo "done"
