@@ -137,7 +137,7 @@ To prepare your dedicated GitHub repository:
 
 ### Katacoda Setup
 
-[https://katacoda.com](katacoda.com) is lab environment used by Online DevOps Dojo that allows students to have dedicated environments for their class right in the browser.
+[https://katacoda.com](https://katacoda.com) is lab environment used by Online DevOps Dojo that allows students to have dedicated environments for their class right in the browser.
 
 1. Sign up for new account on [https://katacoda.com](https://katacoda.com)
 2. If that is your first visit, go to _Claim Your Profile_ page and provide your
