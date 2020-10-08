@@ -10,21 +10,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Add Javascript linter.
-- Trigger the markdown link checker on commit on markdown files and linter only.
-
-### Fixed
-
 - Upgrade GitHub Actions virtual environment to Ubuntu LTS 20.04.
-- Bump github-action-markdown-link-check and ignore HTTP 429 Too Many Requests
+- Bump markdown link checker.
+- Markdown link checker ignore HTTP 429 Too Many Requests.
+- Trigger the markdown link checker on commit on markdown files and linter only.
+- Bump NPM dependencies.
 
 ## [1.3.0] - 2020-10-05
 
 ### Added
 
 - Value Stream Mapping and DevOps Kaizen modules.
-
 - Upgrade GitHub Actions virtual environment to Ubuntu LTS 20.04.
->>>>>>> fc703dd... merge
 
 ## [1.2.1] - 2020-06-26
 

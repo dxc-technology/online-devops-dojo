@@ -22,19 +22,19 @@
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
-    "@probot/serverless-lambda": "^0.5.0",
+    "@probot/serverless-lambda": "^0.5.3",
     "minimist": "^1.2.5",
-    "node": "^12.18.1",
-    "probot": "^9.13.0"
+    "node": "^12.18.4",
+    "probot": "^9.15.1"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-prettier": "^6.12.0",
     "jest": "^25.5.4",
     "nock": "^12.0.3",
     "nodemon": "^2.0.4",
     "prettier": "1.19.1",
-    "smee-client": ">=1.1.0",
+    "smee-client": "^1.2.2",
     "standard": "^14.3.4"
   },
   "engines": {
