@@ -82,7 +82,7 @@
         { "file": "github-issues.py", "target": "~/", "chmod": "+x" },
         { "file": "github-issues.yaml", "target": "~/" },
         { "file": "dialog1.yaml", "target": "~/" },
-        { "file": "dialog2.yaml", "target": "~/" }       
+        { "file": "dialog2.yaml", "target": "~/" }
       ]
     },
     "finish": {
