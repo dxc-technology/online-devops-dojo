@@ -3,6 +3,8 @@ name: Javascript linter
 
 on:
   push:
+    # change(s) on those files trigger this pipeline
+    paths: ['*.js']
 
 jobs:
   linters:   # run linters in separate job to not delay critical stuff
