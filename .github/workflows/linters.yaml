@@ -1,0 +1,49 @@
+# GitHub workflow file
+name: Javascript linter
+
+on:
+  push:
+    # change(s) on those files trigger this pipeline
+    paths: ['*.js']
+
+jobs:
+  linters:   # run linters in separate job to not delay critical stuff
+    timeout-minutes: 10
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Copy the repository
+        uses: actions/checkout@v2
+      
+      # Node 12 included in LTS ubuntu-20.04 matches the version used for AWS Lambda
+      # (https://github.com/actions/virtual-environments/blob/master/images/linux/Ubuntu2004-README.md)
+      # hence comment the upgrade code for now 
+      # - name: Check Node 12
+      #   uses: actions/setup-node@v1.4.2
+      #   with:
+      #     node-version: 12
+
+      - name: Cache node modules  
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      # Install nodejs packages listed in package-lock.json.
+      # - if: github.base_ref == 'master'
+      - name: Install node modules
+        run: npm ci --no-fund
+  
+      - name: Run linters
+        uses: samuelmeuli/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Enable linters
+          eslint: true
+          prettier: false

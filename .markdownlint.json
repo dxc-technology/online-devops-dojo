@@ -4,5 +4,6 @@
   "no-inline-html": {
     "allowed_elements": [ "svg", "path", "ins", "kbd", "pre", "a", "details", "summary", "div", "br" ]
     },
-  "first-line-h1": false
+  "first-line-h1": false,
+  "no-duplicate-header": false
 }

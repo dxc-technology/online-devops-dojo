@@ -7,7 +7,7 @@ on:
 
 jobs:
   reaction_on_comment:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: startsWith(github.event.comment.body, '/deploy')
 
     steps:
@@ -20,7 +20,7 @@ jobs:
           reaction-type: rocket
   
   deploy_on_comment:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04 # includes Node.js 12, same version as for AWS Lambda
     needs: reaction_on_comment
     timeout-minutes: 10
      
@@ -29,30 +29,32 @@ jobs:
         run: echo Workflow triggered by $GITHUB_ACTOR
 
       - name: Copy the repository
-        uses: actions/checkout@v2.0.0
+        uses: actions/checkout@v2
       
-      # Node 10 is current default in ubuntu-latest (https://github.com/actions/virtual-environments/blob/master/images/linux/Ubuntu1804-README.md)
-      # then we install 12, same as for AWS Lambda
-      - name: Install Node 12
-        uses: actions/setup-node@v1.4.1
-        with:
-          node-version: 12
+      # Node 12 included in LTS ubuntu-20.04 matches the version used for AWS Lambda
+      # (https://github.com/actions/virtual-environments/blob/master/images/linux/Ubuntu2004-README.md)
+      # hence comment the upgrade code for now 
+      # - name: Check Node 12
+      #   uses: actions/setup-node@v1.4.2
+      #   with:
+      #     node-version: 12
 
-      - name: Cache node modules  # not supported yet for issue_comment event
-        uses: actions/cache@v1.1.2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+      # not supported yet for issue_comment event
+      # - name: Cache node modules  
+      #   uses: actions/cache@v2
+      #   env:
+      #     cache-name: cache-node-modules
+      #   with:
+      #     path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+      #     key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-build-${{ env.cache-name }}-
+      #       ${{ runner.os }}-build-
+      #       ${{ runner.os }}-
 
       # Install nodejs packages listed in package-lock.json.
       - name: Install node modules
-        run: npm ci --only=prod
+        run: npm ci --only=prod --no-fund
   
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda
