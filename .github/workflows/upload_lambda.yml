@@ -44,7 +44,7 @@ jobs:
       # - if: github.base_ref == 'master'
       # run "serverless deploy --verbose" in a docker container and run the config file serverless.yml
       - name: Deploy lambda
-        uses: serverless/github-action@v1.54.0
+        uses: serverless/github-action@v2.1.0
         env: # all mandatory
           # AWS
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
