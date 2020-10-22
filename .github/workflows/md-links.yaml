@@ -3,7 +3,7 @@ name: Check links in markdown
 
 on:
   schedule:
-  - cron: "1 6 * * *"
+  - cron: "1 6 */3 * *"
   push:
     paths: ['**.md', 'md-link-check.json', '.github/workflows/md-links.yaml']
 
