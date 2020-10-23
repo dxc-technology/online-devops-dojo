@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump serverless to v2.1.
 - Run the link checker every 3 days only.
 
+## [1.4.1] - 2020-10-11
+
+### Fixed
+
+- Updated estimated times for VSM and Kaizen modules
+
 ## [1.4.0] - 2020-10-09
 
 ### Changed
