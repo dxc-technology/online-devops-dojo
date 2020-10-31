@@ -1,6 +1,7 @@
 ## Welcome!
 
 Welcome to the **Online DevOps Dojo** module on shifting security left.
+This course has been adapted from original content designed by [DevOps@DXC](https://dxc-technology.github.io/about-devops-dojo/).
 
 ## Purpose
 

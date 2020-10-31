@@ -1,6 +1,7 @@
 ## Welcome!
 
 Welcome to the **Online DevOps Dojo** Katacoda course.
+This course has been adapted from original content designed by [DevOps@DXC](https://dxc-technology.github.io/about-devops-dojo/).
 
 This course is made up of 6 open source modules.
 
