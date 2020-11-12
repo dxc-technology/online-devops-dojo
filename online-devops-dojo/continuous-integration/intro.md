@@ -12,7 +12,7 @@ and his peers on the team, worked away developing business features on separate 
 
 ![](../../assets/online-devops-dojo/continuous-integration/tina.png)
 
-Testing led by Tina would then proceed identify issues with the development team having to fix the bugs before they could release the application to the business.
+Testing led by Tina would then proceed to identify issues with the development team having to fix the bugs before they could release the application to the business.
 
 **Now**, Dan's team applies the principle of working in small batches and building quality with continuous integration supported by a high degree of automated testing. All the developers are now continuously integrating to trunk (master branch) frequently. They use short lived (one to several days) feature branches which are quickly merged to master. Each and every commit triggers the continuous integration pipeline automatically, which builds the code and run automated tests created by Tina and the testing team. The pass/fail results are made available as part of the feature branch / pull request, thus detecting regressions automatically as well as providing accurate feedback to the development team. Dan (or the lead reviewing the pull request) will not merge the request to master if any of the checks ran from the continuous integration pipeline are not passing.
 
