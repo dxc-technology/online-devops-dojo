@@ -44,9 +44,9 @@ training pages
 - [`serverless.yml`](serverless.yml): Serverless deployment configuration file  
   I have not found a way to isolate the coach files in a sub-folder and execute
   Serverless there. Help is welcome.
-- [`.github/workflows/linters.yml`](.github/workflows/linters.yml):
+- [`.github/workflows/linters.yaml`](.github/workflows/linters.yaml):
   Javascript linter (configuration in `/.eslintrc.json`).
-- [`.github/workflows/md-links.yml`](.github/workflows/md-links.yml):
+- [`.github/workflows/md-links.yaml`](.github/workflows/md-links.yaml):
   Validate links in MarkDown files.
 
 ## Contributing
