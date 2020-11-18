@@ -13,7 +13,7 @@ COLINFO="\033[0;35m"
 COLRESET="\033[m"
 
 baseurl = 'https://api.github.com'
-headers = {"Content-Type": "application/json", "Accept": "application/vnd.github.symmetra-preview+json", "Accept": "application/vnd.github.v3+json"}
+headers = {"Content-Type": "application/json", "Accept": "application/vnd.github.v3+json"}
 user = os.environ['SHORTNAME']
 token = os.environ['TOKEN']
 repo = user + '/pet-clinic'
@@ -69,9 +69,9 @@ def main():
             "description": label['description'],
             "color" : label['color']
             })
-        response = requests.post(baseurl + "/repos/" + repo + "/labels", 
-            data=payload, 
-            headers=headers, 
+        response = requests.post(baseurl + "/repos/" + repo + "/labels",
+            data=payload,
+            headers=headers,
             auth=(user, token))
         if response.status_code != 201:
             # An error occured

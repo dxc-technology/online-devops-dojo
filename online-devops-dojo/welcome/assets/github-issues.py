@@ -13,7 +13,7 @@ COLINFO="\033[0;35m"
 COLRESET="\033[m"
 
 baseurl = 'https://api.github.com'
-headers = {"Content-Type": "application/json", "Accept": "application/vnd.github.symmetra-preview+json", "Accept": "application/vnd.github.v3+json"}
+headers = {"Content-Type": "application/json", "Accept": "application/vnd.github.v3+json"}
 user = os.environ['SHORTNAME']
 token = os.environ['TOKEN']
 repo = user + '/pet-clinic'
@@ -36,7 +36,7 @@ def main():
     
     # Create the issues
     for issue in issues:
-        # Avoid creating an issue which is already there (same title) 
+        # Avoid creating an issue which is already there (same title)
         issue_already_exists = False
         # List all open issues
         payload = json.dumps({
@@ -44,9 +44,9 @@ def main():
             })
         sys.stdout.write(COLINFO + "." + COLRESET)
         sys.stdout.flush()
-        response = requests.get(baseurl + "/repos/" + repo + "/issues", 
-            data=payload, 
-            headers=headers, 
+        response = requests.get(baseurl + "/repos/" + repo + "/issues",
+            data=payload,
+            headers=headers,
             auth=(user, token))
         if response.status_code == 200:
             issues_opened = json.loads(response.text)
@@ -73,6 +73,4 @@ def main():
                 sys.stdout.flush()
     print(COLRESET)
 
-
 main()
-
