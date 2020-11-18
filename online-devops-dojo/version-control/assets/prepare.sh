@@ -7,6 +7,9 @@
 DEBUG=false
 GITHUB="github.com"
 GITHUBAPIURL="https://api.github.com"
+# Explicit header for GitHub API V3 request cf. https://developer.github.com/v3/#current-version
+GITHUBAPIHEADER="Accept: application/vnd.github.v3+json"
+
 COLQUESTION="\u001b[36m"
 COLINFO="\u001b[37m"
 COLLOGS="\u001b[35m"
@@ -32,7 +35,7 @@ read ${HIDE_PAT} TOKEN
 export TOKEN
 
 echo -e "${COLLOGS}Fetching your details from GitHub...${COLRESET}"
-USER_JSON=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/user)
+USER_JSON=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -H ${GITHUBAPIHEADER} -X GET ${GITHUBAPIURL}/user)
 
 SHORTNAME=$(echo $USER_JSON | jq -r '.login')
 export SHORTNAME
@@ -48,7 +51,7 @@ git config --global user.email "${EMAIL}"
 
 # Check if repository already exists and properly populated
 echo -e "${COLLOGS}"
-curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.v3+json" -X GET ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
+curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H ${GITHUBAPIHEADER} -X GET ${GITHUBAPIURL}/repos/$SHORTNAME/$REPO/contents/Jenkinsfile | grep "Not Found"
 REPO_DOES_NOT_EXIST=$?
 if [ $REPO_DOES_NOT_EXIST -eq 0 ]; then
   echo -e "${COLRESET}> I'm confused..."
