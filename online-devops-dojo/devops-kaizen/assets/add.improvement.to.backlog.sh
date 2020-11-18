@@ -1,13 +1,15 @@
 #!/bin/bash
-
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
 #
 # Globals
 #
 DEBUG=false
-GITHUB="github.com"
-GITHUBAPIURL="https://api.github.com"
+GITHUB='github.com'
+GITHUBAPIURL='https://api.github.com'
 # Explicit header for GitHub API V3 request cf. https://developer.github.com/v3/#current-version
-GITHUBAPIHEADER="Accept: application/vnd.github.v3+json"
+GITHUBAPIHEADER='Accept: application/vnd.github.v3+json'
 
 COLQUESTION="\u001b[36m"
 COLINFO="\u001b[37m"
@@ -33,12 +35,12 @@ fi
 # Ask for GitHub PAT
 #
 echo -e "${COLQUESTION}Please enter your ${GITHUB} Personal Access Token:${COLRESET}"
-read ${HIDE_PAT} TOKEN
+read $HIDE_PAT TOKEN
 export TOKEN
 
 check_credentials()
 {
-  curl ${CURL_NODEBUG} -H "Authorization: token $TOKEN" -H ${GITHUBAPIHEADER} -X GET ${GITHUBAPIURL} | grep "current_user_url"
+  curl $CURL_NODEBUG -H "Authorization: token $TOKEN" -H "$GITHUBAPIHEADER" -X GET ${GITHUBAPIURL} | grep "current_user_url"
   CREDS_NOT_OK=$?
   if [ $CREDS_NOT_OK -ne 0 ]; then
     echo -e "${COLQUESTION}Error: it seems that your credentials are invalid. Please use your GitHub user account and a Personal Access Token with 'repo' and 'admin:repo_hook' scopes at https://github.com/settings/tokens/new ${COLRESET}"
@@ -48,7 +50,7 @@ check_credentials()
 check_credentials
 
 echo -e "${COLLOGS}Fetching your details from GitHub...${COLRESET}"
-USER_JSON=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -H ${GITHUBAPIHEADER} -X GET ${GITHUBAPIURL}/user)
+USER_JSON=$(curl ${CURL_NODEBUG} -H "Authorization: token ${TOKEN}" -H "$GITHUBAPIHEADER" -X GET ${GITHUBAPIURL}/user)
 
 SHORTNAME=$(echo $USER_JSON | jq -r '.login')
 export SHORTNAME
