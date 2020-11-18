@@ -19,12 +19,16 @@ if [ "$DEBUG" = false ] ; then
   CURL_NODEBUG="-sS"
 fi
 
+# adding -s to the command line, allows to hide the PAT entered especially during demos
+if [ "$1" == "-s" ] ; then
+  HIDE_PAT="-s"
+fi
 
 #
 # Ask for GitHub PAT
 #
 echo -e "${COLQUESTION}Please enter your ${GITHUB} Personal Access Token:${COLRESET}"
-read TOKEN
+read ${HIDE_PAT} TOKEN
 export TOKEN
 
 echo -e "${COLLOGS}Fetching your details from GitHub...${COLRESET}"

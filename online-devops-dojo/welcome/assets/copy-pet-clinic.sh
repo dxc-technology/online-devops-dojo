@@ -23,11 +23,16 @@ fi
 echo -e "${COLINFO}Installing dependencies...${COLRESET}"
 2>/dev/null 1>/dev/null python3 -m pip install pyyaml requests
 
+# adding -s to the command line, allows to hide the PAT entered especially during demos
+if [ "$1" == "-s" ] ; then
+  HIDE_PAT="-s"
+fi
+
 #
 # Ask for GitHub PAT
 #
 echo -e "${COLQUESTION}Please create and enter a Personal Access Token from ${GITHUB} at https://${GITHUB}/settings/tokens:${COLRESET}"
-read TOKEN
+read ${HIDE_PAT} TOKEN
 export TOKEN
 
 echo -e "${COLLOGS}Fetching your details from GitHub...${COLRESET}"

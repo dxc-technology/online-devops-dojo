@@ -18,6 +18,7 @@ if [ "$DEBUG" = false ] ; then
   CURL_NODEBUG="-sS"
 fi
 
+# adding -s to the command line, allows to hide the PAT entered especially during demos
 if [ "$1" == "-s" ] ; then
   HIDE_PAT="-s"
 fi
@@ -64,7 +65,7 @@ fi
 KatacodaJenkinsUrl=`curl ${CURL_NODEBUG} "https://katacoda.com/metadata/generate-url?port=8080&ip=$(ip addr show ens3 | grep -Po 'inet \K[\d.]+')"`
 url="https://${KatacodaJenkinsUrl}"
 echo $url >> /tmp/shortname.txt
-#
+
 # 
 # Clone Pet Clinic locally
 #
