@@ -2,12 +2,14 @@
 
 Welcome to the **Online DevOps Dojo** Katacoda course.
 
-This course is made up of 4 open source modules.
+This course is made up of 6 open source modules.
 
 * Leading Change
 * Version Control
 * Continuous Integration
 * Shift Left On Security
+* Value Stream Mapping
+* DevOps Kaizen
 
 ## Katacoda environment
 

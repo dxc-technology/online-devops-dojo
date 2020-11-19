@@ -4,9 +4,11 @@ The **Online DevOps Dojo** has several characters which play a role throughout t
 
 ![](../../assets/online-devops-dojo/welcome/charlie.png)
 
-**C**harlie is the **C**EO of the company; a technology entrepreneur, investor, and philanthropist.
+**C**harlie is the **C**EO of the company; a technology entrepreneur, investor,
+and philanthropist.
 
-Charlie is intent on disrupting the world of Pet Clinics and sees DevOps as key to the company's plans ...
+Charlie is intent on disrupting the world of Pet Clinics and sees DevOps as key
+to the company's plans.
 
 ### Chun (Coach)
 
@@ -18,10 +20,10 @@ frequency and quality of software.
 
 She grew into the role of a DevOps Coach. Chun’s coaching is based on her experience gained from working from startups and
 multinational companies. In her previous roles she was an avid outdoors person and adrenaline junky, lover of fun, hater of being
-on-call and worked extensively to automate as much as possible of the build, test, package and deploy process to ensure that the
+on-call and worked extensively to automate as much as possible the build, test, package and deploy process to ensure that the
 systems were created with a LessOps model in mind.
 
-Having identified the opportunities DevOps offers she decided to step up and coach others, to practice what she preached. Chun is
+Having identified the opportunities DevOps offers she decided to step up and coach others, to practice what she preaches. Chun is
 committed to growing the DevOps coaching community by leveraging her experience to support / coach others.
 
 ### Brenda (Business)
@@ -32,7 +34,7 @@ committed to growing the DevOps coaching community by leveraging her experience 
 key to this is the availability and functionality of the Pet Clinic application. Of course, she is aware of engineering capacity,
 technical constraints, security and all that but her primary objective is to deliver often, introduce great products for owners and
 their pets, together with features which will leave Pet Clinic's competitors far behind. She is competitive, but has also developed
-empathy for the team and is extremely proud of her two golden retrievers Bonnie and Clyde.
+empathy for the team. She is extremely proud of her two golden retrievers, Bonnie and Clyde.
 
 Brenda works mainly with Paulo, the product owner. She gets to explain what she wants to Paulo and Paulo helps the team to
 prioritize the work so that Brenda can get what the business needs incorporated into the application.
@@ -41,7 +43,7 @@ She participates in end-of-sprint demos, where she appreciates the opportunity t
 the sprint planning and the sprint reviews, Brenda feels she's engaged often - and sometimes too often - by the team. She would like
 to rely on Paulo more.
 
-Brenda heard once from Selma - the security contact in the team - when important customer information got hacked. Not a pleasant
+Brenda heard once from Selma, the security contact in the team, when important customer information got hacked. Not a pleasant
 experience for her, for the company, and definitely not for the customers. They traced it down to a hacker named Hal, who has been
 in communication with the team via anonymous e-mail.
 
@@ -53,26 +55,31 @@ Clinic application are ready in time for the planned marketing launch in support
 
 ![](../../assets/online-devops-dojo/welcome/paulo.png)
 
-**P**aulo is the **P**roduct Owner, he is a cat person and volunteers at a local animal rescue center.
+**P**aulo is the **P**roduct Owner, he is a cat person and volunteers at a local
+animal rescue center.
 
-Paulo works with Brenda to define the vision of the product. He prioritizes the backlog with Santhosh the scrum master and the scrum
-team.
+Paulo works with Brenda to define the vision of the product. He prioritizes the
+backlog with Santhosh the Scrum master and the Scrum team.
 
-Passionate and outcome-driven he is a product owner with twenty years experience in all aspects of product delivery. He has
-experience across multiple industries, in addition to entrepreneurial experience having run his own company in the past.
+Passionate and outcome-driven he is a product owner with twenty years experience
+in all aspects of product delivery. He has experience across multiple
+industries, in addition to entrepreneurial experience having run his own company
+in the past.
 
-Sometimes, Paulo feels that Brenda does not really know what she wants and that she changes her mind too quickly. "This is because
-of a rapidly changing environment", Brenda says before uttering the magic words that expose the Achilles heel of every product owner
+Sometimes, Paulo feels that Brenda does not really know what she wants and that
+she changes her mind too quickly. "This is because of a rapidly changing
+environment", Brenda says before uttering the magic words that expose the
+Achilles heel of every product owner
 - [Principle 2 of the Agile Manifesto](https://www.agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/) states:
 
 > Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
 
 To the bemusement of the team, Paulo replies that this is INCONCEIVABLE! :) and then works to facilitate the changes via the
-backlog. After which the team point out to Paulo that he keeps using that word and that the team [doesn't think it means what he thinks it means](https://www.youtube.com/watch?v=D58LpHBnvsI).
+backlog. After which the team points out to Paulo that he keeps using that word and that the team [doesn't think it means what he thinks it means](https://www.youtube.com/watch?v=D58LpHBnvsI).
 
-As a key stakeholder in the Agile process, Paulo as part of his product owner responsibilities and from his interactions with Brenda
+As a key stakeholder in the Agile process, as part of his product owner responsibilities and from his interactions with Brenda, Paulo
 has the vision of what is to be built, why it is to be built and in what order it is to be built. He conveys that vision to the
-scrum team who regularly and rather unfairly question it in his opinion.
+Scrum team who regularly and rather unfairly questions it in his opinion.
 
 ### Santhosh (Scrum Master)
 
@@ -83,36 +90,43 @@ including our cast (Brenda from the business, Paulo the product owner, Tina the 
 theory, practices, rules, and values.
 
 Santhosh is keen to learn and understand DevOps tools and processes to better understand the nuances in the approach and
-responsibilities of Scrum Teams adopting DevOps and Scrum Team who are not adopting DevOps.
+responsibilities of Scrum teams adopting DevOps and Scrum teams who are not adopting DevOps.
 
 Traditional Scrum teams consist of people who deliver the potentially releasable increments at the end of a Sprint. Whereas Scrum
 teams adapting DevOps target the whole value stream so the team includes all the people who work a Product Backlog Item (PBI) in the
-end-to-end value stream. A DevOps scrum team could include some or all of the following: analysts, UI/UX designers, developers,
-operations people, sysadmins, data scientists and site-reliability engineers. A DevOps scrum team works together, collaboratively as
+end-to-end value stream. A DevOps Scrum team could include some or all of the following: analysts, UI/UX designers, developers,
+operations people, sysadmins, data scientists and site reliability engineers. A DevOps Scrum team works together, collaboratively as
 one unit, to deliver value to their customers.
 
-Santhosh works diligently as a scrum master to protect the team from anything - typically requests originating from Brenda or Paulo
-that may distract them from the active sprint deliverables - and to remove anything that impedes the flow of value delivery from the
-team to the business.
+Santhosh works diligently as a Scrum master to protect the team from anything -
+typically requests originating from Brenda or Paulo that may distract them from
+the active sprint deliverables - and to remove anything that impedes the flow of
+value delivery from the team to the business.
 
 ### Adam (Site Reliability Engineer)
 
 ![](../../assets/online-devops-dojo/welcome/adam.png)
 
-**A**dam is a System **A**dministrator who is transitioning to the role of Site Reliability Engineer (SRE). SRE is a discipline that
-combines software and systems engineering to create ultra-scalable and massively distributed, fault-tolerant systems.
+**A**dam is a System **A**dministrator who is transitioning to the role of Site
+Reliability Engineer (SRE). SRE is a discipline that combines software and
+systems engineering to create ultra-scalable and massively distributed,
+fault-tolerant systems.
 
-As he transitions into the SRE role, Adam is keen to learn and understand best practices in the SRE and DevOps fields so he can help
-shape the SRE culture in the company. He has started to work with Brenda to understand the needs of the business and with the scrum
-team to ensure they have robust solutions in place for deploying, monitoring, and maintaining their applications and their cloud
+As he transitions into the SRE role, Adam is keen to learn and understand best
+practices in the SRE and DevOps fields so he can help shape the SRE culture in
+the company. He has started to work with Brenda to understand the needs of the
+business and with the Scrum team to ensure they have robust solutions in place
+for deploying, monitoring, and maintaining their applications and their cloud
 environments so they can meet the needs of their customers.
 
-He also works closely with Selma the Security Officer to ensure the security of the company's software and applications. Adam
-suspects that Hal may have an inside man. Adam has a particular set of skills so he is working on a plan to look for the hacker, to
-find the hacker, to ... the hacker.
+He also works closely with Selma the Security Officer to ensure the security of
+the company's software and applications. Adam suspects that Hal may have an
+inside man. Adam has a particular set of skills so he is working on a plan to
+look for the hacker, to find the hacker, to ... the hacker.
 
-Adam has a pet parrot whose favorite phrase is "Have you tried turning it off and on again?" and is working with Brenda to expand
-the Bird, Reptile and Small Animal product lines offered by Pet Clinic.
+Adam has a pet parrot whose favorite phrase is "Have you tried turning it off
+and on again?" and is working with Brenda to expand the Bird, Reptile and Small
+Animal product lines offered by Pet Clinic.
 
 ### Dan (Developer)
 
@@ -144,10 +158,10 @@ DNA of the software development process."
 
 Tina worked until recently in a traditional testing role, where testing was performed after the development stage of the application
 assembly line. She is aware that the role of and skills required by a tester are changing. Tina realizes that testers have to become
-comfortable working with code and be able to analyze it. She appreciates that testers need to work within the scrum teams in order
+comfortable working with code and be able to analyze it. She appreciates that testers need to work within the Scrum teams in order
 to ensure quality is built into the software development process during the two week sprint cycle.
 
-She is keen to expand her strong testing skills, to become more technically adept, and learn more about coding so she can start
+She is keen to expand her strong testing skills, to become more technically adept, and to learn more about coding so she can start
 working on test automation. By expanding her skills to become a test automation expert she hopes to play a more active role in the
 sprint cycle.
 

@@ -11,7 +11,7 @@
       "title": "Leading Change",
       "description": "Learn about the importance of Leading Change in DevOps Transformations. A large factor in the success of DevOps transformations is driven by the organization's ability to empower people to lead change at the different levels in the organization.",
       "course_id": "leading-change"
-    },    
+    },
     {
       "title": "Version Control",
       "description": "Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.",
@@ -26,6 +26,16 @@
       "title": "Shift Left on Security",
       "description": "Security must be considered from the beginning and continuously assessed.",
       "course_id": "shift-security-left"
+    },
+    {
+      "title": "Value Stream Mapping",
+      "description": "Learn how Value Stream Mapping can be used to help you and your team optimize your processes for value delivery and speed.",
+      "course_id": "value-stream-mapping"
+    },
+    {
+      "title": "DevOps Kaizen",
+      "description": "DevOps Kaizen events can be used to help you and your team continuously improve your development processes.",
+      "course_id": "devops-kaizen"
     }
   ]
 }

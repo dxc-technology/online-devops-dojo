@@ -132,13 +132,12 @@ To prepare your dedicated GitHub repository:
    ```
 
    The use of `upstream --push DISABLED` is just a practice preventing those
-   with `write` access to the main repository to accidentally push changes
+   with `write` access to the main repository from accidentally pushing changes
    there.
 
 ### Katacoda Setup
 
-katacoda.com is lab environment used by Online DevOps Dojo that allows students to
-have dedicated environments for their class right in the browser.
+[https://katacoda.com](https://katacoda.com) is lab environment used by Online DevOps Dojo that allows students to have dedicated environments for their class right in the browser.
 
 1. Sign up for new account on [https://katacoda.com](https://katacoda.com)
 2. If that is your first visit, go to _Claim Your Profile_ page and provide your
@@ -164,7 +163,7 @@ each time you push updates to your repository.
    * _Key_: paste the _Git Deploy Key_ value from your Katacoda settings page
    * _Allow write access_: leave unchecked
 4. Click on _Add deploy key_ button
-5. Click on _Hooks_ (left navigation)
+5. Click on _Webhooks_ (left navigation)
 6. Click on _Add webhook_ button and use the following information to set it up:
    * _Payload URL_: [https://editor.katacoda.com/scenarios/updated](https://editor.katacoda.com/scenarios/updated)
    * _Content type_: `application/json`

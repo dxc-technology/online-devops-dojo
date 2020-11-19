@@ -1,0 +1,100 @@
+{
+  "pathwayTitle": "Online DevOps Dojo",
+  "title": "DevOps Kaizen",
+  "private": true,
+  "description": "Learn how DevOps Kaizen events can be used to help you and your team continuously improve your process.",
+  "difficulty": "intermediate",
+  "time": "45 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Protecting the Space Time Continuum",
+        "text": "step1.md"
+      },
+      {
+        "title": "DevOps Kaizen",
+        "text": "step2.md"
+      },
+      {
+        "title": "Opening Scroll",
+        "text": "step3.md",
+        "verify": "step3-verify.sh"
+      },
+      {
+        "title": "Act 1: Getting Started",
+        "text": "step4.md",
+        "verify": "step4-verify.sh"
+      },
+      {
+        "title": "Assessment",
+        "text": "step5.md",
+        "answer": "step5-answer.md"
+      },
+      {
+        "title": "Assessment",
+        "text": "step6.md",
+        "answer": "step6-answer.md"
+      },
+      {
+        "title": "Act 2: DevOps Kaizen - Improvement Themes",
+        "text": "step7.md"
+      },
+      {
+        "title": "Assessment",
+        "text": "step8.md",
+        "answer": "step8-answer.md"
+      },
+      {
+        "title": "Act 3: DevOps Kaizen - Event",
+        "text": "step9.md",
+        "verify": "step9-verify.sh"
+      },
+      {
+        "title": "Testing Improvement Theme",
+        "text": "step10.md",
+        "verify": "step10-verify.sh"
+      },
+      {
+        "title": "Fade Out",
+        "text": "step11.md"
+      },
+      {
+        "title": "Assessment",
+        "text": "step12.md",
+        "answer": "step12-answer.md"
+      },
+      {
+        "title": "Assessment",
+        "text": "step13.md",
+        "answer": "step13-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "assets": {
+      "host01": [
+        { "file": "dialog.py", "target": "~/", "chmod": "+x" },
+        { "file": "prereq.sh", "target": "~/", "chmod": "+x" },
+        { "file": "dialog1.sh", "target": "~/", "chmod": "+x" },
+        { "file": "dialog2.sh", "target": "~/", "chmod": "+x" },
+        { "file": "add.improvement.to.backlog.sh", "target": "~/", "chmod": "+x" },
+        { "file": "github-issues.py", "target": "~/", "chmod": "+x" },
+        { "file": "github-issues.yaml", "target": "~/" },
+        { "file": "dialog1.yaml", "target": "~/" },
+        { "file": "dialog2.yaml", "target": "~/" }
+      ]
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideintro": false,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nYou can type in and run shell commands here.\r\n\u001b[m"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

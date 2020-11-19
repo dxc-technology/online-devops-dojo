@@ -6,6 +6,8 @@
         {"pattern": "YOUR_SHORTNAME"},
         {"pattern": "your_katacoda_user"},
         {"pattern": ".spelling"},
-        {"pattern": "workflows"}
-    ]
+        {"pattern": "/workflows/"},
+        {"pattern": "/actions?"}
+    ],
+    "aliveStatusCodes": [200,206,429]
 }
