@@ -1,4 +1,4 @@
-# Contributing to the Online DevOps Dojo trainings
+# Contributing to the Online DevOps Dojo training
 
 We :heart: [Pull Requests](https://help.github.com/articles/about-pull-requests/)
 for fixing or adding content. Thanks for your contribution!
