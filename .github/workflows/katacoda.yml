@@ -16,7 +16,7 @@ jobs:
     - id: validate
       name: Validate Katacoda scenarios
       run: |
-        npx katacoda validate:all --repo ${{ github.workspace }}
+        npx katacoda-cli validate:all --repo ${{ github.workspace }}
     # - id: validate-markdown
     #   name: Validate Katacoda Markdown
     #   run: |
