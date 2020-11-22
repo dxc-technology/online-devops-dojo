@@ -17,9 +17,5 @@ jobs:
     - id: validate
       name: Validate Katacoda scenarios
       run: |
-        npx katacoda-cli validate:all --repo ${{ github.workspace }}
-    # - id: validate-markdown
-    #   name: Validate Katacoda Markdown
-    #   run: |
-    #     sudo gem install mdl
-    #     mdl ${{ github.workspace }}
+        npx katacoda-cli validate:all --ignore=welcome --repo ${{ github.workspace }}
+# Ignore welcome scenario which has no title

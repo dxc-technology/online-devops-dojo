@@ -29,7 +29,7 @@ training pages
 
 ### Dojo coach
 
-- [`docs/`](docs): Some documentation about the coach bot
+- [`docs/`](docs): Documentation about the coach bot
 - [`handler.js`](handler.js): Handler for the Lambda function
 - [`index.js`](index.js): Coach code
 - [`package.json`](package.json): Node package dependencies
@@ -42,13 +42,15 @@ training pages
   Serverless there. Help is welcome.
 
 In [`.github/workflows`](.github/workflows/) folder:
+
+- [`md-links.yml`](.github/workflows/katacoda.yml):
+  Validate Katacoda scenarios.
 - [`upload_lambda.yml`](.github/workflows/upload_lambda.yml):
   GitHub workflow triggered on repository pushes, which uploads the coach lambda function to AWS.
 - [`upload_lambda_from_comment.yml`](.github/workflows/upload_lambda_from_comment.yml):
   Same upload as above but triggered by a comment `/deploy` (was convenient when manual trigger wasn't possible).
-
 - [`linters.yml`](.github/workflows/linters.yml):
-  Javascript linter (configuration in `/.eslintrc.json`).
+  Javascript linter (configuration in [`/.eslintrc.json`](.eslintrc.json)).
 - [`md-links.yml`](.github/workflows/md-links.yml):
   Validate links in MarkDown files.
 
