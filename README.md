@@ -37,16 +37,19 @@ training pages
 
 ### CI/CD
 
-- [`.github/workflows/upload_lambda.yml`](.github/workflows/upload_lambda.yml):
-  GitHub workflow triggered on repository pushes, which uploads the coach lambda function to AWS.
-- [`.github/workflows/upload_lambda_from_comment.yml`](.github/workflows/upload_lambda_from_comment.yml):
-  Same upload as above but triggered by a comment `/deploy` (convenient to avoid void commit).
 - [`serverless.yml`](serverless.yml): Serverless deployment configuration file  
   I have not found a way to isolate the coach files in a sub-folder and execute
   Serverless there. Help is welcome.
-- [`.github/workflows/linters.yaml`](.github/workflows/linters.yaml):
+
+In [`.github/workflows`](.github/workflows/) folder:
+- [`upload_lambda.yml`](.github/workflows/upload_lambda.yml):
+  GitHub workflow triggered on repository pushes, which uploads the coach lambda function to AWS.
+- [`upload_lambda_from_comment.yml`](.github/workflows/upload_lambda_from_comment.yml):
+  Same upload as above but triggered by a comment `/deploy` (was convenient when manual trigger wasn't possible).
+
+- [`linters.yml`](.github/workflows/linters.yml):
   Javascript linter (configuration in `/.eslintrc.json`).
-- [`.github/workflows/md-links.yaml`](.github/workflows/md-links.yaml):
+- [`md-links.yml`](.github/workflows/md-links.yml):
   Validate links in MarkDown files.
 
 ## Contributing
