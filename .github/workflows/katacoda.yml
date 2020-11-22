@@ -3,6 +3,7 @@ name: Validate Katacoda scenarios
 on: 
   push:
     paths: 'online-devops-dojo/**'
+  workflow_dispatch:
 
 jobs:
   build:
