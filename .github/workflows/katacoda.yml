@@ -1,0 +1,21 @@
+name: Validate Katacoda scenarios
+
+on: 
+  push:
+    paths: 'online-devops-dojo/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Validate
+    runs-on: ubuntu-20.04
+    steps:
+    - id: checkout-code
+      name: Checkout code
+      uses: actions/checkout@v2
+
+    - id: validate
+      name: Validate Katacoda scenarios
+      run: |
+        npx katacoda-cli validate:all --ignore=welcome --repo ${{ github.workspace }}
+# Ignore welcome scenario which has no title
