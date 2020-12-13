@@ -12,13 +12,13 @@ While there are challenges in Leading Change in support of DevOps transformation
 
 The secondary objective of the module is to give you an opportunity to virtually participate in a Leading Change real world scenario using Katacoda.
 
-If you have not completed the Welcome module you should do so before continuing with the Leading Change module.
+If you have not completed the Welcome module you must do so before continuing with the Leading Change module.
 
 By the end of the lesson and lab, you will be able to:
 
 * Understand the need for change.
 
-* List the 3 "ways" of DevOps and the role they play in DevOps transformations. 
+* List the 3 "ways" of DevOps and the role they play in DevOps transformations.
 
 * Explain the role of DevOps coaches to help the organization adapt DevOps patterns, practices and tools.
 
