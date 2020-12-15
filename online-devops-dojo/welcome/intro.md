@@ -1,6 +1,10 @@
 ## Welcome!
 
-Welcome to the **Online DevOps Dojo** Katacoda course.
+Welcome. I am the Octocat for the **Online DevOps Dojo** Katacoda course
+
+![](../../assets/online-devops-dojo/welcome/octocat.png)
+
+You are about to enter another dimension, a dimension not only of sight and sound but of mind. A journey into a wondrous land of imagination. Next stop, the **Online DevOps Dojo**!
 
 This course is made up of 6 open source modules.
 
