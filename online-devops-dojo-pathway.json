@@ -36,6 +36,11 @@
       "title": "DevOps Kaizen",
       "description": "DevOps Kaizen events can be used to help you and your team continuously improve your development processes.",
       "course_id": "devops-kaizen"
+    },
+    {
+      "title": "Post Incident Practices",
+      "description": "Learn how to establish a Safety Culture, conduct blameless post-mortems and create a “code of conduct” to help your team manage incidents in all phases of their life cycle",
+      "course_id": "post-incident-practices"
     }
   ]
 }

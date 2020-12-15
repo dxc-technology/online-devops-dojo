@@ -6,7 +6,7 @@ Welcome. I am the Octocat for the **Online DevOps Dojo** Katacoda course
 
 You are about to enter another dimension, a dimension not only of sight and sound but of mind. A journey into a wondrous land of imagination. Next stop, the **Online DevOps Dojo**!
 
-This course is made up of 6 open source modules.
+This course is made up of 7 open source modules.
 
 * Leading Change
 * Version Control
@@ -14,6 +14,7 @@ This course is made up of 6 open source modules.
 * Shift Left On Security
 * Value Stream Mapping
 * DevOps Kaizen
+* Post Incident Practices
 
 ## Katacoda environment
 

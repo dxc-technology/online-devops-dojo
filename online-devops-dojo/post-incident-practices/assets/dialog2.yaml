@@ -1,0 +1,112 @@
+---
+speaking: Paulo
+text: >
+    Thank you all for joining us today, I think we have everyone we need for this blameless post-mortem.
+---
+speaking: Santhosh
+text: >
+    We do, we have representatives from the teams who developed, tested, and deployed the application.
+---
+speaking: Santhosh
+text: >
+    We have the people who reported the outage, identified the problem, found the root cause of the issue, and the people who resolved the issue.
+---
+speaking: Paulo
+text: >
+    Great, and we have the timeline of events for the outage, when it was detected, reported, responded to, and resolved? 
+---
+speaking: Santhosh
+text: >
+    We do, so how do you want to proceed?
+---
+speaking: Paulo
+text: >
+    I say we dive right in, but first let me share a few ground rules, this is a blameless post-mortem so it will be focused on learning as much as possible from an event or outage. This lets us take appropriate remediation actions to prevent issues of this type happening again. Chun would you like to add something?
+---
+speaking: Chun
+text: >
+    Sure, the purpose of the exercise is to focus on the why rather than the who. We are not here to attribute blame, so I would ask people to be as open and transparent as possible.
+---
+speaking: Paulo
+text: >
+    Thanks Chun. Who wants to start us off?
+---
+speaking: Dan
+text: >
+    Adam, can we get the application logs for the weekend the incident occurred?
+---
+speaking: Adam
+text: >
+    I could not find the logs. The incident was a week ago and detailed logs must have been recycled
+---
+speaking: Dan
+text: >
+    Can we keep the logs for longer?
+---
+speaking: Adam
+text: >
+    Yes we can, but we need you guys in the development team to make the log retention period configurable in the application.
+---
+speaking: Dan
+text: >
+    OK, we can do that.
+---
+speaking: Paulo
+text: >
+    How come the first we heard of this outage was from impacted customers?
+---
+speaking: Adam
+text: >
+    Unfortunately we did not have monitoring, or alarms configured on those servers.
+---
+speaking: Paulo
+text: >
+    That is not ideal. What can we do to resolve those issues?
+---
+speaking: Adam
+text: >
+    We can set some thresholds for the appropriate variables then configure monitoring and alerting to ensure we are informed when they are exceeded.
+---
+speaking: Paulo
+text: >
+    OK, let's agree to proceed on that basis.
+---
+speaking: Santhosh
+text: >
+    While the lack of logs, monitoring, and alarms did not help with the time to resolve the issue, there was still an underlying bug in the application. 
+---
+speaking: Santhosh
+text: >
+    Dan/Tina can we do something to test for the bugs of this nature prior to releasing and deploying the application?
+---
+speaking: Tina
+text: >
+    Sure we can put some automated tests in place.
+---
+speaking: Dan
+text: >
+    We could augment the tests by peer code reviews to help ensure that a change of this nature does not cause issues again.
+---
+speaking: Santhosh
+text: >
+    Thanks guys, we have a plan.
+---
+speaking: Santhosh
+text: >
+    I will work with Paulo to create and prioritize the remediation stories in the backlog to cover what we just discussed.
+---
+speaking: Chun
+text: >
+    See how the tone and nature of the conversation changed? I know the conversation is a little contrived but hopefully you guys got the essential message.
+---
+speaking: Chun
+text: >
+    The priorities in a blameless post-mortem are the why and what can be done, in the system, to avoid the same issue from occuring. 
+---
+speaking: Paulo
+text: >
+    Thanks Chun, it may take us a while to get to there, but I think we all understand what you are saying.
+---
+speaking: Paulo
+text: >
+    What would help is if you could share some tips with the team on how to conduct a blameless post-mortem in terms of best practices including any metrics we should be focusing on?

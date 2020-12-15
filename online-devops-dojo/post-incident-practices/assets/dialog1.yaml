@@ -1,0 +1,72 @@
+---
+speaking: Chun
+text: >
+    Let me start by focusing on what was done well in relation to the incident post-mortem because it is important those practices continue.
+---
+speaking: Chun
+text: >
+    The post-mortem was scheduled immediately after the incident was resolved which is as per best practices.
+---
+speaking: Santhosh
+text: >
+    What else are we doing well?
+---
+speaking: Paulo
+text: >
+    From what we saw, you had all the right people in the meeting. Representatives from the teams who developed, tested, and deployed the application. 
+---
+speaking: Paulo
+text: >
+    The people who reported the outage, identified the problem, found the root cause of the issue, and the people who resolved the issue.
+---
+speaking: Chun
+text: >
+    You created a timeline of the outage and started to get people's perspectives on the events that led to the outage and the outage itself.
+---
+speaking: Santhosh
+text: >
+    Good to hear but I think we all know what you are going to say next - at that point it all went off the rails and it degenerated into a finger pointing exercise.
+---
+speaking: Paulo
+text: >
+    Exactly.
+---
+speaking: Chun
+text: >
+    High performance teams create a Safety Culture where people are empowered to act, expected to act, and rewarded for taking smart action.
+---
+speaking: Chun
+text: >
+    Where mistakes are not punished, so that people give open and frank accounts of their actions which may have contributed to the outage.
+---
+speaking: Santhosh
+text: >
+    And how does your suggestion for a Safety Culture apply to the post incident post-mortem?
+---
+speaking: Chun
+text: >
+    The postmortem should be blameless and be focused on learning as much as possible from an event or outage. It should be used to instill a culture of action in the team.
+---
+speaking: Paulo
+text: >
+    OK so how might have the post-mortem we held yesterday played out if it was held as a blameless post-mortem in a Safety Culture?
+---
+speaking: Chun
+text: >
+    Interesting question, I will need some volunteers to participate in a little role playing exercise to explain.
+---
+speaking: Team
+text: >
+    Groans and starts looking at their feet.
+---
+speaking: Chun
+text: >
+    Laughs and tells everyone not to be shy - the exercise will be fun.
+---
+speaking: Team
+text: >
+    Of course it will.
+---
+speaking: Chun
+text: >
+    First, let's ask some questions to [student].
