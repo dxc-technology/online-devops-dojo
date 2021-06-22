@@ -24,18 +24,18 @@
   "dependencies": {
     "@probot/serverless-lambda": "0.5.0",
     "minimist": "^1.2.5",
-    "node": "^12.20.0",
+    "node": "^12.22.1",
     "probot": "^9.15.1"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.15.0",
-    "jest": "^26.6.3",
-    "nock": "^12.0.3",
-    "nodemon": "^2.0.7",
-    "prettier": "1.19.1",
-    "smee-client": "^1.2.2",
-    "standard": "^14.3.4"
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "jest": "*",
+    "nock": "*",
+    "nodemon": "*",
+    "prettier": "*",
+    "smee-client": "*",
+    "standard": "*"
   },
   "engines": {
     "node": ">= 8.3.0",
