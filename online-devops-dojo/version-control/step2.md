@@ -9,7 +9,7 @@ save it for later.
 
 Let's go ahead and prepare our environment, click this:
 
- `./prepare.sh`{{execute}}
+ `./pet-clinic/prepare.sh`{{execute}}
 
 ...and wait for the "Click on 'CONTINUE'" message.
 
