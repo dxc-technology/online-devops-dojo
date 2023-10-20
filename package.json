@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@probot/serverless-lambda": "0.5.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "node": "^12.19.0",
     "probot": "^9.15.1"
   },
